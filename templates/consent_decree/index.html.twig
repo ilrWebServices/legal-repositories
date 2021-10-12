@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ConsentDecree index{% endblock %}
+
+{% block body %}
+    <h1>ConsentDecree index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Case_number</th>
+                <th>Version</th>
+                <th>Case_name</th>
+                <th>Document</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for consent_decree in consent_decrees %}
+            <tr>
+                <td>{{ consent_decree.id }}</td>
+                <td>{{ consent_decree.caseNumber }}</td>
+                <td>{{ consent_decree.version }}</td>
+                <td>{{ consent_decree.caseName }}</td>
+                {# <td>{{ consent_decree.document }}</td> #}
+                <td>
+                    <a href="{{ path('consent_decree_show', {'id': consent_decree.id}) }}">show</a>
+                    <a href="{{ path('consent_decree_edit', {'id': consent_decree.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('consent_decree_new') }}">Create new</a>
+{% endblock %}

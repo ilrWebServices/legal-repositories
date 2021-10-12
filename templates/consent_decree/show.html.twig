@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ConsentDecree{% endblock %}
+
+{% block body %}
+    <h1>ConsentDecree</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ consent_decree.id }}</td>
+            </tr>
+            <tr>
+                <th>Case_number</th>
+                <td>{{ consent_decree.caseNumber }}</td>
+            </tr>
+            <tr>
+                <th>Version</th>
+                <td>{{ consent_decree.version }}</td>
+            </tr>
+            <tr>
+                <th>Case_name</th>
+                <td>{{ consent_decree.caseName }}</td>
+            </tr>
+            {# <tr>
+                <th>Document</th>
+                <td>{{ consent_decree.document }}</td>
+            </tr> #}
+        </tbody>
+    </table>
+
+    <a href="{{ path('consent_decree_index') }}">back to list</a>
+
+    <a href="{{ path('consent_decree_edit', {'id': consent_decree.id}) }}">edit</a>
+
+    {{ include('consent_decree/_delete_form.html.twig') }}
+{% endblock %}

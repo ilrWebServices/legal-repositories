@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ConsentDecree{% endblock %}
+
+{% block body %}
+    <h1>Create new ConsentDecree</h1>
+
+    {{ include('consent_decree/_form.html.twig') }}
+
+    <a href="{{ path('consent_decree_index') }}">back to list</a>
+{% endblock %}

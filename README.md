@@ -18,6 +18,10 @@ Both of these sites contain legal documents that contain some structured data (e
 
 ## Developer Setup
 
+```
+php bin/console doctrine:migrations:migrate --no-interaction
+```
+
 ## Deployment
 
 
