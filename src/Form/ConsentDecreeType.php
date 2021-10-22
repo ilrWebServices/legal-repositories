@@ -7,6 +7,7 @@ use App\Form\DataTransformer\JSONDataTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type;
 
 class ConsentDecreeType extends AbstractType
 {
@@ -24,12 +25,17 @@ class ConsentDecreeType extends AbstractType
             ->add('case_number')
             ->add('version')
             ->add('case_name')
-            ->add('document')
+            ->add('document', Type\CollectionType::class, [
+                // 'allow_add' => true,
+                // 'allow_delete' => true,
+                'entry_type' => 'App\Form\ConsentDecreeDocument',
+                'label' => 'Details',
+            ])
         ;
 
-        $builder->get('document')
-            ->addModelTransformer($this->transformer);
-        ;
+        // $builder->get('document')
+        //     ->addModelTransformer($this->transformer);
+        // ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void

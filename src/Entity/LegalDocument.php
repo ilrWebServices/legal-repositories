@@ -34,7 +34,7 @@ class LegalDocument
     private $case_name;
 
     /**
-     * @ORM\Column(type="json_array")
+     * @ORM\Column(type="json")
      */
     private $document;
 

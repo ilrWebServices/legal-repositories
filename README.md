@@ -26,3 +26,19 @@ php bin/console doctrine:migrations:migrate --no-interaction
 
 
 ## Developer Notes
+
+### Database
+
+id | case_name | case_number | version | jurisdiction | state | state_claim | document
+
+`type`: consent_decree, ada_case
+`document`: schema-less JSON data
+
+### Routes
+
+/consentdecree/document/{case_number}/{version}
+
+consentdecree/index.html?action=displaySavedDecree&fn=1-1.html
+consentdecree/index.html?action=displaySavedDecree&fn=C00-0301P-1.html
+
+/ada-repository/document/{case_number}/{version}
