@@ -1,0 +1,18 @@
+uuid: 4b33277a-fb84-4017-a2e2-76727ea660b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.title
+field_name: title
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Case name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

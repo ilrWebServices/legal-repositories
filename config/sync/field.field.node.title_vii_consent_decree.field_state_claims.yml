@@ -1,0 +1,23 @@
+uuid: c703769c-8ec8-4377-ac7d-b296acbedbba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_state_claims
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_state_claims
+field_name: field_state_claims
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'State claim(s)'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

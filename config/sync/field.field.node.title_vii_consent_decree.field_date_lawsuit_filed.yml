@@ -1,0 +1,21 @@
+uuid: a2746548-2c3f-4671-b78a-8bbad1974da4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_lawsuit_filed
+    - node.type.title_vii_consent_decree
+  module:
+    - datetime
+id: node.title_vii_consent_decree.field_date_lawsuit_filed
+field_name: field_date_lawsuit_filed
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Date lawsuit filed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

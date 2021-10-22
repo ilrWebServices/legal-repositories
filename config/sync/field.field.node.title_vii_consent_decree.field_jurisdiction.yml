@@ -1,0 +1,19 @@
+uuid: c442a967-48c5-4806-9607-753737de9b7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_jurisdiction
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_jurisdiction
+field_name: field_jurisdiction
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Jurisdiction (Court)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

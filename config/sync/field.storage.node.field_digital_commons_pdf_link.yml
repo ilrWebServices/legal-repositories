@@ -1,0 +1,19 @@
+uuid: 5a98b4e5-7883-49d4-9779-b0b8b74c78b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_digital_commons_pdf_link
+field_name: field_digital_commons_pdf_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

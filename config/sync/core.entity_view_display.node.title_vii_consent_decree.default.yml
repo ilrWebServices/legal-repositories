@@ -3,14 +3,130 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.title_vii_consent_decree.field_case_number
+    - field.field.node.title_vii_consent_decree.field_date_consent_decree_filed
+    - field.field.node.title_vii_consent_decree.field_date_consent_decree_signed
+    - field.field.node.title_vii_consent_decree.field_date_lawsuit_filed
+    - field.field.node.title_vii_consent_decree.field_digital_commons_link
+    - field.field.node.title_vii_consent_decree.field_digital_commons_pdf_link
+    - field.field.node.title_vii_consent_decree.field_duration
+    - field.field.node.title_vii_consent_decree.field_jurisdiction
+    - field.field.node.title_vii_consent_decree.field_state
+    - field.field.node.title_vii_consent_decree.field_state_claims
+    - field.field.node.title_vii_consent_decree.field_version_number
     - node.type.title_vii_consent_decree
   module:
+    - datetime
+    - link
+    - options
     - user
 id: node.title_vii_consent_decree.default
 targetEntityType: node
 bundle: title_vii_consent_decree
 mode: default
 content:
+  field_case_number:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_date_consent_decree_filed:
+    weight: 109
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_consent_decree_signed:
+    weight: 110
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_lawsuit_filed:
+    weight: 108
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_digital_commons_link:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_digital_commons_pdf_link:
+    weight: 104
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_duration:
+    weight: 111
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_jurisdiction:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_state:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_state_claims:
+    weight: 107
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_version_number:
+    weight: 102
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
   links:
     weight: 100
     settings: {  }

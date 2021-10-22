@@ -1,0 +1,23 @@
+uuid: aa46346b-520e-4650-8162-99505f7e2497
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_digital_commons_link
+    - node.type.title_vii_consent_decree
+  module:
+    - link
+id: node.title_vii_consent_decree.field_digital_commons_link
+field_name: field_digital_commons_link
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Digital Commons link'
+description: 'E.g. http://digitalcommons.ilr.cornell.edu/condec/80/'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

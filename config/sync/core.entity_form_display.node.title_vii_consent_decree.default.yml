@@ -3,7 +3,62 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.title_vii_consent_decree.field_case_number
+    - field.field.node.title_vii_consent_decree.field_date_consent_decree_filed
+    - field.field.node.title_vii_consent_decree.field_date_consent_decree_signed
+    - field.field.node.title_vii_consent_decree.field_date_lawsuit_filed
+    - field.field.node.title_vii_consent_decree.field_digital_commons_link
+    - field.field.node.title_vii_consent_decree.field_digital_commons_pdf_link
+    - field.field.node.title_vii_consent_decree.field_duration
+    - field.field.node.title_vii_consent_decree.field_jurisdiction
+    - field.field.node.title_vii_consent_decree.field_state
+    - field.field.node.title_vii_consent_decree.field_state_claims
+    - field.field.node.title_vii_consent_decree.field_version_number
     - node.type.title_vii_consent_decree
+  module:
+    - datetime
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_general_case_data:
+      children:
+        - title
+        - field_case_number
+        - field_version_number
+        - field_jurisdiction
+        - field_state
+        - field_state_claims
+        - field_date_lawsuit_filed
+        - field_date_consent_decree_filed
+        - field_date_consent_decree_signed
+        - field_duration
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'General Case Data'
+    group_digital_commons_links:
+      children:
+        - field_digital_commons_link
+        - field_digital_commons_pdf_link
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Digital Commons links'
 id: node.title_vii_consent_decree.default
 targetEntityType: node
 bundle: title_vii_consent_decree
@@ -11,34 +66,110 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_case_number:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_date_consent_decree_filed:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_consent_decree_signed:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_date_lawsuit_filed:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_digital_commons_link:
+    weight: 7
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_digital_commons_pdf_link:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_duration:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_jurisdiction:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_state:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_state_claims:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_version_number:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 6
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 1
     region: content
     settings:
       size: 60
@@ -46,7 +177,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60

@@ -1,0 +1,23 @@
+uuid: c913db8e-4842-4e87-bf0d-93c4a74ffbb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_duration
+field_name: field_duration
+entity_type: node
+bundle: title_vii_consent_decree
+label: Duration
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: years
+field_type: integer

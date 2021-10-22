@@ -1,0 +1,19 @@
+uuid: cc383f3f-0569-4f4e-afa9-409906c488df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_number
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_case_number
+field_name: field_case_number
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Case number'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

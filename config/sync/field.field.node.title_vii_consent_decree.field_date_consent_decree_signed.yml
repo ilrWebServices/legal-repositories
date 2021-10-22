@@ -1,0 +1,21 @@
+uuid: 5c2b1ada-9cf9-4108-8ec2-fae05a586a36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_consent_decree_signed
+    - node.type.title_vii_consent_decree
+  module:
+    - datetime
+id: node.title_vii_consent_decree.field_date_consent_decree_signed
+field_name: field_date_consent_decree_signed
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Date consent decree signed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

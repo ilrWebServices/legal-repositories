@@ -1,0 +1,21 @@
+uuid: 808f48c2-8fd8-44c0-94b2-be9ec16a5793
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_consent_decree_filed
+    - node.type.title_vii_consent_decree
+  module:
+    - datetime
+id: node.title_vii_consent_decree.field_date_consent_decree_filed
+field_name: field_date_consent_decree_filed
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Date consent decree filed in court'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
