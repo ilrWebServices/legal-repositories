@@ -31,6 +31,7 @@
     "drupal/core-composer-scaffold": "^9.2",
     "drupal/core-recommended": "^9.2",
     "drupal/field_group": "^3.2",
+    "drupal/paragraphs": "^1.12",
     "drush/drush": "^10.6",
     "symfony/dotenv": "^5.3"
   },
