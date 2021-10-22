@@ -1,0 +1,20 @@
+uuid: 12cc105e-273e-48a7-abc7-e169ec445630
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_number_of_named_plaintiffs
+field_name: field_number_of_named_plaintiffs
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

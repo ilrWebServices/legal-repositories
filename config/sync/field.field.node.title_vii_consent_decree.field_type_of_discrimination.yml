@@ -1,0 +1,21 @@
+uuid: ef54fe09-b7d5-46dc-aeac-222b305e7990
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_of_discrimination
+    - node.type.title_vii_consent_decree
+  module:
+    - options
+id: node.title_vii_consent_decree.field_type_of_discrimination
+field_name: field_type_of_discrimination
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Type of discrimination'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

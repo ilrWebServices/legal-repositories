@@ -1,0 +1,21 @@
+uuid: 6febc5ac-0aad-4b95-a175-01865f1e809e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_industry
+    - node.type.title_vii_consent_decree
+  module:
+    - options
+id: node.title_vii_consent_decree.field_industry
+field_name: field_industry
+entity_type: node
+bundle: title_vii_consent_decree
+label: Industry
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

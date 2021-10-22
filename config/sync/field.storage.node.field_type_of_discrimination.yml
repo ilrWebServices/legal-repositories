@@ -1,0 +1,57 @@
+uuid: 87ee6819-3678-4d03-b5da-ff371a4c18ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type_of_discrimination
+field_name: field_type_of_discrimination
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Assignment
+      label: Assignment
+    -
+      value: Compensation
+      label: Compensation
+    -
+      value: 'Constructive Discharge'
+      label: 'Constructive Discharge'
+    -
+      value: Evaluation
+      label: Evaluation
+    -
+      value: Hiring
+      label: Hiring
+    -
+      value: 'Hostile Work Environment'
+      label: 'Hostile Work Environment'
+    -
+      value: Promotion
+      label: Promotion
+    -
+      value: 'Sexual Harassment'
+      label: 'Sexual Harassment'
+    -
+      value: 'Subjective Decision Making'
+      label: 'Subjective Decision Making'
+    -
+      value: Termination
+      label: Termination
+    -
+      value: 'Terms and Conditions'
+      label: 'Terms and Conditions'
+    -
+      value: 'Training / Advancement'
+      label: 'Training / Advancement'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

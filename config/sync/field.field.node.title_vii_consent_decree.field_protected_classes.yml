@@ -1,0 +1,21 @@
+uuid: c087be39-772d-431b-aa65-754825fd334f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_protected_classes
+    - node.type.title_vii_consent_decree
+  module:
+    - options
+id: node.title_vii_consent_decree.field_protected_classes
+field_name: field_protected_classes
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Protected classes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

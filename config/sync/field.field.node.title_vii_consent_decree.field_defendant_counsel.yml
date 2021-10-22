@@ -1,0 +1,31 @@
+uuid: 21b54417-1aa6-49aa-aa10-3828c0d83e12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_defendant_counsel
+    - node.type.title_vii_consent_decree
+    - paragraphs.paragraphs_type.counsel
+  module:
+    - entity_reference_revisions
+id: node.title_vii_consent_decree.field_defendant_counsel
+field_name: field_defendant_counsel
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Defendant counsel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      counsel: counsel
+    target_bundles_drag_drop:
+      counsel:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

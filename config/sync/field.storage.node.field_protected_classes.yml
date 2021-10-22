@@ -1,0 +1,60 @@
+uuid: 506ec2e2-7a5f-4679-b6b9-8e59294ace66
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_protected_classes
+field_name: field_protected_classes
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'National Origin'
+      label: 'National Origin'
+    -
+      value: Religion
+      label: Religion
+    -
+      value: Sex
+      label: Sex
+    -
+      value: Female
+      label: Female
+    -
+      value: Male
+      label: Male
+    -
+      value: Race
+      label: Race
+    -
+      value: 'American Indian or Alaskan Native'
+      label: 'American Indian or Alaskan Native'
+    -
+      value: Asian
+      label: Asian
+    -
+      value: 'African American or Black'
+      label: 'African American or Black'
+    -
+      value: 'Hispanic or Latino'
+      label: 'Hispanic or Latino'
+    -
+      value: 'Native Hawaiian or Other Pacific Islander'
+      label: 'Native Hawaiian or Other Pacific Islander'
+    -
+      value: White
+      label: White
+    -
+      value: Age
+      label: Age
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

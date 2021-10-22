@@ -1,0 +1,21 @@
+uuid: 4ad26f22-4de0-43ff-b5df-c517ce07a509
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_firm_name
+field_name: field_firm_name
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: c900b0a4-c6c2-45f1-bd25-ff990bd367fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+id: node.field_plaintiff_counsel
+field_name: field_plaintiff_counsel
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

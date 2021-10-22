@@ -1,0 +1,81 @@
+uuid: bbaf1f5a-4efd-429f-9ec0-5becdafdc255
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_industry
+field_name: field_industry
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Aerospace
+      label: Aerospace
+    -
+      value: Agriculture
+      label: Agriculture
+    -
+      value: Automotive
+      label: Automotive
+    -
+      value: Biotech
+      label: Biotech
+    -
+      value: Commodities
+      label: Commodities
+    -
+      value: Construction
+      label: Construction
+    -
+      value: Education
+      label: Education
+    -
+      value: 'Financial Services'
+      label: 'Financial Services'
+    -
+      value: Government
+      label: Government
+    -
+      value: Healthcare
+      label: Healthcare
+    -
+      value: 'Homeland Security'
+      label: 'Homeland Security'
+    -
+      value: Hospitality
+      label: Hospitality
+    -
+      value: 'Information Technology'
+      label: 'Information Technology'
+    -
+      value: Manufacturing
+      label: Manufacturing
+    -
+      value: Media
+      label: Media
+    -
+      value: Retail
+      label: Retail
+    -
+      value: Service
+      label: Service
+    -
+      value: Transportation
+      label: Transportation
+    -
+      value: Utilities
+      label: Utilities
+    -
+      value: Other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

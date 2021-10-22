@@ -1,0 +1,19 @@
+uuid: 0f87abd1-7fda-452b-abc4-e598c07bc595
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_attorneys
+    - paragraphs.paragraphs_type.counsel
+id: paragraph.counsel.field_attorneys
+field_name: field_attorneys
+entity_type: paragraph
+bundle: counsel
+label: Attorneys
+description: 'PLACEHOLDER. This will become a compound person name field.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

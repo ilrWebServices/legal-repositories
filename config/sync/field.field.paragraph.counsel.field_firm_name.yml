@@ -1,0 +1,19 @@
+uuid: 8049711d-10d7-4644-8f53-a3d562801a9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_firm_name
+    - paragraphs.paragraphs_type.counsel
+id: paragraph.counsel.field_firm_name
+field_name: field_firm_name
+entity_type: paragraph
+bundle: counsel
+label: 'Firm name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

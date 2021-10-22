@@ -1,0 +1,32 @@
+uuid: e1eebb9a-7a3d-4f29-a037-2d2d8380d53f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.counsel.field_attorneys
+    - field.field.paragraph.counsel.field_firm_name
+    - paragraphs.paragraphs_type.counsel
+id: paragraph.counsel.default
+targetEntityType: paragraph
+bundle: counsel
+mode: default
+content:
+  field_attorneys:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_firm_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

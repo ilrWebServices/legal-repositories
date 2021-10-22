@@ -1,0 +1,10 @@
+uuid: 63937a55-11d7-446e-8c75-c7c41211e4de
+langcode: en
+status: true
+dependencies: {  }
+id: counsel
+label: Counsel
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

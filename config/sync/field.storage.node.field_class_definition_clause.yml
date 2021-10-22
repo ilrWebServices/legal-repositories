@@ -1,0 +1,19 @@
+uuid: fa5be2ae-896d-4500-8714-3e9c69620f86
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_class_definition_clause
+field_name: field_class_definition_clause
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

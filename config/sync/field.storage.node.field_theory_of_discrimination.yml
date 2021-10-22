@@ -1,0 +1,39 @@
+uuid: ef118188-df7f-436f-8646-6a34d1c110eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_theory_of_discrimination
+field_name: field_theory_of_discrimination
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Disparate Impact'
+      label: 'Disparate Impact'
+    -
+      value: 'Disparate Treatment'
+      label: 'Disparate Treatment'
+    -
+      value: 'Failure to Accommodate'
+      label: 'Failure to Accommodate'
+    -
+      value: 'Hostile Work Environment'
+      label: 'Hostile Work Environment'
+    -
+      value: Retaliation
+      label: Retaliation
+    -
+      value: 'Sexual Harassment'
+      label: 'Sexual Harassment'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
