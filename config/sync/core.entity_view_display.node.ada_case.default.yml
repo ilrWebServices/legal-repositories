@@ -1,0 +1,19 @@
+uuid: c37b9df1-98ca-4eb6-b91f-f5c0bceb0d61
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ada_case
+  module:
+    - user
+id: node.ada_case.default
+targetEntityType: node
+bundle: ada_case
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

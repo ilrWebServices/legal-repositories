@@ -1,0 +1,19 @@
+uuid: 3a400b9a-f3b2-41fe-92c4-2f643353038a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.title_vii_consent_decree
+  module:
+    - user
+id: node.title_vii_consent_decree.default
+targetEntityType: node
+bundle: title_vii_consent_decree
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

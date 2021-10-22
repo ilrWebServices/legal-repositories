@@ -1,0 +1,20 @@
+uuid: a814bf09-4907-4154-9f98-9f74d60636bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.title_vii_consent_decree
+  module:
+    - user
+id: node.title_vii_consent_decree.teaser
+targetEntityType: node
+bundle: title_vii_consent_decree
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

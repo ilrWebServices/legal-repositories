@@ -1,0 +1,11 @@
+uuid: 486bfc1e-0ab4-4cb3-9026-7141410bd840
+langcode: en
+status: true
+dependencies: {  }
+name: 'ADA Case'
+type: ada_case
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

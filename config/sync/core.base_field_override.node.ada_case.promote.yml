@@ -1,0 +1,22 @@
+uuid: 90648c98-77a7-49ef-8481-6c14c156b41e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ada_case
+id: node.ada_case.promote
+field_name: promote
+entity_type: node
+bundle: ada_case
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
