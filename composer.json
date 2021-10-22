@@ -29,7 +29,8 @@
   "require": {
     "composer/installers": "^1.9",
     "drupal/core-composer-scaffold": "^9.2",
-    "drupal/core-recommended": "^9.2"
+    "drupal/core-recommended": "^9.2",
+    "symfony/dotenv": "^5.3"
   },
   "conflict": {
     "drupal/drupal": "*"
@@ -38,6 +39,9 @@
   "prefer-stable": true,
   "config": {
     "sort-packages": true
+  },
+  "autoload": {
+    "files": ["load.environment.php"]
   },
   "extra": {
     "drupal-scaffold": {
