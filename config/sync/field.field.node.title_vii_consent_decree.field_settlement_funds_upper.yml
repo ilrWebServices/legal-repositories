@@ -1,0 +1,19 @@
+uuid: 7f0a088e-e5cb-4a69-9a16-44d64df5a66e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_settlement_funds_upper
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_settlement_funds_upper
+field_name: field_settlement_funds_upper
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Settlement funds (upper bound)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

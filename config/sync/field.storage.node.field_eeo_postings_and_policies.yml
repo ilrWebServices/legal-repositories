@@ -1,0 +1,19 @@
+uuid: d1c3bff4-8036-4198-bc5d-fc30aaf02828
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_eeo_postings_and_policies
+field_name: field_eeo_postings_and_policies
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

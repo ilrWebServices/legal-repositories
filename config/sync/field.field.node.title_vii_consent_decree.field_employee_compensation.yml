@@ -1,0 +1,19 @@
+uuid: c2915dab-32ca-4468-a0da-99c313439f3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_employee_compensation
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_employee_compensation
+field_name: field_employee_compensation
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Employee compensation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

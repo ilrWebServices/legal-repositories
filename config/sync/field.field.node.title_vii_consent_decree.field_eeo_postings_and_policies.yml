@@ -1,0 +1,19 @@
+uuid: 417fca4a-b0c9-4c8e-9d92-fc35b818e972
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eeo_postings_and_policies
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_eeo_postings_and_policies
+field_name: field_eeo_postings_and_policies
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'EEO postings and policies'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

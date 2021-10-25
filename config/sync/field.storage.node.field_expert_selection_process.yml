@@ -1,0 +1,19 @@
+uuid: 9c730d43-4ee7-417b-88c2-25d2b984ac1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_expert_selection_process
+field_name: field_expert_selection_process
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

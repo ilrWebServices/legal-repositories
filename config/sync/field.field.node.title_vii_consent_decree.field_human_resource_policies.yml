@@ -1,0 +1,19 @@
+uuid: 5a752213-6c21-4d52-ab0b-ba6a2994bf31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_human_resource_policies
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_human_resource_policies
+field_name: field_human_resource_policies
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Human resource policies'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

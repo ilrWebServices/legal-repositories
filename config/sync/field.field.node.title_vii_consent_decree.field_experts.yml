@@ -1,0 +1,19 @@
+uuid: c8355c64-3e03-4121-a006-c9a740fb6505
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experts
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_experts
+field_name: field_experts
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Expert(s) utilized during discovery/trial'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

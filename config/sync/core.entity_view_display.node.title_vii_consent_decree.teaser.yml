@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.title_vii_consent_decree.field_backpay_frontpay
     - field.field.node.title_vii_consent_decree.field_case_number
     - field.field.node.title_vii_consent_decree.field_class_definition_clause
+    - field.field.node.title_vii_consent_decree.field_class_notice
+    - field.field.node.title_vii_consent_decree.field_complaint_procedures
+    - field.field.node.title_vii_consent_decree.field_confidentiality
+    - field.field.node.title_vii_consent_decree.field_court_juris_retained
     - field.field.node.title_vii_consent_decree.field_date_consent_decree_filed
     - field.field.node.title_vii_consent_decree.field_date_consent_decree_signed
     - field.field.node.title_vii_consent_decree.field_date_lawsuit_filed
@@ -13,16 +18,38 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_digital_commons_link
     - field.field.node.title_vii_consent_decree.field_digital_commons_pdf_link
     - field.field.node.title_vii_consent_decree.field_duration
+    - field.field.node.title_vii_consent_decree.field_eeo_postings_and_policies
+    - field.field.node.title_vii_consent_decree.field_employee_compensation
+    - field.field.node.title_vii_consent_decree.field_enforceability_procedures
+    - field.field.node.title_vii_consent_decree.field_evaluation
+    - field.field.node.title_vii_consent_decree.field_expert_fees
+    - field.field.node.title_vii_consent_decree.field_expert_responsibilities
+    - field.field.node.title_vii_consent_decree.field_expert_selection_process
+    - field.field.node.title_vii_consent_decree.field_experts
+    - field.field.node.title_vii_consent_decree.field_expunge_record
+    - field.field.node.title_vii_consent_decree.field_fairness_hearings
+    - field.field.node.title_vii_consent_decree.field_hiring_promotions
+    - field.field.node.title_vii_consent_decree.field_human_resource_policies
     - field.field.node.title_vii_consent_decree.field_industry
     - field.field.node.title_vii_consent_decree.field_jurisdiction
+    - field.field.node.title_vii_consent_decree.field_new_staff_positions
+    - field.field.node.title_vii_consent_decree.field_non_retaliation
     - field.field.node.title_vii_consent_decree.field_number_of_named_plaintiffs
     - field.field.node.title_vii_consent_decree.field_plaintiff_counsel
     - field.field.node.title_vii_consent_decree.field_protected_classes
+    - field.field.node.title_vii_consent_decree.field_recruitment
+    - field.field.node.title_vii_consent_decree.field_releases
+    - field.field.node.title_vii_consent_decree.field_settlement_funds_lower
+    - field.field.node.title_vii_consent_decree.field_settlement_funds_upper
     - field.field.node.title_vii_consent_decree.field_state
     - field.field.node.title_vii_consent_decree.field_state_claims
     - field.field.node.title_vii_consent_decree.field_theory_of_discrimination
+    - field.field.node.title_vii_consent_decree.field_training_progs_advancement
+    - field.field.node.title_vii_consent_decree.field_training_progs_discrim
+    - field.field.node.title_vii_consent_decree.field_training_progs_diversity
     - field.field.node.title_vii_consent_decree.field_type_of_discrimination
     - field.field.node.title_vii_consent_decree.field_version_number
+    - field.field.node.title_vii_consent_decree.field_work_assignment
     - node.type.title_vii_consent_decree
   module:
     - user
@@ -37,8 +64,13 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_backpay_frontpay: true
   field_case_number: true
   field_class_definition_clause: true
+  field_class_notice: true
+  field_complaint_procedures: true
+  field_confidentiality: true
+  field_court_juris_retained: true
   field_date_consent_decree_filed: true
   field_date_consent_decree_signed: true
   field_date_lawsuit_filed: true
@@ -46,13 +78,35 @@ hidden:
   field_digital_commons_link: true
   field_digital_commons_pdf_link: true
   field_duration: true
+  field_eeo_postings_and_policies: true
+  field_employee_compensation: true
+  field_enforceability_procedures: true
+  field_evaluation: true
+  field_expert_fees: true
+  field_expert_responsibilities: true
+  field_expert_selection_process: true
+  field_experts: true
+  field_expunge_record: true
+  field_fairness_hearings: true
+  field_hiring_promotions: true
+  field_human_resource_policies: true
   field_industry: true
   field_jurisdiction: true
+  field_new_staff_positions: true
+  field_non_retaliation: true
   field_number_of_named_plaintiffs: true
   field_plaintiff_counsel: true
   field_protected_classes: true
+  field_recruitment: true
+  field_releases: true
+  field_settlement_funds_lower: true
+  field_settlement_funds_upper: true
   field_state: true
   field_state_claims: true
   field_theory_of_discrimination: true
+  field_training_progs_advancement: true
+  field_training_progs_discrim: true
+  field_training_progs_diversity: true
   field_type_of_discrimination: true
   field_version_number: true
+  field_work_assignment: true

@@ -1,0 +1,19 @@
+uuid: c812cc77-4635-49ca-a322-e495773862f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_court_juris_retained
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_court_juris_retained
+field_name: field_court_juris_retained
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Court Jurisdiction Retained'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

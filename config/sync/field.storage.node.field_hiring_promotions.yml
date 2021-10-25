@@ -1,0 +1,19 @@
+uuid: e907f1cb-9161-4f94-adba-14146cf2b71f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_hiring_promotions
+field_name: field_hiring_promotions
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

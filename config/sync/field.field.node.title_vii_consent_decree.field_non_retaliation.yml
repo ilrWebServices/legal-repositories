@@ -1,0 +1,19 @@
+uuid: 7376aee7-4d14-4dc1-a6f1-4c31e5c3e991
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_non_retaliation
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_non_retaliation
+field_name: field_non_retaliation
+entity_type: node
+bundle: title_vii_consent_decree
+label: Non-retaliation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

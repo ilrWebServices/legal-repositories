@@ -1,0 +1,19 @@
+uuid: 12ca5019-8ac2-4f23-874a-92b3cb0d436b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hiring_promotions
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_hiring_promotions
+field_name: field_hiring_promotions
+entity_type: node
+bundle: title_vii_consent_decree
+label: Hiring/promotions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

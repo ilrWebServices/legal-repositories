@@ -1,0 +1,19 @@
+uuid: 95a10390-0ffa-4457-b0f1-4a0a3d4a11c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enforceability_procedures
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_enforceability_procedures
+field_name: field_enforceability_procedures
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Enforceability / enforcement procedures'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

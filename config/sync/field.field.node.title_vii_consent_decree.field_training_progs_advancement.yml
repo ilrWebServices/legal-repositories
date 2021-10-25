@@ -1,0 +1,19 @@
+uuid: 5ab21b75-e56e-4c64-9c3f-2c712393da7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_progs_advancement
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_training_progs_advancement
+field_name: field_training_progs_advancement
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Training programs (advancement)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

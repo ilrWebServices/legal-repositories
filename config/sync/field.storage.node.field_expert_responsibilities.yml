@@ -1,0 +1,19 @@
+uuid: 148860d1-c7ef-48d6-a818-b08dabcafb15
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_expert_responsibilities
+field_name: field_expert_responsibilities
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

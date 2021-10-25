@@ -1,0 +1,19 @@
+uuid: 8224fa9e-1bec-4835-8145-b3db9d3d1e64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recruitment
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_recruitment
+field_name: field_recruitment
+entity_type: node
+bundle: title_vii_consent_decree
+label: Recruitment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

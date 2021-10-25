@@ -3,8 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.title_vii_consent_decree.field_backpay_frontpay
     - field.field.node.title_vii_consent_decree.field_case_number
     - field.field.node.title_vii_consent_decree.field_class_definition_clause
+    - field.field.node.title_vii_consent_decree.field_class_notice
+    - field.field.node.title_vii_consent_decree.field_complaint_procedures
+    - field.field.node.title_vii_consent_decree.field_confidentiality
+    - field.field.node.title_vii_consent_decree.field_court_juris_retained
     - field.field.node.title_vii_consent_decree.field_date_consent_decree_filed
     - field.field.node.title_vii_consent_decree.field_date_consent_decree_signed
     - field.field.node.title_vii_consent_decree.field_date_lawsuit_filed
@@ -12,16 +17,38 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_digital_commons_link
     - field.field.node.title_vii_consent_decree.field_digital_commons_pdf_link
     - field.field.node.title_vii_consent_decree.field_duration
+    - field.field.node.title_vii_consent_decree.field_eeo_postings_and_policies
+    - field.field.node.title_vii_consent_decree.field_employee_compensation
+    - field.field.node.title_vii_consent_decree.field_enforceability_procedures
+    - field.field.node.title_vii_consent_decree.field_evaluation
+    - field.field.node.title_vii_consent_decree.field_expert_fees
+    - field.field.node.title_vii_consent_decree.field_expert_responsibilities
+    - field.field.node.title_vii_consent_decree.field_expert_selection_process
+    - field.field.node.title_vii_consent_decree.field_experts
+    - field.field.node.title_vii_consent_decree.field_expunge_record
+    - field.field.node.title_vii_consent_decree.field_fairness_hearings
+    - field.field.node.title_vii_consent_decree.field_hiring_promotions
+    - field.field.node.title_vii_consent_decree.field_human_resource_policies
     - field.field.node.title_vii_consent_decree.field_industry
     - field.field.node.title_vii_consent_decree.field_jurisdiction
+    - field.field.node.title_vii_consent_decree.field_new_staff_positions
+    - field.field.node.title_vii_consent_decree.field_non_retaliation
     - field.field.node.title_vii_consent_decree.field_number_of_named_plaintiffs
     - field.field.node.title_vii_consent_decree.field_plaintiff_counsel
     - field.field.node.title_vii_consent_decree.field_protected_classes
+    - field.field.node.title_vii_consent_decree.field_recruitment
+    - field.field.node.title_vii_consent_decree.field_releases
+    - field.field.node.title_vii_consent_decree.field_settlement_funds_lower
+    - field.field.node.title_vii_consent_decree.field_settlement_funds_upper
     - field.field.node.title_vii_consent_decree.field_state
     - field.field.node.title_vii_consent_decree.field_state_claims
     - field.field.node.title_vii_consent_decree.field_theory_of_discrimination
+    - field.field.node.title_vii_consent_decree.field_training_progs_advancement
+    - field.field.node.title_vii_consent_decree.field_training_progs_discrim
+    - field.field.node.title_vii_consent_decree.field_training_progs_diversity
     - field.field.node.title_vii_consent_decree.field_type_of_discrimination
     - field.field.node.title_vii_consent_decree.field_version_number
+    - field.field.node.title_vii_consent_decree.field_work_assignment
     - node.type.title_vii_consent_decree
   module:
     - datetime
@@ -34,6 +61,13 @@ targetEntityType: node
 bundle: title_vii_consent_decree
 mode: default
 content:
+  field_backpay_frontpay:
+    weight: 132
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_case_number:
     weight: 101
     label: above
@@ -44,6 +78,34 @@ content:
     region: content
   field_class_definition_clause:
     weight: 117
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_class_notice:
+    weight: 123
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_complaint_procedures:
+    weight: 133
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_confidentiality:
+    weight: 125
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_court_juris_retained:
+    weight: 120
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -118,6 +180,90 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_eeo_postings_and_policies:
+    weight: 134
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_employee_compensation:
+    weight: 135
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_enforceability_procedures:
+    weight: 122
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_evaluation:
+    weight: 136
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_expert_fees:
+    weight: 129
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_expert_responsibilities:
+    weight: 128
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_expert_selection_process:
+    weight: 127
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_experts:
+    weight: 126
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_expunge_record:
+    weight: 137
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_fairness_hearings:
+    weight: 121
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_hiring_promotions:
+    weight: 138
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_human_resource_policies:
+    weight: 139
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_industry:
     weight: 114
     label: above
@@ -132,6 +278,20 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_new_staff_positions:
+    weight: 140
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_non_retaliation:
+    weight: 141
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_number_of_named_plaintiffs:
     weight: 116
@@ -158,6 +318,36 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_recruitment:
+    weight: 142
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_releases:
+    weight: 124
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_settlement_funds_lower:
+    weight: 130
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_settlement_funds_upper:
+    weight: 131
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_state:
     weight: 106
     label: above
@@ -182,6 +372,27 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_training_progs_advancement:
+    weight: 143
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_training_progs_discrim:
+    weight: 144
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_training_progs_diversity:
+    weight: 145
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_type_of_discrimination:
     weight: 119
     label: above
@@ -197,6 +408,13 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_work_assignment:
+    weight: 146
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   links:
     weight: 100

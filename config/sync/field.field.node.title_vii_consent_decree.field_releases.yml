@@ -1,0 +1,19 @@
+uuid: 7a399e86-db57-4838-a4be-0772a49e1ed5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_releases
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_releases
+field_name: field_releases
+entity_type: node
+bundle: title_vii_consent_decree
+label: Releases
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

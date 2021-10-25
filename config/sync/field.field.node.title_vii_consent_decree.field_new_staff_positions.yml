@@ -1,0 +1,19 @@
+uuid: d9c17d7e-cda2-4df9-84ab-889d89a62075
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_staff_positions
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_new_staff_positions
+field_name: field_new_staff_positions
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'New permanent staff positions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,19 @@
+uuid: 4d792318-8bfa-4778-8aa5-8feb75b5c37b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_progs_diversity
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_training_progs_diversity
+field_name: field_training_progs_diversity
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Training programs (diversity)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

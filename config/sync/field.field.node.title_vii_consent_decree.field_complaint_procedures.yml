@@ -1,0 +1,19 @@
+uuid: 911af38f-704d-4a3c-80f5-c6dc789d6524
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_complaint_procedures
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_complaint_procedures
+field_name: field_complaint_procedures
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Complaint procedures'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
