@@ -1,0 +1,19 @@
+uuid: ecf9a48b-149d-4a07-be4c-f73a3cca3f32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spmaster_responsibilities
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_spmaster_responsibilities
+field_name: field_spmaster_responsibilities
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Special Master responsibilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

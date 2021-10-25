@@ -1,0 +1,19 @@
+uuid: dd6f7e6b-0aa0-4b04-9afd-6c87b87887f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_internal_monitor_selection
+field_name: field_internal_monitor_selection
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

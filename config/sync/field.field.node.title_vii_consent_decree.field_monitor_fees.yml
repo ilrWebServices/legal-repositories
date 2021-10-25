@@ -1,0 +1,19 @@
+uuid: af437ae3-ce15-4c00-aef4-576bdc41e958
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_monitor_fees
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_monitor_fees
+field_name: field_monitor_fees
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Monitor fees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,19 @@
+uuid: 863e4305-7507-4d52-8a73-9e37700c4afc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ext_monitor_selection_proc
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_ext_monitor_selection_proc
+field_name: field_ext_monitor_selection_proc
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'External monitor selection process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

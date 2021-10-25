@@ -1,0 +1,19 @@
+uuid: f3de9a2d-615f-47b1-8b7b-f852ef7d97ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_spmaster_selection_process
+field_name: field_spmaster_selection_process
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

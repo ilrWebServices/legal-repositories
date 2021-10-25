@@ -1,0 +1,19 @@
+uuid: e31e21a8-6f17-48ee-8a86-7d10ec6ed247
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_training_providers
+field_name: field_training_providers
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

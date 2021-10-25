@@ -1,0 +1,19 @@
+uuid: 60b1ded1-8c21-433a-8839-27a1cdc29eee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_internal_monitor_selection
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_internal_monitor_selection
+field_name: field_internal_monitor_selection
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Internal monitor selection process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

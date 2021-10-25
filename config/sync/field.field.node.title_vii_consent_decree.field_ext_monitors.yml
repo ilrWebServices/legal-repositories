@@ -1,0 +1,19 @@
+uuid: 5c5d4777-2ec1-473b-a7d1-07aa2f587dee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ext_monitors
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_ext_monitors
+field_name: field_ext_monitors
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'External monitors'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

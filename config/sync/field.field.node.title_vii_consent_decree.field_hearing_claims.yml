@@ -1,0 +1,19 @@
+uuid: 6e48acfa-582f-423f-981e-2a2c711bb3aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hearing_claims
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_hearing_claims
+field_name: field_hearing_claims
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Hearing claims'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

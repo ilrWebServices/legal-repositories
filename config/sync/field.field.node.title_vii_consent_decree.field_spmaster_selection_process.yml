@@ -1,0 +1,19 @@
+uuid: ffc05c21-1cb6-4836-9d2b-766fbb3456ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spmaster_selection_process
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_spmaster_selection_process
+field_name: field_spmaster_selection_process
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Special master selection process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

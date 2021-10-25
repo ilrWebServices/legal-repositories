@@ -1,0 +1,19 @@
+uuid: d4f98541-e5ed-4daa-9257-09f318f275d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_record_retention
+field_name: field_record_retention
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 79a6fadf-93d0-4d7c-ba2e-400e3bcfbfed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mediator_selection_process
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_mediator_selection_process
+field_name: field_mediator_selection_process
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Mediator Selection Process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

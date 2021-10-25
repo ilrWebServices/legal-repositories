@@ -1,0 +1,19 @@
+uuid: 3a065f86-1c46-4d16-a4e0-ae48e5bb27c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mediator_fees
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_mediator_fees
+field_name: field_mediator_fees
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Mediator fees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

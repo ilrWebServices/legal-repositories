@@ -1,0 +1,19 @@
+uuid: d427ec16-16b6-4494-9f0a-ab748693e3b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consultant_responsibility
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_consultant_responsibility
+field_name: field_consultant_responsibility
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Consultant responsibilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

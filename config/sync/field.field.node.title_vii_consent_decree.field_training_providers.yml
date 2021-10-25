@@ -1,0 +1,19 @@
+uuid: 10e31626-ec80-4b5f-9a6e-3fb66c40848d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_providers
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_training_providers
+field_name: field_training_providers
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Training providers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

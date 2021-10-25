@@ -1,0 +1,19 @@
+uuid: cdfa9260-615b-41a8-8246-77bcdd81d419
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_administration_claims
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_administration_claims
+field_name: field_administration_claims
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Administration claims'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

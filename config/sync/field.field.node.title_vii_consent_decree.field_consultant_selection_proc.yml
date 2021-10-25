@@ -1,0 +1,19 @@
+uuid: a1726cff-41b8-4a1a-b3ef-62a1372cd7c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consultant_selection_proc
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_consultant_selection_proc
+field_name: field_consultant_selection_proc
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Consultant Selection Process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
