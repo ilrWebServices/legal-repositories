@@ -1,0 +1,19 @@
+uuid: f071b914-eb63-4e92-9329-36f6a2cf3f61
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_other_special_issues
+field_name: field_other_special_issues
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

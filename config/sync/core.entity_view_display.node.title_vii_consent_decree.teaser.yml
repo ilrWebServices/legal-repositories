@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_case_number
     - field.field.node.title_vii_consent_decree.field_class_definition_clause
     - field.field.node.title_vii_consent_decree.field_class_notice
+    - field.field.node.title_vii_consent_decree.field_coll_bargaining_agreement
     - field.field.node.title_vii_consent_decree.field_complaint_procedures
     - field.field.node.title_vii_consent_decree.field_confidentiality
     - field.field.node.title_vii_consent_decree.field_consultant_fees
@@ -52,6 +53,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_new_staff_positions
     - field.field.node.title_vii_consent_decree.field_non_retaliation
     - field.field.node.title_vii_consent_decree.field_number_of_named_plaintiffs
+    - field.field.node.title_vii_consent_decree.field_other_special_issues
     - field.field.node.title_vii_consent_decree.field_plaintiff_counsel
     - field.field.node.title_vii_consent_decree.field_progress_performance_rpt
     - field.field.node.title_vii_consent_decree.field_protected_classes
@@ -94,6 +96,7 @@ hidden:
   field_case_number: true
   field_class_definition_clause: true
   field_class_notice: true
+  field_coll_bargaining_agreement: true
   field_complaint_procedures: true
   field_confidentiality: true
   field_consultant_fees: true
@@ -137,6 +140,7 @@ hidden:
   field_new_staff_positions: true
   field_non_retaliation: true
   field_number_of_named_plaintiffs: true
+  field_other_special_issues: true
   field_plaintiff_counsel: true
   field_progress_performance_rpt: true
   field_protected_classes: true

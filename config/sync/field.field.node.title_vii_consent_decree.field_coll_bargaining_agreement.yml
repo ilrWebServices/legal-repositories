@@ -1,0 +1,19 @@
+uuid: 32e75267-0014-4c79-a9c3-83c854c72bf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coll_bargaining_agreement
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_coll_bargaining_agreement
+field_name: field_coll_bargaining_agreement
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Collective bargaining agreement'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,19 @@
+uuid: 815679d0-ae93-4115-94e6-7e1d2a3a6175
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_special_issues
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_other_special_issues
+field_name: field_other_special_issues
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Other special issues'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

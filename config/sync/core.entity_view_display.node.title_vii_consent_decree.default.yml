@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_case_number
     - field.field.node.title_vii_consent_decree.field_class_definition_clause
     - field.field.node.title_vii_consent_decree.field_class_notice
+    - field.field.node.title_vii_consent_decree.field_coll_bargaining_agreement
     - field.field.node.title_vii_consent_decree.field_complaint_procedures
     - field.field.node.title_vii_consent_decree.field_confidentiality
     - field.field.node.title_vii_consent_decree.field_consultant_fees
@@ -51,6 +52,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_new_staff_positions
     - field.field.node.title_vii_consent_decree.field_non_retaliation
     - field.field.node.title_vii_consent_decree.field_number_of_named_plaintiffs
+    - field.field.node.title_vii_consent_decree.field_other_special_issues
     - field.field.node.title_vii_consent_decree.field_plaintiff_counsel
     - field.field.node.title_vii_consent_decree.field_progress_performance_rpt
     - field.field.node.title_vii_consent_decree.field_protected_classes
@@ -117,6 +119,13 @@ content:
     region: content
   field_class_notice:
     weight: 123
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_coll_bargaining_agreement:
+    weight: 172
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -445,6 +454,13 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_other_special_issues:
+    weight: 173
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_plaintiff_counsel:
     type: entity_reference_revisions_entity_view
