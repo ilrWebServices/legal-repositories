@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_administration_claims
     - field.field.node.title_vii_consent_decree.field_backpay_frontpay
     - field.field.node.title_vii_consent_decree.field_case_number
+    - field.field.node.title_vii_consent_decree.field_circuit
     - field.field.node.title_vii_consent_decree.field_class_definition_clause
     - field.field.node.title_vii_consent_decree.field_class_notice
     - field.field.node.title_vii_consent_decree.field_coll_bargaining_agreement
@@ -55,6 +56,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_number_of_named_plaintiffs
     - field.field.node.title_vii_consent_decree.field_other_special_issues
     - field.field.node.title_vii_consent_decree.field_plaintiff_counsel
+    - field.field.node.title_vii_consent_decree.field_plaintiffs_attorneys_fees
     - field.field.node.title_vii_consent_decree.field_progress_performance_rpt
     - field.field.node.title_vii_consent_decree.field_protected_classes
     - field.field.node.title_vii_consent_decree.field_record_retention
@@ -94,6 +96,7 @@ hidden:
   field_administration_claims: true
   field_backpay_frontpay: true
   field_case_number: true
+  field_circuit: true
   field_class_definition_clause: true
   field_class_notice: true
   field_coll_bargaining_agreement: true
@@ -142,6 +145,7 @@ hidden:
   field_number_of_named_plaintiffs: true
   field_other_special_issues: true
   field_plaintiff_counsel: true
+  field_plaintiffs_attorneys_fees: true
   field_progress_performance_rpt: true
   field_protected_classes: true
   field_record_retention: true

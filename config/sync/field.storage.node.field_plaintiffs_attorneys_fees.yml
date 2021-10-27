@@ -1,0 +1,19 @@
+uuid: ba3c34a6-de83-4545-b5d2-3705a1c4daca
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_plaintiffs_attorneys_fees
+field_name: field_plaintiffs_attorneys_fees
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

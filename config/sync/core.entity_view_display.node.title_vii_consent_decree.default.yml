@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_administration_claims
     - field.field.node.title_vii_consent_decree.field_backpay_frontpay
     - field.field.node.title_vii_consent_decree.field_case_number
+    - field.field.node.title_vii_consent_decree.field_circuit
     - field.field.node.title_vii_consent_decree.field_class_definition_clause
     - field.field.node.title_vii_consent_decree.field_class_notice
     - field.field.node.title_vii_consent_decree.field_coll_bargaining_agreement
@@ -54,6 +55,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_number_of_named_plaintiffs
     - field.field.node.title_vii_consent_decree.field_other_special_issues
     - field.field.node.title_vii_consent_decree.field_plaintiff_counsel
+    - field.field.node.title_vii_consent_decree.field_plaintiffs_attorneys_fees
     - field.field.node.title_vii_consent_decree.field_progress_performance_rpt
     - field.field.node.title_vii_consent_decree.field_protected_classes
     - field.field.node.title_vii_consent_decree.field_record_retention
@@ -89,99 +91,106 @@ bundle: title_vii_consent_decree
 mode: default
 content:
   field_administration_claims:
-    weight: 150
+    weight: 51
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_backpay_frontpay:
-    weight: 132
+    weight: 33
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_case_number:
-    weight: 101
+    weight: 1
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_circuit:
+    weight: 75
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_class_definition_clause:
-    weight: 117
+    weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_class_notice:
-    weight: 123
+    weight: 24
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_coll_bargaining_agreement:
-    weight: 172
+    weight: 73
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_complaint_procedures:
-    weight: 133
+    weight: 34
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_confidentiality:
-    weight: 125
+    weight: 26
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_consultant_fees:
-    weight: 159
+    weight: 60
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_consultant_responsibility:
-    weight: 158
+    weight: 59
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_consultant_selection_proc:
-    weight: 157
+    weight: 58
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_consultants_utilized:
-    weight: 156
+    weight: 57
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_court_juris_retained:
-    weight: 120
+    weight: 21
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_date_consent_decree_filed:
-    weight: 109
+    weight: 9
     label: above
     settings:
       timezone_override: ''
@@ -190,7 +199,7 @@ content:
     type: datetime_default
     region: content
   field_date_consent_decree_signed:
-    weight: 110
+    weight: 10
     label: above
     settings:
       timezone_override: ''
@@ -199,7 +208,7 @@ content:
     type: datetime_default
     region: content
   field_date_lawsuit_filed:
-    weight: 108
+    weight: 8
     label: above
     settings:
       timezone_override: ''
@@ -209,7 +218,7 @@ content:
     region: content
   field_defendant_counsel:
     type: entity_reference_revisions_entity_view
-    weight: 113
+    weight: 14
     label: above
     settings:
       view_mode: default
@@ -217,7 +226,7 @@ content:
     third_party_settings: {  }
     region: content
   field_digital_commons_link:
-    weight: 103
+    weight: 3
     label: above
     settings:
       trim_length: 80
@@ -229,7 +238,7 @@ content:
     type: link
     region: content
   field_digital_commons_pdf_link:
-    weight: 104
+    weight: 4
     label: above
     settings:
       trim_length: 80
@@ -241,7 +250,7 @@ content:
     type: link
     region: content
   field_duration:
-    weight: 111
+    weight: 11
     label: above
     settings:
       thousand_separator: ''
@@ -250,147 +259,147 @@ content:
     type: number_integer
     region: content
   field_eeo_postings_and_policies:
-    weight: 134
+    weight: 35
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_employee_compensation:
-    weight: 135
+    weight: 36
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_enforceability_procedures:
-    weight: 122
+    weight: 23
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_evaluation:
-    weight: 136
+    weight: 37
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_expert_fees:
-    weight: 129
+    weight: 30
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_expert_responsibilities:
-    weight: 128
+    weight: 29
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_expert_selection_process:
-    weight: 127
+    weight: 28
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_experts:
-    weight: 126
+    weight: 27
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_expunge_record:
-    weight: 137
+    weight: 38
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_ext_monitor_responsibility:
-    weight: 165
+    weight: 66
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_ext_monitor_selection_proc:
-    weight: 164
+    weight: 65
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_ext_monitors:
-    weight: 163
+    weight: 64
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_fairness_hearings:
-    weight: 121
+    weight: 22
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_hearing_claims:
-    weight: 151
+    weight: 52
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_hiring_promotions:
-    weight: 138
+    weight: 39
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_human_resource_policies:
-    weight: 139
+    weight: 40
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_industry:
-    weight: 114
+    weight: 15
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_internal_monitor_responsib:
-    weight: 162
+    weight: 63
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_internal_monitor_selection:
-    weight: 161
+    weight: 62
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_internal_monitors:
-    weight: 160
+    weight: 61
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_jurisdiction:
-    weight: 105
+    weight: 5
     label: above
     settings:
       link_to_entity: false
@@ -398,56 +407,56 @@ content:
     type: string
     region: content
   field_mediator_fees:
-    weight: 170
+    weight: 71
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_mediator_responsibilities:
-    weight: 169
+    weight: 70
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_mediator_selection_process:
-    weight: 168
+    weight: 69
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_mediators_utilized:
-    weight: 167
+    weight: 68
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_monitor_fees:
-    weight: 166
+    weight: 67
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_new_staff_positions:
-    weight: 140
+    weight: 41
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_non_retaliation:
-    weight: 141
+    weight: 42
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_number_of_named_plaintiffs:
-    weight: 116
+    weight: 17
     label: above
     settings:
       thousand_separator: ''
@@ -456,7 +465,7 @@ content:
     type: number_integer
     region: content
   field_other_special_issues:
-    weight: 173
+    weight: 74
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -464,50 +473,57 @@ content:
     region: content
   field_plaintiff_counsel:
     type: entity_reference_revisions_entity_view
-    weight: 112
+    weight: 12
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
+  field_plaintiffs_attorneys_fees:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_progress_performance_rpt:
-    weight: 147
+    weight: 48
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_protected_classes:
-    weight: 115
+    weight: 16
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_record_retention:
-    weight: 149
+    weight: 50
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_recruitment:
-    weight: 142
+    weight: 43
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_releases:
-    weight: 124
+    weight: 25
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_settlement_funds_lower:
-    weight: 130
+    weight: 31
     label: above
     settings:
       link_to_entity: false
@@ -515,7 +531,7 @@ content:
     type: string
     region: content
   field_settlement_funds_upper:
-    weight: 131
+    weight: 32
     label: above
     settings:
       link_to_entity: false
@@ -523,42 +539,42 @@ content:
     type: string
     region: content
   field_special_master_fees:
-    weight: 155
+    weight: 56
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_special_masters_utilized:
-    weight: 152
+    weight: 53
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_spmaster_responsibilities:
-    weight: 154
+    weight: 55
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_spmaster_selection_process:
-    weight: 153
+    weight: 54
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_state:
-    weight: 106
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_state_claims:
-    weight: 107
+    weight: 7
     label: above
     settings:
       format: default
@@ -568,56 +584,56 @@ content:
     type: boolean
     region: content
   field_successor_bligations:
-    weight: 148
+    weight: 49
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_theory_of_discrimination:
-    weight: 118
+    weight: 19
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_training_progs_advancement:
-    weight: 143
+    weight: 44
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_training_progs_discrim:
-    weight: 144
+    weight: 45
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_training_progs_diversity:
-    weight: 145
+    weight: 46
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_training_providers:
-    weight: 171
+    weight: 72
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_type_of_discrimination:
-    weight: 119
+    weight: 20
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_version_number:
-    weight: 102
+    weight: 2
     label: above
     settings:
       thousand_separator: ''
@@ -626,14 +642,14 @@ content:
     type: number_integer
     region: content
   field_work_assignment:
-    weight: 146
+    weight: 47
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

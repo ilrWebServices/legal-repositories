@@ -1,0 +1,19 @@
+uuid: 1fcdfb0e-61db-46fc-aa72-35e97a6423ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_plaintiffs_attorneys_fees
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_plaintiffs_attorneys_fees
+field_name: field_plaintiffs_attorneys_fees
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Plaintiffs attorneys fees'
+description: 'Leave blank if not applicable.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
