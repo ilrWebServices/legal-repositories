@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Contains legal_repos.module.
+ */
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function legal_repos_entity_type_alter(array &$entity_types) {
+  $entity_types['node']->addConstraint('UniqueCaseNumberVersion');
+}
