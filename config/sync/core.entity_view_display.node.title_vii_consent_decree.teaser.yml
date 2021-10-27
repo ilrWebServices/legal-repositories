@@ -27,6 +27,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_duration
     - field.field.node.title_vii_consent_decree.field_duration_text
     - field.field.node.title_vii_consent_decree.field_eeo_postings_and_policies
+    - field.field.node.title_vii_consent_decree.field_effective_date
     - field.field.node.title_vii_consent_decree.field_employee_compensation
     - field.field.node.title_vii_consent_decree.field_enforceability_procedures
     - field.field.node.title_vii_consent_decree.field_evaluation
@@ -117,6 +118,7 @@ hidden:
   field_duration: true
   field_duration_text: true
   field_eeo_postings_and_policies: true
+  field_effective_date: true
   field_employee_compensation: true
   field_enforceability_procedures: true
   field_evaluation: true
