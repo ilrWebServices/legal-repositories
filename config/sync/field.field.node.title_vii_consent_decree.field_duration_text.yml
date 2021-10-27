@@ -1,0 +1,19 @@
+uuid: 5622a84f-ff1c-4fde-8071-0c8df0ad11bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration_text
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_duration_text
+field_name: field_duration_text
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Duration text'
+description: 'Leave blank if not applicable.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

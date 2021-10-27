@@ -24,6 +24,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_digital_commons_link
     - field.field.node.title_vii_consent_decree.field_digital_commons_pdf_link
     - field.field.node.title_vii_consent_decree.field_duration
+    - field.field.node.title_vii_consent_decree.field_duration_text
     - field.field.node.title_vii_consent_decree.field_eeo_postings_and_policies
     - field.field.node.title_vii_consent_decree.field_employee_compensation
     - field.field.node.title_vii_consent_decree.field_enforceability_procedures
@@ -98,6 +99,7 @@ third_party_settings:
         - field_date_consent_decree_filed
         - field_date_consent_decree_signed
         - field_duration
+        - field_duration_text
       parent_name: ''
       weight: 0
       format_type: fieldset
@@ -519,6 +521,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_duration_text:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
     region: content
   field_eeo_postings_and_policies:
     weight: 17

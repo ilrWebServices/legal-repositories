@@ -25,6 +25,7 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_digital_commons_link
     - field.field.node.title_vii_consent_decree.field_digital_commons_pdf_link
     - field.field.node.title_vii_consent_decree.field_duration
+    - field.field.node.title_vii_consent_decree.field_duration_text
     - field.field.node.title_vii_consent_decree.field_eeo_postings_and_policies
     - field.field.node.title_vii_consent_decree.field_employee_compensation
     - field.field.node.title_vii_consent_decree.field_enforceability_procedures
@@ -114,6 +115,7 @@ hidden:
   field_digital_commons_link: true
   field_digital_commons_pdf_link: true
   field_duration: true
+  field_duration_text: true
   field_eeo_postings_and_policies: true
   field_employee_compensation: true
   field_enforceability_procedures: true
