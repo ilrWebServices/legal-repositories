@@ -1,0 +1,5 @@
+services:
+  legal_repos.entity_presave.subscriber:
+    class: Drupal\legal_repos\EventSubscriber\EntityPresaveSubscriber
+    tags:
+      - {name: event_subscriber}
