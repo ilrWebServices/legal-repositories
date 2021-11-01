@@ -1009,3 +1009,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_circuit: true
+  path: true
