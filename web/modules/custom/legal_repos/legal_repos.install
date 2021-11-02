@@ -1,6 +1,0 @@
-<?php
-
-function legal_repos_install() {
-  // Import the default content.
-  \Drupal::service('legal_repos.importer')->import();
-}
