@@ -1,0 +1,23 @@
+uuid: de6d6d9e-3573-415d-8959-7a08e4b88eaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_id
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_legacy_id
+field_name: field_legacy_id
+entity_type: node
+bundle: title_vii_consent_decree
+label: 'Legacy ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
