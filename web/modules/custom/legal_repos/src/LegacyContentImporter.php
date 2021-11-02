@@ -66,13 +66,14 @@ class LegacyContentImporter {
         ]);
 
         if (empty($existing_nodes)) {
-          // Create a new consent decree.
+          /** @var \Drupal\node\NodeInterface $node */
           $node = $node_storage->create([
             'type' => 'title_vii_consent_decree',
             'field_legacy_id' => $record['cdid'],
           ]);
         }
         elseif (count($existing_nodes) === 1) {
+          /** @var \Drupal\node\NodeInterface $node */
           $node = reset($existing_nodes);
         }
         // More than one node was returned.
@@ -260,6 +261,8 @@ class LegacyContentImporter {
         }
       }
     }
+
+    return TRUE;
   }
 
   /**
