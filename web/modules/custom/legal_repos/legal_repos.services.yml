@@ -3,3 +3,6 @@ services:
     class: Drupal\legal_repos\EventSubscriber\EntityPresaveSubscriber
     tags:
       - {name: event_subscriber}
+  legal_repos.importer:
+    class: Drupal\legal_repos\LegacyContentImporter
+    arguments: ['@entity_type.manager', '@module_handler', '@messenger']
