@@ -119,6 +119,7 @@ class LegacyContentImporter {
     $extended_data_cd_file_handle = fopen($this->dataPath . 'downloadVersion.csv', 'r+');
     $rows = 0;
     $header = FALSE;
+    $paragraph_storage = $this->entityTypeManager->getStorage('paragraph');
 
     while (($data = fgetcsv($extended_data_cd_file_handle, 0, ',', '"')) !== FALSE) {
       if (!$header) {
@@ -134,6 +135,34 @@ class LegacyContentImporter {
         }
 
         $node->field_industry = $record['Industry'];
+
+        $plaintiff_counsel = $this->parseCounselData($record['plaintiffCounsel']);
+
+        if ($node->field_plaintiff_counsel->count() < count($plaintiff_counsel)) {
+          foreach ($plaintiff_counsel as $firm => $attorney_array) {
+            $counsel = $paragraph_storage->create([
+              'type' => 'counsel',
+              'field_firm_name' => $firm,
+              'field_attorneys' => $attorney_array,
+            ]);
+            $counsel->save();
+            $node->field_plaintiff_counsel->appendItem($counsel);
+          }
+        }
+
+        $defendent_counsel = $this->parseCounselData($record['defendantCounsel']);
+
+        if ($node->field_defendant_counsel->count() < count($defendent_counsel)) {
+          foreach ($defendent_counsel as $firm => $attorney_array) {
+            $counsel = $paragraph_storage->create([
+              'type' => 'counsel',
+              'field_firm_name' => $firm,
+              'field_attorneys' => $attorney_array,
+            ]);
+            $counsel->save();
+            $node->field_defendant_counsel->appendItem($counsel);
+          }
+        }
 
         $protected_class_keys = ['National Origin', 'Religion', 'Sex', 'Female', 'Male', 'Race', 'American Indian or Alaskan Native', 'Asian', 'African American or Black', 'Hispanic or Latino', 'Native Hawaiian or Other Pacific Islander', 'White', 'Age'];
         $protected_classes = [];
@@ -231,6 +260,28 @@ class LegacyContentImporter {
         }
       }
     }
+  }
+
+  /**
+   * Parse the stored firm and attorney data.
+   *
+   * @param string $counsel_data
+   *   The unparsed data from the spreadsheet.
+   * @return array
+   *   An array keyed by firm name with an array of attorneys as the value.
+   */
+  protected function parseCounselData($counsel_data) {
+    $firm_attorney_array = explode('LAW FIRM OR AGENCY: ', $counsel_data);
+    $counsel = [];
+
+    foreach ($firm_attorney_array as $firm_and_attorney) {
+      if (empty($firm_and_attorney)) {
+        continue;
+      }
+      $firm_and_attorney = explode('- ATTORNEY: ', $firm_and_attorney);
+      $counsel[trim($firm_and_attorney[0])][] = trim(preg_replace('/\s+;/', ' ', $firm_and_attorney[1]));
+    }
+    return $counsel;
   }
 
 }
