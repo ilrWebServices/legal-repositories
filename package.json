@@ -1,0 +1,39 @@
+{
+  "name": "@ilrweb/legalrepositories",
+  "version": "1.0.0",
+  "description": "Composer-based Drupal site for ILR Legal Repositories",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@cornell_ilr/union": "^0.12.3"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp sass",
+    "postinstall": "if [ -L \"./web/libraries/union\" ]; then echo \"./web/libraries/union is a symlink; skipping copy from ./node_modules\"; else rsync -av --delete ./node_modules/@cornell_ilr/union ./web/libraries/; fi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ilrWebServices/legal-repositories.git"
+  },
+  "author": {
+    "name": "Aaron Froehlich",
+    "email": "aaronf@cornell.edu"
+  },
+  "contributors": [
+    {
+      "name": "Jeff Amaral",
+      "email": "jeff.amaral@cornell.edu"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ilrWebServices/legal-repositories/issues"
+  },
+  "homepage": "https://github.com/ilrWebServices/legal-repositories#readme"
+}

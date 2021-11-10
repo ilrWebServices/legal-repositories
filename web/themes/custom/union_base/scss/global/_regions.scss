@@ -1,0 +1,34 @@
+header {
+  background: $white;
+  padding: 1em 0;
+  border-bottom: 10px solid $cornell-red;
+}
+
+.layout-main {
+  margin-bottom: var(--cu-vr1);
+}
+
+aside.layout-sidebar-first {
+  @include breakpoint(md) {
+    margin-top: var(--cu-vr3);
+  }
+}
+
+footer {
+  padding: 1em 0;
+}
+
+// This is the footer element in the order summary total view.
+main footer {
+  background: none;
+  margin-bottom: var(--cu-vr1);
+}
+
+.layout-footer {
+  border-top: 1px solid $gray-medium;
+}
+
+// Commerce regions
+.layout-region-checkout-secondary {
+  margin-top: var(--cu-vr1);
+}

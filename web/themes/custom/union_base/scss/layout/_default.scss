@@ -1,0 +1,58 @@
+body {
+  margin: 0 auto;
+}
+
+.layout-container {
+  width: 100%;
+  min-height: 100vh;
+  max-width: $max-width--layout;
+  margin: 0 auto;
+  padding: 0 var(--cu-ps1);
+
+  @include breakpoint(md) {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 9fr 3fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  // Partial fix for logged in users with the toolbar. A padding gets
+  // dynamically added to the top of the page.
+  .toolbar-tray-open.toolbar-horizontal & {
+    min-height: calc(100vh - 100px);
+  }
+}
+
+.layout-header,
+.layout-footer {
+  grid-column: 1/-1;
+}
+
+.layout-main {
+  grid-column: 1/-1;
+}
+
+.layout-main--with-sidebar {
+  grid-column: 1;
+}
+
+aside.layout-sidebar-first {
+  @include breakpoint(md) {
+    grid-column: 2;
+  }
+
+  > div:first-of-type {
+    padding: var(--cu-vr0) var(--cu-ps1) var(--cu-vr1);
+    border: 1px solid $gray-light;
+    background: #fbfbfb;
+    border-radius: 3px;
+    margin-bottom: var(--cu-vr1);
+  }
+}
+
+.region-header {
+  @include breakpoint(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
