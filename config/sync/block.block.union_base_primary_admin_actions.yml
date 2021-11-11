@@ -1,0 +1,20 @@
+uuid: af4dabee-acab-4d66-8b14-7566b5fa83ef
+langcode: en
+status: true
+dependencies:
+  theme:
+    - union_base
+_core:
+  default_config_hash: sBMSSrWtP58IZaz1i3-MJ9yq_y32w1nc7N5DZJmt-4M
+id: union_base_primary_admin_actions
+theme: union_base
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

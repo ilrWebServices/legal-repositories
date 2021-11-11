@@ -1,0 +1,22 @@
+uuid: 72b7c286-124e-4df8-997b-790e33ab9048
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - union_base
+_core:
+  default_config_hash: KfyaTPRJEcAyy2e5AxEfWQnuHcn4WrfvcWek7lSmHZQ
+id: union_base_messages
+theme: union_base
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
