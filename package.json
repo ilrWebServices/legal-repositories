@@ -4,7 +4,7 @@
   "description": "Composer-based Drupal site for ILR Legal Repositories",
   "main": "gulpfile.js",
   "dependencies": {
-    "@cornell_ilr/union": "^0.12.3"
+    "@cornell_ilr/union": "^0.12.4"
   },
   "devDependencies": {
     "gulp": "^4",

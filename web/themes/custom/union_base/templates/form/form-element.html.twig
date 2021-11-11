@@ -2,7 +2,13 @@
   {% set labelDisplay = 'float' %}
 {% endif %}
 {% include "@union/_form-element.twig" with {
-  required: element['#required'],
+  attributes: attributes,
+  type: type,
+  children: children,
+  errors: errors,
+  label: label,
+  prefix: prefix,
+  suffix: suffix,
   labelDisplay: labelDisplay,
-  descriptionText: element['#description']
-}%}
+  descriptionText: element['#description'],
+} only %}
