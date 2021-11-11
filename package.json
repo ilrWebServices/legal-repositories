@@ -7,10 +7,11 @@
     "@cornell_ilr/union": "^0.12.3"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-livereload": "^4.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp": "^4",
+    "gulp-livereload": "^4",
+    "gulp-sass": "^5",
+    "gulp-sourcemaps": "^3",
+    "sass": "^1"
   },
   "scripts": {
     "start": "gulp",
