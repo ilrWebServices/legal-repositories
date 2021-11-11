@@ -47,7 +47,9 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_internal_monitor_responsib
     - field.field.node.title_vii_consent_decree.field_internal_monitor_selection
     - field.field.node.title_vii_consent_decree.field_internal_monitors
+    - field.field.node.title_vii_consent_decree.field_judge
     - field.field.node.title_vii_consent_decree.field_jurisdiction
+    - field.field.node.title_vii_consent_decree.field_legacy_id
     - field.field.node.title_vii_consent_decree.field_mediator_fees
     - field.field.node.title_vii_consent_decree.field_mediator_responsibilities
     - field.field.node.title_vii_consent_decree.field_mediator_selection_process
@@ -138,7 +140,9 @@ hidden:
   field_internal_monitor_responsib: true
   field_internal_monitor_selection: true
   field_internal_monitors: true
+  field_judge: true
   field_jurisdiction: true
+  field_legacy_id: true
   field_mediator_fees: true
   field_mediator_responsibilities: true
   field_mediator_selection_process: true

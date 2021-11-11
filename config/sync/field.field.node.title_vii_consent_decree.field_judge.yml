@@ -1,0 +1,19 @@
+uuid: 7b6f5a02-a9e9-469e-8837-c00efa78ca1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_judge
+    - node.type.title_vii_consent_decree
+id: node.title_vii_consent_decree.field_judge
+field_name: field_judge
+entity_type: node
+bundle: title_vii_consent_decree
+label: Judge
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
