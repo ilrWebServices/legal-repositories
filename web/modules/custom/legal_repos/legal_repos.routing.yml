@@ -1,0 +1,7 @@
+legal_repos.title-vii-consent-decree.search:
+  path: '/title-vii-consent-decree'
+  defaults:
+    _form: '\Drupal\legal_repos\Form\ConsentDecreeSearchForm'
+    _title: 'Consent Decree Search'
+  requirements:
+    _permission: 'access content'

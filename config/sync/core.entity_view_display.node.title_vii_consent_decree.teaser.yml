@@ -91,15 +91,22 @@ targetEntityType: node
 bundle: title_vii_consent_decree
 mode: teaser
 content:
+  field_case_number:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_administration_claims: true
   field_backpay_frontpay: true
-  field_case_number: true
   field_circuit: true
   field_class_definition_clause: true
   field_class_notice: true
