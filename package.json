@@ -8,14 +8,10 @@
   },
   "devDependencies": {
     "gulp": "^4",
-    "gulp-livereload": "^4",
-    "gulp-sass": "^5",
-    "gulp-sourcemaps": "^3",
-    "sass": "^1"
+    "gulp-livereload": "^4"
   },
   "scripts": {
     "start": "gulp",
-    "build": "gulp sass",
     "postinstall": "if [ -L \"./web/libraries/union\" ]; then echo \"./web/libraries/union is a symlink; skipping copy from ./node_modules\"; else rsync -av --delete ./node_modules/@cornell_ilr/union ./web/libraries/; fi"
   },
   "repository": {

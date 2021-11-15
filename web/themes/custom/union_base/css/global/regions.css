@@ -1,0 +1,28 @@
+header {
+  background: white;
+  padding: 1em 0;
+  border-bottom: 10px solid var(--color-cornell-red);
+}
+
+.layout-main {
+  margin-bottom: var(--cu-vr1);
+}
+
+@media (min-width: 64rem) {
+  aside.layout-sidebar-first {
+    margin-top: var(--cu-vr3);
+  }
+}
+
+footer {
+  padding: 1em 0;
+}
+
+main footer {
+  background: none;
+  margin-bottom: var(--cu-vr1);
+}
+
+.layout-footer {
+  border-top: 1px solid var(--color-gray-medium);
+}

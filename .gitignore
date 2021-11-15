@@ -21,4 +21,3 @@
 
 # Ignore build artifacts.
 /node_modules/
-/web/themes/custom/union_base/css

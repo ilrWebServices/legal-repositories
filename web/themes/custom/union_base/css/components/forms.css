@@ -1,0 +1,20 @@
+.cu-input--submit,
+.cu-button {
+  --cu-current-link-color: var(--color-black);
+
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--color-cornell-red);
+  padding: var(--cu-vr-4) var(--cu-ps-1);
+  background: white;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cu-fieldset {
+  border: none;
+  background: var(--color-gray-lightest);
+  border: 1px solid var(--color-gray-medium);
+  border-radius: 3px;
+  margin: 0 0 var(--cu-vr1);
+}

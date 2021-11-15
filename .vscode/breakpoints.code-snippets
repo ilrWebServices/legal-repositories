@@ -1,0 +1,18 @@
+{
+  "Small breakpoint": {
+    "prefix": ["breakpoint-sm"],
+    "body": ["@media (min-width: 37.5rem) {", "\t$0", "}"]
+  },
+  "Medium breakpoint": {
+    "prefix": ["breakpoint-md"],
+    "body": ["@media (min-width: 64rem) {", "\t$0", "}"]
+  },
+  "Large breakpoint": {
+    "prefix": ["breakpoint-lg"],
+    "body": ["@media (min-width: 80rem) {", "\t$0", "}"]
+  },
+  "Extra-large breakpoint": {
+    "prefix": ["breakpoint-xl"],
+    "body": ["@media (min-width: 90rem) {", "\t$0", "}"]
+  }
+}
