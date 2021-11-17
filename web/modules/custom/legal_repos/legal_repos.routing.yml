@@ -1,3 +1,10 @@
+legal_repos.home:
+  path: '/home'
+  defaults:
+    _controller: '\Drupal\legal_repos\Controller\HomeController::content'
+    _title: 'Legal Repositories'
+  requirements:
+    _permission: 'access content'
 legal_repos.title-vii-consent-decree.search:
   path: '/title-vii-consent-decree'
   defaults:
