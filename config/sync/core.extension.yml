@@ -23,6 +23,7 @@ module:
   text: 0
   title_length: 0
   toolbar: 0
+  union_organizer: 0
   user: 0
   views: 10
   paragraphs: 11
@@ -30,6 +31,8 @@ module:
 theme:
   olivero: 0
   seven: 0
+  stable: 0
+  union_base: 0
 profile: minimal
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

@@ -1,0 +1,20 @@
+uuid: 92bcf348-f568-4873-aaf1-6b9c8072cfdb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - union_base
+_core:
+  default_config_hash: WImvmaBdDpwIqobqbDWebBnyxssRvrNEnZSQbOsvOe4
+id: union_base_page_title
+theme: union_base
+region: content
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

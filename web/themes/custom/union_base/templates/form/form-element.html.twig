@@ -1,0 +1,14 @@
+{% if element['#type'] in ['textfield', 'textarea', 'tel', 'email'] %}
+  {% set labelDisplay = 'float' %}
+{% endif %}
+{% include "@union/_form-element.twig" with {
+  attributes: attributes,
+  type: type,
+  children: children,
+  errors: errors,
+  label: label,
+  prefix: prefix,
+  suffix: suffix,
+  labelDisplay: labelDisplay,
+  descriptionText: element['#description'],
+} only %}

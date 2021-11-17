@@ -1,0 +1,22 @@
+uuid: 52722a33-14f4-48ac-869d-899a424f818b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - union_base
+_core:
+  default_config_hash: BL6Gcw5Us0zai1ADadlNYLxlEblMedc_3C3lF0PjtCE
+id: union_base_content
+theme: union_base
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

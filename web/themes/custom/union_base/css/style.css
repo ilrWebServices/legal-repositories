@@ -1,0 +1,28 @@
+@import url('layout/default.css');
+@import url('global/regions.css');
+@import url('components/breadcrumbs.css');
+@import url('components/fields.css');
+@import url('components/forms.css');
+@import url('components/tabs.css');
+
+:root {
+  /* Color vars */
+  --color-cornell-red: #B31B1B;
+  --color-black: #222;
+  --color-gray-lightest: #fbfbfb;
+  --color-gray-medium: #ccc;
+  --color-border: var(--color-gray-medium);
+  --color-link: var(--color-cornell-red);
+  --color-breadcrumbs: var(--color-link);
+
+  /* Layout vars */
+  --layout-display: block;
+  --layout-max-width: 1264px;
+  --layout-grid-column-gap: 2rem;
+  --layout-grid-template-columns: 9fr 3fr;
+  --layout-grid-template-rows: auto 1fr auto;
+}
+
+a {
+  color: var(--color-link);
+}

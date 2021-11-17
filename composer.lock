@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "66d05e0e1623cc3e4f81d4742784a2d4",
+    "content-hash": "b5218f1116a8133dbbc12d4eaff67595",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1985,6 +1985,36 @@
                 "source": "http://cgit.drupalcode.org/title_length",
                 "issues": "https://www.drupal.org/project/issues/title_length"
             }
+        },
+        {
+            "name": "drupal/union_organizer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ilrWebServices/union_organizer.git",
+                "reference": "ba44675a0618c773cfbb1bba789c989521dfb010"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ilrWebServices/union_organizer/zipball/ba44675a0618c773cfbb1bba789c989521dfb010",
+                "reference": "ba44675a0618c773cfbb1bba789c989521dfb010",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A simple integration module for the Union component system",
+            "homepage": "https://github.com/ilrWebServices/union_organizer",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "issues": "https://github.com/ilrWebServices/union_organizer/issues",
+                "source": "https://github.com/ilrWebServices/union_organizer.git"
+            },
+            "time": "2021-04-08T21:30:12+00:00"
         },
         {
             "name": "drush/drush",
@@ -6713,7 +6743,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/union_organizer": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

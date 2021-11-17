@@ -1,0 +1,8 @@
+.field__label {
+  margin: var(--cu-vr1) 0 0;
+  font-weight: 400;
+}
+
+.field__item {
+  max-width: 800px;
+}

@@ -1,0 +1,28 @@
+#block-union-base-breadcrumbs ol {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  align-items: flex-start;
+}
+
+#block-union-base-breadcrumbs li {
+  display: flex;
+}
+
+#block-union-base-breadcrumbs li + li::before {
+  content: "/";
+}
+
+#block-union-base-breadcrumbs li + li a {
+  padding-left: 0.75rem;
+}
+
+#block-union-base-breadcrumbs a {
+  text-decoration: none;
+  padding-right: 0.75rem;
+}
+
+#block-union-base-breadcrumbs a:hover {
+  text-decoration: underline;
+}
