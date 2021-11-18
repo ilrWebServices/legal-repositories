@@ -84,7 +84,7 @@ class ConsentDecreeSearchForm extends SearchFormBase {
     $results = $form_state->get('results');
 
     if ($results) {
-      dump($results);
+      // dump($results);
       $view_builder = $this->entityTypeManager->getViewBuilder('node');
 
       $form['results'] = [
@@ -140,7 +140,7 @@ class ConsentDecreeSearchForm extends SearchFormBase {
     $this->addQueryGeneralConditions($query, $form_state);
 
     $values = $form_state->getValues();
-    dump($values);
+    // dump($values);
 
     $this->addQueryListCondition($query, $form_state, 'field_protected_classes');
     $this->addQueryListCondition($query, $form_state, 'field_theory_of_discrimination');
@@ -167,7 +167,7 @@ class ConsentDecreeSearchForm extends SearchFormBase {
       $query->condition($clause_group);
     }
 
-    dump($query->__toString());
+    // dump($query->__toString());
     $results = $query->execute();
     $results_obj = new \stdClass();
 
