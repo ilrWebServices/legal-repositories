@@ -85,17 +85,25 @@ class ConsentDecreeSearchForm extends SearchFormBase {
 
     if ($results) {
       // dump($results);
-      $view_builder = $this->entityTypeManager->getViewBuilder('node');
-
       $form['results'] = [
         '#type' => 'details',
         '#title' => $results->count . ' ' . $this->stringTranslation->formatPlural(count($results->nodes), ' Result', ' Results'),
         '#open' => (bool) $results->count,
       ];
 
+      $form['results']['links'] = [
+        '#theme' => 'item_list',
+        '#items' => [],
+        '#empty' => $this->t('Please refine your search criteria.'),
+        '#list_type' => 'ol',
+      ];
+
       foreach ($results->nodes as $node) {
-        $build = $view_builder->view($node, 'teaser');
-        $form['results'][$node->id()] = $build;
+        $form['results']['links']['#items'][$node->id()] = [
+          '#type' => 'link',
+          '#url' => $node->toUrl(),
+          '#title' => $node->label(),
+        ];
       }
     }
 
