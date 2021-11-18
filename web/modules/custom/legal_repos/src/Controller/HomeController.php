@@ -18,6 +18,7 @@ class HomeController extends ControllerBase {
       '#theme' => 'item_list',
       '#items' => [
         Link::createFromRoute($this->t('Consent Decree Search'), 'legal_repos.title-vii-consent-decree.search'),
+        Link::createFromRoute($this->t('ADA Case Search'), 'legal_repos.ada-case.search'),
       ],
     ];
     return $build;
