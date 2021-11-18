@@ -7,7 +7,8 @@
 
 :root {
   /* Color vars */
-  --color-cornell-red: #B31B1B;
+  --color-cornell-red: rgb(129, 27, 27);
+  --color-cornell-red-bg: rgba(129, 27, 27, 0.1);
   --color-black: #222;
   --color-gray-lightest: #fbfbfb;
   --color-gray-medium: #ccc;

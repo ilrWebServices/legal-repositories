@@ -34,7 +34,8 @@ details > summary {
   font-weight: bold;
   list-style: none;
   line-height: 1;
-  padding: 0.5em 0;
+  padding: 0.75em var(--cu-ps-1);
+  background-color: var(--color-cornell-red-bg);
 }
 
 details > summary::before {
@@ -56,4 +57,8 @@ details > summary::marker,
 details > summary::-webkit-details-marker {
   display: none;
   content: '';
+}
+
+.details__wrapper {
+  margin-left: calc(var(--cu-ps-1) + 0.625rem + 10px);
 }
