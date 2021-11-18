@@ -158,7 +158,7 @@ class ConsentDecreeSearchForm extends SearchFormBase {
     foreach ($this->clauseFields as $field_names) {
       foreach ($field_names as $field_name) {
         if ($values[$field_name]) {
-          $clause_group->condition($field_name, null, 'IS NOT NULL');
+          $clause_group->exists($field_name);
         }
       }
     }
