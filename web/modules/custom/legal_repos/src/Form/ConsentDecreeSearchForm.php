@@ -81,32 +81,6 @@ class ConsentDecreeSearchForm extends SearchFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $form = parent::buildForm($form, $form_state);
 
-    $results = $form_state->get('results');
-
-    if ($results) {
-      // dump($results);
-      $form['results'] = [
-        '#type' => 'details',
-        '#title' => $results->count . ' ' . $this->stringTranslation->formatPlural(count($results->nodes), ' Result', ' Results'),
-        '#open' => (bool) $results->count,
-      ];
-
-      $form['results']['links'] = [
-        '#theme' => 'item_list',
-        '#items' => [],
-        '#empty' => $this->t('Please refine your search criteria.'),
-        '#list_type' => 'ol',
-      ];
-
-      foreach ($results->nodes as $node) {
-        $form['results']['links']['#items'][$node->id()] = [
-          '#type' => 'link',
-          '#url' => $node->toUrl(),
-          '#title' => $node->label(),
-        ];
-      }
-    }
-
     $form['search'] += $this->getListFieldInput('field_protected_classes');
     $form['search'] += $this->getListFieldInput('field_theory_of_discrimination');
     $form['search'] += $this->getListFieldInput('field_type_of_discrimination');

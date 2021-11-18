@@ -52,6 +52,30 @@ abstract class SearchFormBase extends FormBase {
 
     $results = $form_state->get('results');
 
+    if ($results) {
+      // dump($results);
+      $form['results'] = [
+        '#type' => 'details',
+        '#title' => $results->count . ' ' . $this->stringTranslation->formatPlural(count($results->nodes), ' Result', ' Results'),
+        '#open' => (bool) $results->count,
+      ];
+
+      $form['results']['links'] = [
+        '#theme' => 'item_list',
+        '#items' => [],
+        '#empty' => $this->t('Please refine your search criteria.'),
+        '#list_type' => 'ol',
+      ];
+
+      foreach ($results->nodes as $node) {
+        $form['results']['links']['#items'][$node->id()] = [
+          '#type' => 'link',
+          '#url' => $node->toUrl(),
+          '#title' => $node->label(),
+        ];
+      }
+    }
+
     $form['search'] = [
       '#type' => (bool) $results ? 'details' : 'container',
       '#title' => $this->t('Search form'),
