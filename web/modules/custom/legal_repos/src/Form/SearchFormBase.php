@@ -267,7 +267,7 @@ abstract class SearchFormBase extends FormBase {
 
   protected function getListFieldInput($field_name) {
     if (!isset($this->fieldDefinitions[$field_name])) {
-      throw new \Exception('Missing field ' . $field_name);
+      return [];
     }
 
     $element[$field_name] = [
@@ -294,7 +294,7 @@ abstract class SearchFormBase extends FormBase {
 
   protected function getListFieldSelectInput($field_name) {
     if (!isset($this->fieldDefinitions[$field_name])) {
-      throw new \Exception('Missing field ' . $field_name);
+      return [];
     }
 
     $element[$field_name] = [
@@ -309,7 +309,7 @@ abstract class SearchFormBase extends FormBase {
 
   protected function getTextFieldInput($field_name) {
     if (!isset($this->fieldDefinitions[$field_name])) {
-      throw new \Exception('Missing field ' . $field_name);
+      return [];
     }
 
     $element[$field_name] = [
@@ -328,7 +328,7 @@ abstract class SearchFormBase extends FormBase {
 
   protected function addQueryListCondition(QueryInterface $query, FormStateInterface $form_state, $field_name) {
     if (!isset($this->fieldDefinitions[$field_name])) {
-      throw new \Exception('Missing field ' . $field_name);
+      return;
     }
 
     $condition = $form_state->getValue($field_name . '_condition');
