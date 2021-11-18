@@ -106,10 +106,6 @@ class LegacyContentImporter {
         if ($node->save()) {
           $nodes[$record['cdid']] = $node;
         }
-
-        if ($rows === 10) {
-          break;
-        }
       }
     }
 
@@ -255,10 +251,6 @@ class LegacyContentImporter {
         $node->field_coll_bargaining_agreement = $record['Collective Bargaining Agreement'];
         $node->field_other_special_issues = $record['Other Special Issues'];
         $node->save();
-
-        if ($rows === 10) {
-          break;
-        }
       }
     }
 
