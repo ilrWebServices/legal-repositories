@@ -5,9 +5,45 @@
  * Contains legal_repos.module.
  */
 
+use \Drupal\field\Entity\FieldConfig;
+
 /**
  * Implements hook_entity_type_alter().
  */
 function legal_repos_entity_type_alter(array &$entity_types) {
   $entity_types['node']->addConstraint('UniqueCaseNumberVersion');
+}
+
+/**
+ * Implements hook_entity_prepare_view().
+ *
+ * Set display-only default values for consent decree and ADA case nodes.
+ */
+function legal_repos_entity_prepare_view($entity_type_id, array $entities, array $displays, $view_mode) {
+  if ($entity_type_id !== 'node') {
+    return;
+  }
+
+  if ($view_mode !== 'full') {
+    return;
+  }
+
+  /** @var \Drupal\Core\Entity\ContentEntityInterface $node */
+  foreach ($entities as $node) {
+    if (!in_array($node->bundle(), ['title_vii_consent_decree', 'ada_case'])) {
+      return;
+    }
+
+    /** @var \Drupal\Core\Field\FieldItemList $field */
+    foreach ($node->getFields() as $field_name => $field) {
+      /** @var \Drupal\Core\Field\BaseFieldDefinition $field_definition */
+      $field_definition = $field->getFieldDefinition();
+
+      // This should match both `string_long` and `string` user-defined fields,
+      // but not base fields.
+      if ($field_definition instanceof FieldConfig && strpos($field_definition->getType(), 'string') === 0 && $field->isEmpty()) {
+        $node->set($field_name, t('[none specified]'));
+      }
+    }
+  }
 }
