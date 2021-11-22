@@ -5,6 +5,10 @@ namespace Drupal\legal_repos;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Messenger\MessengerInterface;
+use GuzzleHttp\Client as GuzzleClient;
+use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\UriInterface;
 
 class LegacyContentImporter {
 
@@ -30,6 +34,13 @@ class LegacyContentImporter {
   protected $dataPath;
 
   /**
+   * The http client service.
+   *
+   * @var \GuzzleHttp\Client
+   */
+  protected $httpClient;
+
+  /**
    * Constructs a new legacy content importer.
    *
    * @param EntityTypeManagerInterface $entity_type_manager
@@ -39,10 +50,11 @@ class LegacyContentImporter {
    * @param MessengerInterface $messenger
    *   The messenger service.
    */
-  public function __construct(EntityTypeManagerInterface $entity_type_manager, ModuleHandlerInterface $module_handler, MessengerInterface $messenger) {
+  public function __construct(EntityTypeManagerInterface $entity_type_manager, ModuleHandlerInterface $module_handler, MessengerInterface $messenger, GuzzleClient $http_client) {
     $this->entityTypeManager = $entity_type_manager;
     $this->dataPath = $module_handler->getModule('legal_repos')->getPath() . '/data/';
     $this->messenger = $messenger;
+    $this->httpClient = $http_client;
   }
 
   public function import() {
@@ -82,6 +94,8 @@ class LegacyContentImporter {
           continue;
         }
 
+        $commons_url = $this->getFinalRedirectUrl($record['digitalCommonsURL']);
+
         $node->created = strtotime(substr($record['cdCreateDate'], 0, 20));
         $node->changed = strtotime(substr($record['lastModifiedDate'], 0, 20));
         $node->status = ($record['hidden'] === 'False') ? 1 : 0;
@@ -91,8 +105,8 @@ class LegacyContentImporter {
         $node->field_state = $record['state'];
         $node->field_state_claims = $record['stateClaim'] === 'True' ? 1 : 0;
         $node->field_judge = $record['judgeFullName'];
-        $node->field_digital_commons_link = $record['digitalCommonsURL'];
         $node->field_digital_commons_pdf_link = $record['digitalCommonsPdfURL'];
+        $node->field_digital_commons_link = $commons_url;
         $node->field_jurisdiction = $record['court'];
         $node->field_date_lawsuit_filed = substr($record['lawsuitFiledDate'], 0, 10);
         $node->field_date_consent_decree_filed = substr($record['cdFiledDate'], 0, 10);
@@ -277,6 +291,29 @@ class LegacyContentImporter {
       $counsel[trim($firm_and_attorney[0])][] = trim(preg_replace('/\s+;/', ' ', $firm_and_attorney[1]));
     }
     return $counsel;
+  }
+
+  /**
+   * Get the final redirect location for a given URL.
+   *
+   * @param string $url
+   *   A given URL.
+   * @return string
+   *   The final URL after following redirects, if any.
+   */
+  protected function getFinalRedirectUrl(string $url) {
+    $final_redirected_url = NULL;
+
+    $this->httpClient->request('HEAD', $url, [
+      'allow_redirects' => [
+        'referer' => true,
+        'on_redirect' => function(RequestInterface $request, ResponseInterface $response, UriInterface $uri) use (&$final_redirected_url) {
+          $final_redirected_url = (string) $uri;
+        },
+      ]
+    ]);
+
+    return $final_redirected_url ?? $url;
   }
 
 }

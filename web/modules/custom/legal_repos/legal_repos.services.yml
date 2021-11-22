@@ -5,7 +5,7 @@ services:
       - {name: event_subscriber}
   legal_repos.importer:
     class: Drupal\legal_repos\LegacyContentImporter
-    arguments: ['@entity_type.manager', '@module_handler', '@messenger']
+    arguments: ['@entity_type.manager', '@module_handler', '@messenger', '@http_client']
   legal_repos.commands:
     class: \Drupal\legal_repos\Commands\LegalReposCommands
     arguments: ['@legal_repos.importer']
