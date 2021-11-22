@@ -69,10 +69,26 @@ abstract class SearchFormBase extends FormBase {
 
       foreach ($results->nodes as $node) {
         $form['results']['links']['#items'][$node->id()] = [
-          '#type' => 'link',
-          '#url' => $node->toUrl(),
-          '#title' => $node->label(),
+          'link' => [
+            '#type' => 'link',
+            '#url' => $node->toUrl(),
+            '#title' => $node->label(),
+          ],
+          'details' => [
+            '#theme' => 'item_list',
+            '#items' => [],
+            '#list_type' => 'ul',
+            '#attributes' => ['class' => 'result-details'],
+          ]
         ];
+
+        if (!$node->field_digital_commons_pdf_link->isEmpty()) {
+          $form['results']['links']['#items'][$node->id()]['details']['#items'][] = [
+            '#type' => 'link',
+            '#url' => $node->field_digital_commons_pdf_link->first()->getUrl(),
+            '#title' => $this->t('Full text PDF'),
+          ];
+        }
       }
     }
 
