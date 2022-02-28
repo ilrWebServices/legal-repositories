@@ -21,8 +21,8 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_date_consent_decree_signed
     - field.field.node.title_vii_consent_decree.field_date_lawsuit_filed
     - field.field.node.title_vii_consent_decree.field_defendant_counsel
-    - field.field.node.title_vii_consent_decree.field_digital_commons_link
-    - field.field.node.title_vii_consent_decree.field_digital_commons_pdf_link
+    - field.field.node.title_vii_consent_decree.field_resource_url
+    - field.field.node.title_vii_consent_decree.field_resource_pdf_url
     - field.field.node.title_vii_consent_decree.field_duration
     - field.field.node.title_vii_consent_decree.field_duration_text
     - field.field.node.title_vii_consent_decree.field_eeo_postings_and_policies
@@ -118,8 +118,8 @@ third_party_settings:
       label: 'General Case Data'
     group_digital_commons_links:
       children:
-        - field_digital_commons_link
-        - field_digital_commons_pdf_link
+        - field_resource_url
+        - field_resource_pdf_url
       parent_name: ''
       weight: 1
       format_type: fieldset
@@ -505,7 +505,7 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
     region: content
-  field_digital_commons_link:
+  field_resource_url:
     weight: 7
     settings:
       placeholder_url: ''
@@ -513,7 +513,7 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
-  field_digital_commons_pdf_link:
+  field_resource_pdf_url:
     weight: 8
     settings:
       placeholder_url: ''

@@ -105,8 +105,8 @@ class LegacyContentImporter {
         $node->field_state = $record['state'];
         $node->field_state_claims = $record['stateClaim'] === 'True' ? 1 : 0;
         $node->field_judge = $record['judgeFullName'];
-        $node->field_digital_commons_link = $commons_url;
-        $node->field_digital_commons_pdf_link = $this->getEcommonsPdfUrl($commons_url);
+        $node->field_resource_url = $commons_url;
+        $node->field_resource_pdf_url = $this->getEcommonsPdfUrl($commons_url);
         $node->field_jurisdiction = $record['court'];
         $node->field_date_lawsuit_filed = substr($record['lawsuitFiledDate'], 0, 10);
         $node->field_date_consent_decree_filed = substr($record['cdFiledDate'], 0, 10);

@@ -82,10 +82,10 @@ abstract class SearchFormBase extends FormBase {
           ]
         ];
 
-        if (!$node->field_digital_commons_pdf_link->isEmpty()) {
+        if (!$node->field_resource_pdf_url->isEmpty()) {
           $form['results']['links']['#items'][$node->id()]['details']['#items'][] = [
             '#type' => 'link',
-            '#url' => $node->field_digital_commons_pdf_link->first()->getUrl(),
+            '#url' => $node->field_resource_pdf_url->first()->getUrl(),
             '#title' => $this->t('Full text PDF'),
           ];
         }

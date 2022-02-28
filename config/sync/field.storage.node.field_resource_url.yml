@@ -1,12 +1,12 @@
-uuid: 5a98b4e5-7883-49d4-9779-b0b8b74c78b0
+uuid: f261fbc9-f736-424b-a60b-664b6f88fa42
 langcode: en
 status: true
 dependencies:
   module:
     - link
     - node
-id: node.field_digital_commons_pdf_link
-field_name: field_digital_commons_pdf_link
+id: node.field_resource_url
+field_name: field_resource_url
 entity_type: node
 type: link
 settings: {  }

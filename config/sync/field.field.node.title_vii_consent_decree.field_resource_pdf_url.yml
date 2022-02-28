@@ -1,18 +1,18 @@
-uuid: aa46346b-520e-4650-8162-99505f7e2497
+uuid: b81a6730-dd0e-4c95-813b-7a3d258904af
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_digital_commons_link
+    - field.storage.node.field_resource_pdf_url
     - node.type.title_vii_consent_decree
   module:
     - link
-id: node.title_vii_consent_decree.field_digital_commons_link
-field_name: field_digital_commons_link
+id: node.title_vii_consent_decree.field_resource_pdf_url
+field_name: field_resource_pdf_url
 entity_type: node
 bundle: title_vii_consent_decree
-label: 'Digital Commons link'
-description: 'E.g. http://digitalcommons.ilr.cornell.edu/condec/80/'
+label: 'eCommons PDF link'
+description: ''
 required: false
 translatable: false
 default_value: {  }
