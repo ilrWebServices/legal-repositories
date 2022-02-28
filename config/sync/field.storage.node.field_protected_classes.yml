@@ -50,6 +50,9 @@ settings:
     -
       value: Age
       label: Age
+    -
+      value: LBGTQ
+      label: LBGTQ
   allowed_values_function: ''
 module: options
 locked: false
