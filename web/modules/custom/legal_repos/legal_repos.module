@@ -6,6 +6,16 @@
  */
 
 use \Drupal\field\Entity\FieldConfig;
+use Drupal\legal_repos\Entity\ConsentDecreeNode;
+
+/**
+ * Implements hook_entity_bundle_info_alter().
+ */
+function legal_repos_entity_bundle_info_alter(array &$bundles): void {
+  if (isset($bundles['node']['title_vii_consent_decree'])) {
+    $bundles['node']['title_vii_consent_decree']['class'] = ConsentDecreeNode::class;
+  }
+}
 
 /**
  * Implements hook_entity_type_alter().

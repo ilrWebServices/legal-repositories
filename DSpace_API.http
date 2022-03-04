@@ -1,0 +1,14 @@
+# For a given eCommons link (e.g. https://ecommons.cornell.edu/handle/1813/80013) with a path of /^\/handle\/\d+\/\d+$/, just prepend /rest like so:
+
+GET https://ecommons.cornell.edu/rest/handle/1813/80013
+Accept: application/json
+
+###
+
+# The returned 'link' property will contain a basepath to the items. Appending `/bitstream` will get a list of items, one of which should be an application/pdf.
+
+# `retrieveLink` is a URL to the PDF, with useful headers, including one like:
+# Content-Disposition: attachment; filename="Wilfong_v__Rent_A_Center.pdf"
+
+GET https://ecommons.cornell.edu/rest/items/517f1cba-59b9-40ef-8cde-3290041a6620/bitstreams
+Accept: application/json

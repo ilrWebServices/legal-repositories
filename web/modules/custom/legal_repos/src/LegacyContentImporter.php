@@ -106,7 +106,6 @@ class LegacyContentImporter {
         $node->field_state_claims = $record['stateClaim'] === 'True' ? 1 : 0;
         $node->field_judge = $record['judgeFullName'];
         $node->field_resource_url = $commons_url;
-        $node->field_resource_pdf_url = $this->getEcommonsPdfUrl($commons_url);
         $node->field_jurisdiction = $record['court'];
         $node->field_date_lawsuit_filed = substr($record['lawsuitFiledDate'], 0, 10);
         $node->field_date_consent_decree_filed = substr($record['cdFiledDate'], 0, 10);
@@ -314,33 +313,6 @@ class LegacyContentImporter {
     ]);
 
     return $final_redirected_url ?? $url;
-  }
-
-  protected function getEcommonsPdfUrl(string $url) {
-    try {
-      /** @var \Psr\Http\Message\ResponseInterface $response */
-      $response = $this->httpClient->get($url);
-    }
-    catch(\Exception $e) {
-      return '';
-    }
-
-    $dom = new \DOMDocument;
-    libxml_use_internal_errors(TRUE);
-    $dom->loadHTML($response->getBody());
-    libxml_clear_errors();
-
-    /** @var \DOMElement $link */
-    foreach ($dom->getElementsByTagName('a') as $link) {
-      $href = $link->getAttribute('href');
-
-      if (preg_match('|^/bitstream/handle.*\.pdf|', $href)) {
-        $url_parts = parse_url($url);
-        return $url_parts['scheme'] . '://' . $url_parts['host'] . $href;
-      }
-    }
-
-    return '';
   }
 
 }
