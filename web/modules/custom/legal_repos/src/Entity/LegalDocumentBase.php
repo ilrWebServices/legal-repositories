@@ -2,6 +2,7 @@
 
 namespace Drupal\legal_repos\Entity;
 
+use Drupal\Core\Cache\Cache;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\node\Entity\Node;
 
@@ -20,6 +21,18 @@ class LegalDocumentBase extends Node {
     if (!$this->field_state->isEmpty()) {
       $this->field_circuit = $this->getCircuitForState($this->field_state->value);
     }
+
+    // Hard-code the path alias based on the case_number and version. Path auto
+    // is for the weak.
+    $clean_case_number = preg_replace('/[[:punct:]]/',' ', $this->field_case_number->value);
+    $clean_case_number = preg_replace('/[ ]+/','-', trim($clean_case_number));
+    $calculated_alias = '/' . str_replace('_', '-', $this->bundle()) . '/' . $clean_case_number . '-' . $this->field_version_number->value;
+
+    $path_alias = $this->path->first();
+    $path_alias->alias = $calculated_alias;
+
+    // Force cache invalidation for this node to pick up changes to the path.
+    Cache::invalidateTags($this->getCacheTagsToInvalidate());
   }
 
   /**
