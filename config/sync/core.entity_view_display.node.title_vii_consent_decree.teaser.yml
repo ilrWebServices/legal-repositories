@@ -93,17 +93,17 @@ mode: teaser
 content:
   field_case_number:
     type: string
-    weight: 0
-    region: content
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  links:
-    weight: 100
+    weight: 0
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   field_administration_claims: true
   field_backpay_frontpay: true
@@ -122,8 +122,6 @@ hidden:
   field_date_consent_decree_signed: true
   field_date_lawsuit_filed: true
   field_defendant_counsel: true
-  field_resource_url: true
-  field_resource_pdf_url: true
   field_duration: true
   field_duration_text: true
   field_eeo_postings_and_policies: true
@@ -166,6 +164,8 @@ hidden:
   field_record_retention: true
   field_recruitment: true
   field_releases: true
+  field_resource_pdf_url: true
+  field_resource_url: true
   field_settlement_funds_lower: true
   field_settlement_funds_upper: true
   field_special_master_fees: true

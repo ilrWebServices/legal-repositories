@@ -105,32 +105,32 @@ third_party_settings:
         - field_effective_date
         - field_duration
         - field_duration_text
+      label: 'General Case Data'
+      region: content
       parent_name: ''
       weight: 0
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: 'General Case Data'
     group_digital_commons_links:
       children:
         - field_resource_url
         - field_resource_pdf_url
+      label: 'Digital Commons links'
+      region: content
       parent_name: ''
       weight: 1
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: 'Digital Commons links'
     group_case_facts:
       children:
         - field_industry
@@ -139,17 +139,17 @@ third_party_settings:
         - field_class_definition_clause
         - field_theory_of_discrimination
         - field_type_of_discrimination
+      label: 'Case facts'
+      region: content
       parent_name: ''
       weight: 5
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: 'Case facts'
     group_procedural_category_clause:
       children:
         - field_court_juris_retained
@@ -158,34 +158,34 @@ third_party_settings:
         - field_class_notice
         - field_releases
         - field_confidentiality
+      label: 'Procedural category clauses'
+      region: content
       parent_name: ''
       weight: 6
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: 'Procedural category clauses'
     group_evidence_clauses:
       children:
         - field_experts
         - field_expert_selection_process
         - field_expert_responsibilities
         - field_expert_fees
+      label: 'Evidence clauses'
+      region: content
       parent_name: ''
       weight: 7
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: 'Evidence clauses'
     group_remedy_clauses:
       children:
         - field_settlement_funds_lower
@@ -205,17 +205,17 @@ third_party_settings:
         - field_training_progs_discrim
         - field_training_progs_diversity
         - field_work_assignment
+      label: 'Remedy clauses'
+      region: content
       parent_name: ''
       weight: 8
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: 'Remedy clauses'
     group_enforcement_clauses:
       children:
         - field_progress_performance_rpt
@@ -227,66 +227,66 @@ third_party_settings:
         - group_monitoring_program
         - group_mediators
         - group_training
+      label: 'Enforcement clauses'
+      region: content
       parent_name: ''
       weight: 9
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: 'Enforcement clauses'
     group_claims:
       children:
         - field_administration_claims
         - field_hearing_claims
+      label: Claims
+      region: content
       parent_name: group_enforcement_clauses
       weight: 17
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: Claims
     group_special_masters:
       children:
         - field_special_masters_utilized
         - field_spmaster_selection_process
         - field_spmaster_responsibilities
         - field_special_master_fees
+      label: 'Special masters'
+      region: content
       parent_name: group_enforcement_clauses
       weight: 18
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: 'Special masters'
     group_consultants:
       children:
         - field_consultants_utilized
         - field_consultant_selection_proc
         - field_consultant_responsibility
         - field_consultant_fees
+      label: Consultants
+      region: content
       parent_name: group_enforcement_clauses
       weight: 19
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: Consultants
     group_monitoring_program:
       children:
         - field_internal_monitors
@@ -296,63 +296,63 @@ third_party_settings:
         - field_ext_monitor_selection_proc
         - field_ext_monitor_responsibility
         - field_monitor_fees
+      label: 'Monitoring program'
+      region: content
       parent_name: group_enforcement_clauses
       weight: 20
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: 'Monitoring program'
     group_mediators:
       children:
         - field_mediators_utilized
         - field_mediator_selection_process
         - field_mediator_responsibilities
         - field_mediator_fees
+      label: Mediators
+      region: content
       parent_name: group_enforcement_clauses
       weight: 21
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: Mediators
     group_training:
       children:
         - field_training_providers
+      label: Training
+      region: content
       parent_name: group_enforcement_clauses
       weight: 22
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: Training
     group_special_issues_clauses:
       children:
         - field_coll_bargaining_agreement
         - field_other_special_issues
+      label: 'Special issues clauses'
+      region: content
       parent_name: ''
       weight: 10
       format_type: fieldset
-      region: content
       format_settings:
+        classes: ''
         show_empty_fields: false
         id: ''
-        classes: ''
         description: ''
         required_fields: true
-      label: 'Special issues clauses'
 id: node.title_vii_consent_decree.default
 targetEntityType: node
 bundle: title_vii_consent_decree
@@ -365,130 +365,131 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_administration_claims:
+    type: string_textarea
     weight: 18
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_backpay_frontpay:
+    type: string_textarea
     weight: 15
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_case_number:
+    type: string_textfield
     weight: 2
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_class_definition_clause:
+    type: string_textarea
     weight: 13
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_class_notice:
+    type: string_textarea
     weight: 29
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_coll_bargaining_agreement:
+    type: string_textarea
     weight: 15
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_complaint_procedures:
+    type: string_textarea
     weight: 16
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_confidentiality:
+    type: string_textarea
     weight: 31
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_consultant_fees:
+    type: string_textarea
     weight: 26
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_consultant_responsibility:
+    type: string_textarea
     weight: 25
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_consultant_selection_proc:
+    type: string_textarea
     weight: 24
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_consultants_utilized:
+    type: string_textarea
     weight: 23
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_court_juris_retained:
+    type: string_textarea
     weight: 26
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_date_consent_decree_filed:
+    type: datetime_default
     weight: 9
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_date_consent_decree_signed:
+    type: datetime_default
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_date_lawsuit_filed:
+    type: datetime_default
     weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_defendant_counsel:
     type: paragraphs
     weight: 4
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -504,294 +505,278 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
-  field_resource_url:
-    weight: 7
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
-  field_resource_pdf_url:
-    weight: 8
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_duration:
-    weight: 12
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
     type: number
-    region: content
-  field_duration_text:
-    weight: 13
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_eeo_postings_and_policies:
-    weight: 17
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_effective_date:
-    weight: 11
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_employee_compensation:
-    weight: 18
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_enforceability_procedures:
-    weight: 28
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_evaluation:
-    weight: 19
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_expert_fees:
-    weight: 15
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_expert_responsibilities:
-    weight: 14
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_expert_selection_process:
-    weight: 13
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_experts:
     weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_duration_text:
+    type: string_textarea
+    weight: 13
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_eeo_postings_and_policies:
     type: string_textarea
+    weight: 17
     region: content
-  field_expunge_record:
-    weight: 20
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_effective_date:
     type: string_textarea
+    weight: 11
     region: content
-  field_ext_monitor_responsibility:
-    weight: 32
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_employee_compensation:
     type: string_textarea
+    weight: 18
     region: content
-  field_ext_monitor_selection_proc:
-    weight: 31
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_enforceability_procedures:
     type: string_textarea
+    weight: 28
     region: content
-  field_ext_monitors:
-    weight: 30
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_evaluation:
     type: string_textarea
-    region: content
-  field_fairness_hearings:
-    weight: 27
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
-    region: content
-  field_hearing_claims:
     weight: 19
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_expert_fees:
     type: string_textarea
+    weight: 15
     region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_expert_responsibilities:
+    type: string_textarea
+    weight: 14
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_expert_selection_process:
+    type: string_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_experts:
+    type: string_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_expunge_record:
+    type: string_textarea
+    weight: 20
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ext_monitor_responsibility:
+    type: string_textarea
+    weight: 32
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ext_monitor_selection_proc:
+    type: string_textarea
+    weight: 31
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_ext_monitors:
+    type: string_textarea
+    weight: 30
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_fairness_hearings:
+    type: string_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_hearing_claims:
+    type: string_textarea
+    weight: 19
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_hiring_promotions:
+    type: string_textarea
     weight: 21
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_human_resource_policies:
+    type: string_textarea
     weight: 22
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_industry:
+    type: options_select
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_internal_monitor_responsib:
+    type: string_textarea
     weight: 29
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_internal_monitor_selection:
+    type: string_textarea
     weight: 28
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_internal_monitors:
+    type: string_textarea
     weight: 27
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_judge:
+    type: string_textfield
     weight: 7
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_jurisdiction:
+    type: string_textfield
     weight: 4
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_mediator_fees:
+    type: string_textarea
     weight: 37
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_mediator_responsibilities:
+    type: string_textarea
     weight: 36
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_mediator_selection_process:
+    type: string_textarea
     weight: 35
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_mediators_utilized:
+    type: string_textarea
     weight: 34
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_monitor_fees:
+    type: string_textarea
     weight: 33
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_new_staff_positions:
+    type: string_textarea
     weight: 23
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_non_retaliation:
+    type: string_textarea
     weight: 24
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_number_of_named_plaintiffs:
+    type: number
     weight: 12
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_other_special_issues:
+    type: string_textarea
     weight: 16
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_plaintiff_counsel:
     type: paragraphs
     weight: 2
+    region: content
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -807,200 +792,215 @@ content:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
     third_party_settings: {  }
-    region: content
   field_plaintiffs_attorneys_fees:
+    type: string_textarea
     weight: 3
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_progress_performance_rpt:
+    type: string_textarea
     weight: 14
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_protected_classes:
+    type: options_buttons
     weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_record_retention:
+    type: string_textarea
     weight: 16
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_recruitment:
+    type: string_textarea
     weight: 25
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_releases:
+    type: string_textarea
     weight: 30
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+  field_resource_pdf_url:
+    type: link_default
+    weight: 8
     region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_resource_url:
+    type: link_default
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   field_settlement_funds_lower:
+    type: string_textfield
     weight: 13
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_settlement_funds_upper:
+    type: string_textfield
     weight: 14
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_special_master_fees:
+    type: string_textarea
     weight: 22
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_special_masters_utilized:
+    type: string_textarea
     weight: 19
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_spmaster_responsibilities:
+    type: string_textarea
     weight: 21
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_spmaster_selection_process:
+    type: string_textarea
     weight: 20
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_state:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_state_claims:
+    type: options_buttons
     weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_successor_bligations:
+    type: string_textarea
     weight: 15
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_theory_of_discrimination:
+    type: options_buttons
     weight: 14
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_training_progs_advancement:
+    type: string_textarea
     weight: 26
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_training_progs_discrim:
+    type: string_textarea
     weight: 27
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_training_progs_diversity:
+    type: string_textarea
     weight: 28
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_training_providers:
+    type: string_textarea
     weight: 38
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_type_of_discrimination:
+    type: options_buttons
     weight: 15
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_version_number:
+    type: number
     weight: 3
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_work_assignment:
+    type: string_textarea
     weight: 29
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 13
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 15
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 14
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -1013,12 +1013,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 11
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 16
