@@ -21,8 +21,6 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_date_consent_decree_signed
     - field.field.node.title_vii_consent_decree.field_date_lawsuit_filed
     - field.field.node.title_vii_consent_decree.field_defendant_counsel
-    - field.field.node.title_vii_consent_decree.field_resource_url
-    - field.field.node.title_vii_consent_decree.field_resource_pdf_url
     - field.field.node.title_vii_consent_decree.field_duration
     - field.field.node.title_vii_consent_decree.field_duration_text
     - field.field.node.title_vii_consent_decree.field_eeo_postings_and_policies
@@ -65,6 +63,8 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_record_retention
     - field.field.node.title_vii_consent_decree.field_recruitment
     - field.field.node.title_vii_consent_decree.field_releases
+    - field.field.node.title_vii_consent_decree.field_resource_pdf_url
+    - field.field.node.title_vii_consent_decree.field_resource_url
     - field.field.node.title_vii_consent_decree.field_settlement_funds_lower
     - field.field.node.title_vii_consent_decree.field_settlement_funds_upper
     - field.field.node.title_vii_consent_decree.field_special_master_fees
@@ -116,11 +116,11 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: true
-    group_digital_commons_links:
+    group_ecommons_links:
       children:
         - field_resource_url
         - field_resource_pdf_url
-      label: 'Digital Commons links'
+      label: 'eCommons links'
       region: content
       parent_name: ''
       weight: 1
