@@ -5,6 +5,10 @@ dependencies:
   config:
     - field.storage.node.field_record_retention
     - node.type.title_vii_consent_decree
+  module:
+    - text
+  modules:
+    - text
 id: node.title_vii_consent_decree.field_record_retention
 field_name: field_record_retention
 entity_type: node
@@ -16,4 +20,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: text_long

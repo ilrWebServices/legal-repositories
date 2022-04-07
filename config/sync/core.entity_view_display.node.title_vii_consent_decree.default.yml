@@ -21,8 +21,6 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_date_consent_decree_signed
     - field.field.node.title_vii_consent_decree.field_date_lawsuit_filed
     - field.field.node.title_vii_consent_decree.field_defendant_counsel
-    - field.field.node.title_vii_consent_decree.field_resource_url
-    - field.field.node.title_vii_consent_decree.field_resource_pdf_url
     - field.field.node.title_vii_consent_decree.field_duration
     - field.field.node.title_vii_consent_decree.field_duration_text
     - field.field.node.title_vii_consent_decree.field_eeo_postings_and_policies
@@ -65,6 +63,8 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_record_retention
     - field.field.node.title_vii_consent_decree.field_recruitment
     - field.field.node.title_vii_consent_decree.field_releases
+    - field.field.node.title_vii_consent_decree.field_resource_pdf_url
+    - field.field.node.title_vii_consent_decree.field_resource_url
     - field.field.node.title_vii_consent_decree.field_settlement_funds_lower
     - field.field.node.title_vii_consent_decree.field_settlement_funds_upper
     - field.field.node.title_vii_consent_decree.field_special_master_fees
@@ -89,6 +89,7 @@ dependencies:
     - field_group
     - link
     - options
+    - text
     - user
 third_party_settings:
   field_group:
@@ -301,14 +302,14 @@ bundle: title_vii_consent_decree
 mode: default
 content:
   field_administration_claims:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 12
     region: content
   field_backpay_frontpay:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -330,70 +331,70 @@ content:
     weight: 5
     region: content
   field_class_definition_clause:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 11
     region: content
   field_class_notice:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 10
     region: content
   field_coll_bargaining_agreement:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 13
     region: content
   field_complaint_procedures:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 11
     region: content
   field_confidentiality:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 12
     region: content
   field_consultant_fees:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 17
     region: content
   field_consultant_responsibility:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 16
     region: content
   field_consultant_selection_proc:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 15
     region: content
   field_consultants_utilized:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 14
     region: content
   field_court_juris_retained:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -445,126 +446,126 @@ content:
     weight: 14
     region: content
   field_duration_text:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 15
     region: content
   field_eeo_postings_and_policies:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 12
     region: content
   field_effective_date:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 13
     region: content
   field_employee_compensation:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 14
     region: content
   field_enforceability_procedures:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 9
     region: content
   field_evaluation:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 15
     region: content
   field_expert_fees:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 10
     region: content
   field_expert_responsibilities:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 9
     region: content
   field_expert_selection_process:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 8
     region: content
   field_experts:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 7
     region: content
   field_expunge_record:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 16
     region: content
   field_ext_monitor_responsibility:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 27
     region: content
   field_ext_monitor_selection_proc:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 26
     region: content
   field_ext_monitors:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 25
     region: content
   field_fairness_hearings:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 8
     region: content
   field_hearing_claims:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 13
     region: content
   field_hiring_promotions:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 17
     region: content
   field_human_resource_policies:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -578,21 +579,21 @@ content:
     weight: 6
     region: content
   field_internal_monitor_responsib:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 24
     region: content
   field_internal_monitor_selection:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 23
     region: content
   field_internal_monitors:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -615,49 +616,49 @@ content:
     weight: 6
     region: content
   field_mediator_fees:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 21
     region: content
   field_mediator_responsibilities:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 20
     region: content
   field_mediator_selection_process:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 19
     region: content
   field_mediators_utilized:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 18
     region: content
   field_monitor_fees:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 28
     region: content
   field_new_staff_positions:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 19
     region: content
   field_non_retaliation:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -673,7 +674,7 @@ content:
     weight: 7
     region: content
   field_other_special_issues:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -689,14 +690,14 @@ content:
     weight: 4
     region: content
   field_plaintiffs_attorneys_fees:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 5
     region: content
   field_progress_performance_rpt:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -710,21 +711,21 @@ content:
     weight: 8
     region: content
   field_record_retention:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 11
     region: content
   field_recruitment:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 21
     region: content
   field_releases:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -771,28 +772,28 @@ content:
     weight: 9
     region: content
   field_special_master_fees:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 32
     region: content
   field_special_masters_utilized:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 29
     region: content
   field_spmaster_responsibilities:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 31
     region: content
   field_spmaster_selection_process:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -816,7 +817,7 @@ content:
     weight: 8
     region: content
   field_successor_bligations:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -830,28 +831,28 @@ content:
     weight: 9
     region: content
   field_training_progs_advancement:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 22
     region: content
   field_training_progs_discrim:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 23
     region: content
   field_training_progs_diversity:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 24
     region: content
   field_training_providers:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -865,7 +866,7 @@ content:
     weight: 10
     region: content
   field_work_assignment:
-    type: basic_string
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }

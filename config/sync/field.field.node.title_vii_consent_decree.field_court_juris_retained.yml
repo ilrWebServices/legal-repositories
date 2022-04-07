@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.node.field_court_juris_retained
     - node.type.title_vii_consent_decree
+  module:
+    - text
 id: node.title_vii_consent_decree.field_court_juris_retained
 field_name: field_court_juris_retained
 entity_type: node
@@ -16,4 +18,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: string_long
+field_type: text_long

@@ -88,6 +88,7 @@ dependencies:
     - field_group
     - link
     - paragraphs
+    - text
 third_party_settings:
   field_group:
     group_general_case_data:
@@ -365,7 +366,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_administration_claims:
-    type: string_textarea
+    type: text_textarea
     weight: 18
     region: content
     settings:
@@ -373,7 +374,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_backpay_frontpay:
-    type: string_textarea
+    type: text_textarea
     weight: 15
     region: content
     settings:
@@ -389,7 +390,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_class_definition_clause:
-    type: string_textarea
+    type: text_textarea
     weight: 13
     region: content
     settings:
@@ -397,7 +398,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_class_notice:
-    type: string_textarea
+    type: text_textarea
     weight: 29
     region: content
     settings:
@@ -405,7 +406,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_coll_bargaining_agreement:
-    type: string_textarea
+    type: text_textarea
     weight: 15
     region: content
     settings:
@@ -413,7 +414,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_complaint_procedures:
-    type: string_textarea
+    type: text_textarea
     weight: 16
     region: content
     settings:
@@ -421,7 +422,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_confidentiality:
-    type: string_textarea
+    type: text_textarea
     weight: 31
     region: content
     settings:
@@ -429,7 +430,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_consultant_fees:
-    type: string_textarea
+    type: text_textarea
     weight: 26
     region: content
     settings:
@@ -437,7 +438,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_consultant_responsibility:
-    type: string_textarea
+    type: text_textarea
     weight: 25
     region: content
     settings:
@@ -445,7 +446,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_consultant_selection_proc:
-    type: string_textarea
+    type: text_textarea
     weight: 24
     region: content
     settings:
@@ -453,7 +454,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_consultants_utilized:
-    type: string_textarea
+    type: text_textarea
     weight: 23
     region: content
     settings:
@@ -461,7 +462,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_court_juris_retained:
-    type: string_textarea
+    type: text_textarea
     weight: 26
     region: content
     settings:
@@ -513,7 +514,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_duration_text:
-    type: string_textarea
+    type: text_textarea
     weight: 13
     region: content
     settings:
@@ -521,7 +522,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_eeo_postings_and_policies:
-    type: string_textarea
+    type: text_textarea
     weight: 17
     region: content
     settings:
@@ -529,7 +530,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_effective_date:
-    type: string_textarea
+    type: text_textarea
     weight: 11
     region: content
     settings:
@@ -537,7 +538,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_employee_compensation:
-    type: string_textarea
+    type: text_textarea
     weight: 18
     region: content
     settings:
@@ -545,7 +546,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_enforceability_procedures:
-    type: string_textarea
+    type: text_textarea
     weight: 28
     region: content
     settings:
@@ -553,7 +554,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_evaluation:
-    type: string_textarea
+    type: text_textarea
     weight: 19
     region: content
     settings:
@@ -561,7 +562,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_expert_fees:
-    type: string_textarea
+    type: text_textarea
     weight: 15
     region: content
     settings:
@@ -569,7 +570,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_expert_responsibilities:
-    type: string_textarea
+    type: text_textarea
     weight: 14
     region: content
     settings:
@@ -577,7 +578,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_expert_selection_process:
-    type: string_textarea
+    type: text_textarea
     weight: 13
     region: content
     settings:
@@ -585,7 +586,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_experts:
-    type: string_textarea
+    type: text_textarea
     weight: 12
     region: content
     settings:
@@ -593,7 +594,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_expunge_record:
-    type: string_textarea
+    type: text_textarea
     weight: 20
     region: content
     settings:
@@ -601,7 +602,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_ext_monitor_responsibility:
-    type: string_textarea
+    type: text_textarea
     weight: 32
     region: content
     settings:
@@ -609,7 +610,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_ext_monitor_selection_proc:
-    type: string_textarea
+    type: text_textarea
     weight: 31
     region: content
     settings:
@@ -617,7 +618,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_ext_monitors:
-    type: string_textarea
+    type: text_textarea
     weight: 30
     region: content
     settings:
@@ -625,7 +626,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_fairness_hearings:
-    type: string_textarea
+    type: text_textarea
     weight: 27
     region: content
     settings:
@@ -633,7 +634,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_hearing_claims:
-    type: string_textarea
+    type: text_textarea
     weight: 19
     region: content
     settings:
@@ -641,7 +642,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_hiring_promotions:
-    type: string_textarea
+    type: text_textarea
     weight: 21
     region: content
     settings:
@@ -649,7 +650,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_human_resource_policies:
-    type: string_textarea
+    type: text_textarea
     weight: 22
     region: content
     settings:
@@ -663,7 +664,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_internal_monitor_responsib:
-    type: string_textarea
+    type: text_textarea
     weight: 29
     region: content
     settings:
@@ -671,7 +672,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_internal_monitor_selection:
-    type: string_textarea
+    type: text_textarea
     weight: 28
     region: content
     settings:
@@ -679,7 +680,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_internal_monitors:
-    type: string_textarea
+    type: text_textarea
     weight: 27
     region: content
     settings:
@@ -703,7 +704,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_mediator_fees:
-    type: string_textarea
+    type: text_textarea
     weight: 37
     region: content
     settings:
@@ -711,7 +712,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_mediator_responsibilities:
-    type: string_textarea
+    type: text_textarea
     weight: 36
     region: content
     settings:
@@ -719,7 +720,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_mediator_selection_process:
-    type: string_textarea
+    type: text_textarea
     weight: 35
     region: content
     settings:
@@ -727,7 +728,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_mediators_utilized:
-    type: string_textarea
+    type: text_textarea
     weight: 34
     region: content
     settings:
@@ -735,7 +736,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_monitor_fees:
-    type: string_textarea
+    type: text_textarea
     weight: 33
     region: content
     settings:
@@ -743,7 +744,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_new_staff_positions:
-    type: string_textarea
+    type: text_textarea
     weight: 23
     region: content
     settings:
@@ -751,7 +752,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_non_retaliation:
-    type: string_textarea
+    type: text_textarea
     weight: 24
     region: content
     settings:
@@ -766,7 +767,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_other_special_issues:
-    type: string_textarea
+    type: text_textarea
     weight: 16
     region: content
     settings:
@@ -793,7 +794,7 @@ content:
         duplicate: duplicate
     third_party_settings: {  }
   field_plaintiffs_attorneys_fees:
-    type: string_textarea
+    type: text_textarea
     weight: 3
     region: content
     settings:
@@ -801,7 +802,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_progress_performance_rpt:
-    type: string_textarea
+    type: text_textarea
     weight: 14
     region: content
     settings:
@@ -815,7 +816,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_record_retention:
-    type: string_textarea
+    type: text_textarea
     weight: 16
     region: content
     settings:
@@ -823,7 +824,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_recruitment:
-    type: string_textarea
+    type: text_textarea
     weight: 25
     region: content
     settings:
@@ -831,7 +832,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_releases:
-    type: string_textarea
+    type: text_textarea
     weight: 30
     region: content
     settings:
@@ -871,7 +872,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_special_master_fees:
-    type: string_textarea
+    type: text_textarea
     weight: 22
     region: content
     settings:
@@ -879,7 +880,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_special_masters_utilized:
-    type: string_textarea
+    type: text_textarea
     weight: 19
     region: content
     settings:
@@ -887,7 +888,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_spmaster_responsibilities:
-    type: string_textarea
+    type: text_textarea
     weight: 21
     region: content
     settings:
@@ -895,7 +896,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_spmaster_selection_process:
-    type: string_textarea
+    type: text_textarea
     weight: 20
     region: content
     settings:
@@ -915,7 +916,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_successor_bligations:
-    type: string_textarea
+    type: text_textarea
     weight: 15
     region: content
     settings:
@@ -929,7 +930,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_training_progs_advancement:
-    type: string_textarea
+    type: text_textarea
     weight: 26
     region: content
     settings:
@@ -937,7 +938,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_training_progs_discrim:
-    type: string_textarea
+    type: text_textarea
     weight: 27
     region: content
     settings:
@@ -945,7 +946,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_training_progs_diversity:
-    type: string_textarea
+    type: text_textarea
     weight: 28
     region: content
     settings:
@@ -953,7 +954,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_training_providers:
-    type: string_textarea
+    type: text_textarea
     weight: 38
     region: content
     settings:
@@ -974,7 +975,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_work_assignment:
-    type: string_textarea
+    type: text_textarea
     weight: 29
     region: content
     settings:
