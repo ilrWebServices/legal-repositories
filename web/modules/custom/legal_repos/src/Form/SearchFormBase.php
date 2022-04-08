@@ -8,6 +8,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Entity\Query\QueryInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 abstract class SearchFormBase extends FormBase {
@@ -59,6 +60,7 @@ abstract class SearchFormBase extends FormBase {
       $form['results'] = [
         '#type' => 'details',
         '#title' => $results->count . ' ' . $this->stringTranslation->formatPlural(count($results->nodes), ' Result', ' Results'),
+        '#description' => Link::createFromRoute($this->t('New search'), \Drupal::routeMatch()->getRouteName()),
         '#open' => (bool) $results->count,
       ];
 
