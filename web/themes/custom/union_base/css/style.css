@@ -28,3 +28,7 @@
 a {
   color: var(--color-link);
 }
+
+[class*="cu-"] p {
+  margin-top: revert;
+}
