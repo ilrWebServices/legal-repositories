@@ -86,7 +86,7 @@ dependencies:
     - node.type.title_vii_consent_decree
   module:
     - field_group
-    - link
+    - fixed_text_link_formatter
     - user
 third_party_settings:
   field_group:
@@ -298,14 +298,17 @@ bundle: title_vii_consent_decree
 mode: mini
 content:
   field_resource_pdf_url:
-    type: link
+    type: fixed_text_link
     label: hidden
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
       rel: '0'
       target: '0'
+      link_text: 'Full text PDF'
+      link_class: ''
+      allow_override: false
     third_party_settings: {  }
     weight: 3
     region: content
