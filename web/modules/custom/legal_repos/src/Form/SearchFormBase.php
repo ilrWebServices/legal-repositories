@@ -54,10 +54,47 @@ abstract class SearchFormBase extends FormBase {
 
     if ($results) {
       // dump($results);
+      $compare_field = $form_state->getValue('compare');
+
       $form['results'] = [
         '#type' => 'details',
         '#title' => $results->count . ' ' . $this->stringTranslation->formatPlural(count($results->nodes), ' Result', ' Results'),
         '#open' => (bool) $results->count,
+      ];
+
+      $compare_opts = [
+        '' => $this->t('--- Choose clause ---'),
+      ];
+
+      foreach ($this->clauseFields as $clause_group => $field_names) {
+        $compare_opts[$clause_group] = [];
+
+        foreach ($field_names as $field_name) {
+          if (isset($this->fieldDefinitions[$field_name])) {
+            $compare_opts[$clause_group][$field_name] = $this->fieldDefinitions[$field_name]->getLabel();
+          }
+        }
+      }
+
+      $form['results']['compare_wrapper'] = [
+        '#type' => 'fieldset',
+        '#title' => $this->t('Compare results'),
+        '#attributes' => ['class' => ['compare']],
+      ];
+
+      $form['results']['compare_wrapper']['compare'] = [
+        '#type' => 'select',
+        '#title' => $this->t('Clause'),
+        '#description' => $this->t('Select a clause to compare across @things.', [
+          '@thing' => $this->nodeType,
+        ]),
+        '#options' => $compare_opts,
+        '#default_value' => $compare_field,
+      ];
+
+      $form['results']['compare_wrapper']['compare_submit'] = [
+        '#type' => 'submit',
+        '#value' => $this->t('Compare'),
       ];
 
       $form['results']['links'] = [
@@ -69,25 +106,27 @@ abstract class SearchFormBase extends FormBase {
 
       foreach ($results->nodes as $node) {
         $form['results']['links']['#items'][$node->id()] = [
-          'link' => [
-            '#type' => 'link',
-            '#url' => $node->toUrl(),
-            '#title' => $node->label(),
-          ],
-          'details' => [
-            '#theme' => 'item_list',
-            '#items' => [],
-            '#list_type' => 'ul',
-            '#attributes' => ['class' => 'result-details'],
-          ]
+          '#theme' => 'container',
+          '#attributes' => ['class' => ['result-details']],
         ];
 
-        if (!$node->field_resource_pdf_url->isEmpty()) {
-          $form['results']['links']['#items'][$node->id()]['details']['#items'][] = [
-            '#type' => 'link',
-            '#url' => $node->field_resource_pdf_url->first()->getUrl(),
-            '#title' => $this->t('Full text PDF'),
-          ];
+        $view_mode = $compare_field ? 'teaser' : 'mini';
+        $form['results']['links']['#items'][$node->id()]['#children'][] = $this->entityTypeManager->getViewBuilder('node')->view($node, $view_mode);
+
+        if ($node->hasField($compare_field)) {
+          if (!$node->get($compare_field)->isEmpty()) {
+            $form['results']['links']['#items'][$node->id()]['#children'][] = $node->get($compare_field)->view();
+          }
+          else {
+            $form['results']['links']['#items'][$node->id()]['#children'][] = [
+              '#type' => 'inline_template',
+              '#template' => '<p class="empty-clause">{% trans %}Clause <strong><em>{{clause}}</em></strong> doesn\'t appear in this {{thingamabob}}.{% endtrans %}</p>',
+              '#context' => [
+                'clause' => $this->fieldDefinitions[$compare_field]->getLabel(),
+                'thingamabob' => $this->nodeType,
+              ],
+            ];
+          }
         }
       }
     }

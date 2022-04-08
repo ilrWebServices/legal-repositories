@@ -10,6 +10,9 @@ class ConsentDecreeSearchForm extends SearchFormBase {
   protected $nodeType = 'title_vii_consent_decree';
 
   protected $clauseFields = [
+    'General' => [
+      'field_class_definition_clause',
+    ],
     'Procedural Category Clauses' => [
       'field_court_juris_retained',
       'field_fairness_hearings',

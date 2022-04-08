@@ -1,9 +1,9 @@
-uuid: a814bf09-4907-4154-9f98-9f74d60636bc
+uuid: f7e1466c-b1fd-4c49-92c7-954ac7860695
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.mini
     - field.field.node.title_vii_consent_decree.field_administration_claims
     - field.field.node.title_vii_consent_decree.field_backpay_frontpay
     - field.field.node.title_vii_consent_decree.field_case_number
@@ -85,66 +85,234 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_work_assignment
     - node.type.title_vii_consent_decree
   module:
-    - datetime
-    - options
+    - field_group
+    - link
     - user
-id: node.title_vii_consent_decree.teaser
+third_party_settings:
+  field_group:
+    group_general_case_data:
+      children:
+        - field_case_number
+        - field_circuit
+        - field_date_consent_decree_filed
+        - field_date_consent_decree_signed
+        - field_date_lawsuit_filed
+        - field_duration
+        - field_duration_text
+        - field_effective_date
+        - field_judge
+        - field_jurisdiction
+        - field_resource_url
+        - field_state
+        - field_state_claims
+      label: 'General Case Data'
+      parent_name: ''
+      region: hidden
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: false
+    group_case_facts:
+      children:
+        - field_class_definition_clause
+        - field_industry
+        - field_number_of_named_plaintiffs
+        - field_protected_classes
+        - field_theory_of_discrimination
+        - field_type_of_discrimination
+      label: 'Case Facts'
+      parent_name: ''
+      region: hidden
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: false
+    group_procedural_category_clause:
+      children:
+        - field_class_notice
+        - field_confidentiality
+        - field_court_juris_retained
+        - field_enforceability_procedures
+        - field_fairness_hearings
+        - field_releases
+      label: 'Procedural Category Clauses'
+      parent_name: ''
+      region: hidden
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: false
+    group_defendant_counsel:
+      children:
+        - field_defendant_counsel
+      label: 'Defendant Counsel'
+      parent_name: ''
+      region: hidden
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: false
+    group_plaintiff_counsel:
+      children:
+        - field_plaintiff_counsel
+        - field_plaintiffs_attorneys_fees
+      label: 'Plaintiff Counsel'
+      parent_name: ''
+      region: hidden
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: false
+    group_evidence_clauses:
+      children:
+        - field_expert_fees
+        - field_expert_responsibilities
+        - field_expert_selection_process
+        - field_experts
+      label: 'Evidence Clauses'
+      parent_name: ''
+      region: hidden
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: false
+    group_remedy_clauses:
+      children:
+        - field_backpay_frontpay
+        - field_non_retaliation
+        - field_training_progs_diversity
+        - field_training_progs_discrim
+        - field_training_progs_advancement
+        - field_settlement_funds_upper
+        - field_settlement_funds_lower
+        - field_recruitment
+        - field_new_staff_positions
+        - field_complaint_procedures
+        - field_human_resource_policies
+        - field_hiring_promotions
+        - field_expunge_record
+        - field_evaluation
+        - field_employee_compensation
+        - field_eeo_postings_and_policies
+        - field_work_assignment
+      label: 'Remedy Clauses'
+      parent_name: ''
+      region: hidden
+      weight: 7
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: false
+    group_enforcement_clauses:
+      children:
+        - field_administration_claims
+        - field_mediator_responsibilities
+        - field_successor_bligations
+        - field_spmaster_selection_process
+        - field_spmaster_responsibilities
+        - field_special_masters_utilized
+        - field_special_master_fees
+        - field_record_retention
+        - field_progress_performance_rpt
+        - field_monitor_fees
+        - field_mediators_utilized
+        - field_mediator_selection_process
+        - field_mediator_fees
+        - field_consultant_fees
+        - field_internal_monitors
+        - field_internal_monitor_selection
+        - field_internal_monitor_responsib
+        - field_hearing_claims
+        - field_ext_monitors
+        - field_ext_monitor_selection_proc
+        - field_ext_monitor_responsibility
+        - field_consultants_utilized
+        - field_consultant_selection_proc
+        - field_consultant_responsibility
+        - field_training_providers
+      label: 'Enforcement Clauses'
+      parent_name: ''
+      region: hidden
+      weight: 8
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: false
+    group_special_issues_clauses:
+      children:
+        - field_coll_bargaining_agreement
+        - field_other_special_issues
+      label: 'Special Issues Clauses'
+      parent_name: ''
+      region: hidden
+      weight: 9
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: true
+        description: ''
+        required_fields: false
+id: node.title_vii_consent_decree.mini
 targetEntityType: node
 bundle: title_vii_consent_decree
-mode: teaser
+mode: mini
 content:
-  field_case_number:
-    type: string
-    label: inline
+  field_resource_pdf_url:
+    type: link
+    label: hidden
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  field_date_consent_decree_signed:
-    type: datetime_default
-    label: inline
-    settings:
-      timezone_override: ''
-      format_type: html_year
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_date_lawsuit_filed:
-    type: datetime_default
-    label: inline
-    settings:
-      timezone_override: ''
-      format_type: html_year
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_judge:
-    type: string
-    label: inline
-    settings:
-      link_to_entity: false
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
     third_party_settings: {  }
     weight: 3
-    region: content
-  field_jurisdiction:
-    type: string
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_state:
-    type: list_default
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
     region: content
 hidden:
   field_administration_claims: true
   field_backpay_frontpay: true
+  field_case_number: true
   field_circuit: true
   field_class_definition_clause: true
   field_class_notice: true
@@ -157,6 +325,8 @@ hidden:
   field_consultants_utilized: true
   field_court_juris_retained: true
   field_date_consent_decree_filed: true
+  field_date_consent_decree_signed: true
+  field_date_lawsuit_filed: true
   field_defendant_counsel: true
   field_duration: true
   field_duration_text: true
@@ -181,6 +351,8 @@ hidden:
   field_internal_monitor_responsib: true
   field_internal_monitor_selection: true
   field_internal_monitors: true
+  field_judge: true
+  field_jurisdiction: true
   field_legacy_id: true
   field_mediator_fees: true
   field_mediator_responsibilities: true
@@ -198,7 +370,6 @@ hidden:
   field_record_retention: true
   field_recruitment: true
   field_releases: true
-  field_resource_pdf_url: true
   field_resource_url: true
   field_settlement_funds_lower: true
   field_settlement_funds_upper: true
@@ -206,6 +377,7 @@ hidden:
   field_special_masters_utilized: true
   field_spmaster_responsibilities: true
   field_spmaster_selection_process: true
+  field_state: true
   field_state_claims: true
   field_successor_bligations: true
   field_theory_of_discrimination: true
