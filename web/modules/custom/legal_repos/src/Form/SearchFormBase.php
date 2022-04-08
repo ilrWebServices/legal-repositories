@@ -88,7 +88,7 @@ abstract class SearchFormBase extends FormBase {
         '#type' => 'select',
         '#title' => $this->t('Clause'),
         '#description' => $this->t('Select a clause to compare across @things.', [
-          '@thing' => $this->nodeType,
+          '@thing' => $this->entityTypeManager->getStorage('node_type')->load($this->nodeType)->label(),
         ]),
         '#options' => $compare_opts,
         '#default_value' => $compare_field,
@@ -125,7 +125,7 @@ abstract class SearchFormBase extends FormBase {
               '#template' => '<p class="empty-clause">{% trans %}Clause <strong><em>{{clause}}</em></strong> doesn\'t appear in this {{thingamabob}}.{% endtrans %}</p>',
               '#context' => [
                 'clause' => $this->fieldDefinitions[$compare_field]->getLabel(),
-                'thingamabob' => $this->nodeType,
+                'thingamabob' => $node->type->entity->label(),
               ],
             ];
           }
