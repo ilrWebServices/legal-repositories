@@ -3,6 +3,19 @@
   font-weight: 400;
 }
 
+.field--label-inline {
+  display: flex;
+  gap: .5em;
+}
+
+.field--label-inline .field__label {
+  margin: 0;
+}
+
+.field--label-inline .field__label::after {
+  content: ': ';
+}
+
 .field__item {
   max-width: 800px;
 }
