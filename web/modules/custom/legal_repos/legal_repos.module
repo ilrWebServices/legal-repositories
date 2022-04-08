@@ -49,9 +49,9 @@ function legal_repos_entity_prepare_view($entity_type_id, array $entities, array
       /** @var \Drupal\Core\Field\BaseFieldDefinition $field_definition */
       $field_definition = $field->getFieldDefinition();
 
-      // This should match both `string_long` and `string` user-defined fields,
+      // This should match both `text_long` and `string` user-defined fields,
       // but not base fields.
-      if ($field_definition instanceof FieldConfig && strpos($field_definition->getType(), 'string') === 0 && $field->isEmpty()) {
+      if ($field_definition instanceof FieldConfig && in_array($field_definition->getType(), ['text_long', 'string']) && $field->isEmpty()) {
         $node->set($field_name, t('[none specified]'));
       }
     }
