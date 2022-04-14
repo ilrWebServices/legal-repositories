@@ -5,6 +5,7 @@ namespace Drupal\legal_repos\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Link;
 use Drupal\legal_repos\Entity\LegalDocumentBase;
+use Drupal\paragraphs\Entity\Paragraph;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
@@ -86,8 +87,19 @@ class DownloadController extends ControllerBase {
           $row[] = $node->get($field_definition->getName())->isEmpty() ? 0 : 1;
         }
         else if ($field_definition->getType() === 'entity_reference_revisions') {
-          // dump($node->get($field_definition->getName())->referencedEntities());
-          $row[] = 'TBD: ' . $node->get($field_definition->getName())->getString();
+          $counsel_data = [];
+
+          foreach ($node->get($field_definition->getName())->referencedEntities() as $entity) {
+            if ($entity instanceof Paragraph && $entity->bundle() === 'counsel') {
+              $counsel_data[] = $entity->field_firm_name->getString();
+
+              foreach (array_column($entity->field_attorneys->getValue(), 'value') as $attorney) {
+                $counsel_data[] = "\t" . $attorney;
+              }
+            }
+          }
+
+          $row[] = implode("\n", $counsel_data);
         }
         // The getString() method works for string (e.g. `text_long`), `link`,
         // `datetime`, and other field types. Multiple items are comma
