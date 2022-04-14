@@ -303,14 +303,19 @@ class LegacyContentImporter {
   protected function getFinalRedirectUrl(string $url) {
     $final_redirected_url = NULL;
 
-    $this->httpClient->request('HEAD', $url, [
-      'allow_redirects' => [
-        'referer' => true,
-        'on_redirect' => function(RequestInterface $request, ResponseInterface $response, UriInterface $uri) use (&$final_redirected_url) {
-          $final_redirected_url = (string) $uri;
-        },
-      ]
-    ]);
+    try {
+      $this->httpClient->request('HEAD', $url, [
+        'allow_redirects' => [
+          'referer' => true,
+          'on_redirect' => function(RequestInterface $request, ResponseInterface $response, UriInterface $uri) use (&$final_redirected_url) {
+            $final_redirected_url = (string) $uri;
+          },
+        ]
+      ]);
+    }
+    catch(\Exception $e) {
+      // echo $url . ': ' . $e->getMessage(); // Uncomment for debugging.
+    }
 
     return $final_redirected_url ?? $url;
   }
