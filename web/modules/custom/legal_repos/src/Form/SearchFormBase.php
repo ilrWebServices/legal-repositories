@@ -9,6 +9,7 @@ use Drupal\Core\Entity\Query\QueryInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Link;
+use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 abstract class SearchFormBase extends FormBase {
@@ -60,8 +61,45 @@ abstract class SearchFormBase extends FormBase {
       $form['results'] = [
         '#type' => 'details',
         '#title' => $results->count . ' ' . $this->stringTranslation->formatPlural(count($results->nodes), ' Result', ' Results'),
-        '#description' => Link::createFromRoute($this->t('New search'), \Drupal::routeMatch()->getRouteName()),
         '#open' => (bool) $results->count,
+      ];
+
+      $form['results']['utils'] = [
+        '#theme' => 'item_list',
+        '#items' => [],
+        '#list_type' => 'ul',
+        '#attributes' => ['class' => 'result-utils'],
+      ];
+
+      $form['results']['utils']['#items'][] = [
+        '#type' => 'link',
+        '#url' => Url::fromRoute(\Drupal::routeMatch()->getRouteName()),
+        '#title' => $this->t('New search'),
+      ];
+
+      $form['results']['utils']['#items'][] = [
+        '#type' => 'dropbutton',
+        '#dropbutton_type' => 'small',
+        '#links' => [
+          'download' => [
+            'title' => $this->t('Download'),
+            'url' => Url::fromRoute('legal_repos.download', [], [
+              'query' => [
+                'nids' => implode('.', array_keys($results->nodes)),
+                // 'preview' => 1,
+              ],
+            ]),
+          ],
+          'download_mini' => [
+            'title' => $this->t('Download mini'),
+            'url' => Url::fromRoute('legal_repos.download', [], [
+              'query' => [
+                'nids' => implode('.', array_keys($results->nodes)),
+                'mini' => 1,
+              ],
+            ]),
+          ],
+        ],
       ];
 
       $compare_opts = [

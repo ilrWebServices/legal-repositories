@@ -19,3 +19,10 @@ legal_repos.ada-case.search:
     _title: 'ADA Case Search'
   requirements:
     _permission: 'access content'
+legal_repos.download:
+  path: '/download'
+  defaults:
+    _controller: '\Drupal\legal_repos\Controller\DownloadController::content'
+    _title: 'Search Results Download'
+  requirements:
+    _permission: 'access content'
