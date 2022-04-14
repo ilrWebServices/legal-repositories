@@ -442,6 +442,8 @@ abstract class SearchFormBase extends FormBase {
   protected function getQuery() {
     $query = $this->entityTypeManager->getStorage('node')->getQuery();
     $query->condition('type', $this->nodeType);
+    $query->condition('status', 1);
+    $query->exists('field_resource_url');
     return $query;
   }
 
