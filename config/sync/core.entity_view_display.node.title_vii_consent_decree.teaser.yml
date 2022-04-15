@@ -18,8 +18,8 @@ dependencies:
     - field.field.node.title_vii_consent_decree.field_consultant_selection_proc
     - field.field.node.title_vii_consent_decree.field_consultants_utilized
     - field.field.node.title_vii_consent_decree.field_court_juris_retained
-    - field.field.node.title_vii_consent_decree.field_date_consent_decree_filed
-    - field.field.node.title_vii_consent_decree.field_date_consent_decree_signed
+    - field.field.node.title_vii_consent_decree.field_date_filed
+    - field.field.node.title_vii_consent_decree.field_date_signed
     - field.field.node.title_vii_consent_decree.field_date_lawsuit_filed
     - field.field.node.title_vii_consent_decree.field_defendant_counsel
     - field.field.node.title_vii_consent_decree.field_duration
@@ -101,7 +101,7 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_date_consent_decree_signed:
+  field_date_signed:
     type: datetime_default
     label: inline
     settings:
@@ -156,7 +156,7 @@ hidden:
   field_consultant_selection_proc: true
   field_consultants_utilized: true
   field_court_juris_retained: true
-  field_date_consent_decree_filed: true
+  field_date_filed: true
   field_defendant_counsel: true
   field_duration: true
   field_duration_text: true

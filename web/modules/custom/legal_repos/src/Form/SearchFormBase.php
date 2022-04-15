@@ -310,7 +310,7 @@ abstract class SearchFormBase extends FormBase {
     }
 
     // Confusingly, there are two fields that might represent this value:
-    // `field_date_lawsuit_filed` and `field_date_consent_decree_filed`.
+    // `field_date_lawsuit_filed` and `field_date_filed`.
     if ($values['year_filed_start'] || $values['year_filed_end']) {
       $year_filed_group = $query->andConditionGroup();
 
@@ -329,11 +329,11 @@ abstract class SearchFormBase extends FormBase {
       $year_signed_group = $query->andConditionGroup();
 
       if ($values['year_signed_start']) {
-        $year_signed_group->condition('field_date_consent_decree_signed', $values['year_signed_start'] . '-01-01', '>=');
+        $year_signed_group->condition('field_date_signed', $values['year_signed_start'] . '-01-01', '>=');
       }
 
       if ($values['year_signed_end']) {
-        $year_signed_group->condition('field_date_consent_decree_signed', $values['year_signed_end'] . '-12-31', '<=');
+        $year_signed_group->condition('field_date_signed', $values['year_signed_end'] . '-12-31', '<=');
       }
 
       $query->condition($year_signed_group);

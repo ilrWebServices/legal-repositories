@@ -108,8 +108,8 @@ class LegacyContentImporter {
         $node->field_resource_url = $commons_url;
         $node->field_jurisdiction = $record['court'];
         $node->field_date_lawsuit_filed = substr($record['lawsuitFiledDate'], 0, 10);
-        $node->field_date_consent_decree_filed = substr($record['cdFiledDate'], 0, 10);
-        $node->field_date_consent_decree_signed = substr($record['cdSignedDate'], 0, 10);
+        $node->field_date_filed = substr($record['cdFiledDate'], 0, 10);
+        $node->field_date_signed = substr($record['cdSignedDate'], 0, 10);
         $node->field_effective_date = $record['effectiveDate'];
         $node->field_duration = $record['durationNumberOfYears'];
         $node->field_duration_text = $record['durationText'];
