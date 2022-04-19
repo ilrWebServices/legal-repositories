@@ -59,7 +59,7 @@ class LegacyContentImporter {
 
   public function import() {
     $node_storage = $this->entityTypeManager->getStorage('node');
-    $base_cd_file_handle = fopen($this->dataPath . 'consentDecree.csv', 'r+');
+    $base_cd_file_handle = fopen($this->dataPath . 'consentDecree.csv', 'r');
     $rows = 0;
     $nodes = [];
     $header = FALSE;
@@ -126,7 +126,7 @@ class LegacyContentImporter {
 
     // Update the consent decrees with expanded data from the exported download
     // file.
-    $extended_data_cd_file_handle = fopen($this->dataPath . 'downloadVersion.csv', 'r+');
+    $extended_data_cd_file_handle = fopen($this->dataPath . 'downloadVersion.csv', 'r');
     $rows = 0;
     $header = FALSE;
     $paragraph_storage = $this->entityTypeManager->getStorage('paragraph');
