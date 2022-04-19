@@ -1,0 +1,93 @@
+name: drupal
+type: 'php:8.1'
+disk: 2048
+relationships:
+  database: 'db:mysql'
+runtime:
+  extensions:
+    - apcu
+    - sodium
+variables:
+  php:
+    display_errors: Off
+    display_startup_errors: Off
+build:
+  flavor: none
+dependencies:
+  php:
+    composer/composer: '~2.1.0'
+hooks:
+  build: |
+    curl -sS https://platform.sh/cli/installer | php
+    set -e
+    composer --no-dev --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
+    # Install union.
+    npm install
+  deploy: |
+    set -e
+    php ./drush/platformsh_generate_drush_yml.php
+    cd web
+    drush -y cache-rebuild
+    drush -y updatedb --no-post-updates
+    drush -y config-import
+    drush -y updatedb
+    drush -y cache-rebuild
+mounts:
+  '/web/sites/default/files': 'shared:files/files'
+  '/tmp': 'shared:files/tmp'
+  '/private': 'shared:files/private'
+  '/.drush': 'shared:files/.drush'
+  '/drush-backups': 'shared:files/drush-backups'
+  '/.console': 'shared:files/console'
+web:
+  # Specific parameters for different URL prefixes.
+  locations:
+    '/':
+      root: 'web'
+      expires: 1d
+      passthru: '/index.php'
+
+      # Deny access to static files in this location.
+      allow: false
+
+      rules:
+        # Allow access to common static files.
+        '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$':
+          allow: true
+        '^/robots\.txt$':
+          allow: true
+        '^/sitemap\.xml$':
+          allow: true
+
+        # Deny direct access to configuration files.
+        '^/sites/[^/]+/settings.*?\.php$':
+          scripts: false
+
+    '/sites/default/files':
+      # Allow access to all files in the public files directory.
+      allow: true
+      expires: 5m
+      passthru: '/index.php'
+      root: 'web/sites/default/files'
+
+      # Do not execute PHP scripts.
+      scripts: false
+
+      rules:
+        # Provide a longer TTL (2 weeks) for aggregated CSS and JS files.
+        '^/sites/default/files/(css|js)':
+          expires: 2w
+crons:
+  drupal:
+    # Run drush cron every five minutes.
+    spec: '*/5 * * * *'
+    cmd: 'cd web ; drush core-cron'
+  snapshot:
+    # Take a snapshot automatically every night at 5am (UTC). See
+    # https://docs.platform.sh/administration/backup-and-restore.html#automated-backups
+    # for more info about API tokens and configuration.
+    spec: '0 5 * * *'
+    cmd: |
+      if [ "$PLATFORM_BRANCH" = main ]; then
+        platform snapshot:create --yes --no-wait
+      fi

@@ -1,0 +1,5 @@
+"https://{default}/":
+  type: upstream
+  upstream: "drupal:http"
+  cache:
+    enabled: true
