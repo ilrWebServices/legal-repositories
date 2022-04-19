@@ -1,0 +1,21 @@
+uuid: f6d0194e-bcf8-488b-8923-027e40bade56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_internal_monitor_responsib
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_internal_monitor_responsib
+field_name: field_internal_monitor_responsib
+entity_type: node
+bundle: ada_case
+label: 'Internal monitor responsibilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

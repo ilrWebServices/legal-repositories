@@ -1,0 +1,21 @@
+uuid: 74b0b876-560f-453e-bf12-0228b75fe731
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_record_retention
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_record_retention
+field_name: field_record_retention
+entity_type: node
+bundle: ada_case
+label: 'Record retention'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

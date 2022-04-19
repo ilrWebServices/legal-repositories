@@ -1,0 +1,19 @@
+uuid: 2b1263d0-9f43-4833-8a9d-3bddf644ac61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_settlement_funds_upper
+    - node.type.ada_case
+id: node.ada_case.field_settlement_funds_upper
+field_name: field_settlement_funds_upper
+entity_type: node
+bundle: ada_case
+label: 'Settlement funds (upper bound)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

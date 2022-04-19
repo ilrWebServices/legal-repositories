@@ -1,0 +1,21 @@
+uuid: 8b612c40-7be6-41d7-8572-9852825df337
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theory_discrim_pre_empl
+    - node.type.ada_case
+  module:
+    - options
+id: node.ada_case.field_theory_discrim_pre_empl
+field_name: field_theory_discrim_pre_empl
+entity_type: node
+bundle: ada_case
+label: 'Theory of Discrimination - Pre-Employment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

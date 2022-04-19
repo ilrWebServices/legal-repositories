@@ -1,0 +1,21 @@
+uuid: ae55a56d-b088-4878-8021-08425f68cf44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consultant_selection_proc
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_consultant_selection_proc
+field_name: field_consultant_selection_proc
+entity_type: node
+bundle: ada_case
+label: 'Consultant Selection Process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

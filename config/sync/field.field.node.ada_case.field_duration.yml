@@ -1,0 +1,23 @@
+uuid: 2147cd2d-ef29-43eb-bcfb-161c9f813e69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.ada_case
+id: node.ada_case.field_duration
+field_name: field_duration
+entity_type: node
+bundle: ada_case
+label: Duration
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: years
+field_type: integer

@@ -1,0 +1,21 @@
+uuid: d45c771a-db91-48b0-b76e-6c47d796f1d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hearing_claims
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_hearing_claims
+field_name: field_hearing_claims
+entity_type: node
+bundle: ada_case
+label: 'Hearing claims'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

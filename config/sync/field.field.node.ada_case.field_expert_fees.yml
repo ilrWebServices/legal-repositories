@@ -1,0 +1,21 @@
+uuid: 18e65ab1-1ab2-4354-8670-4881a44bfdf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expert_fees
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_expert_fees
+field_name: field_expert_fees
+entity_type: node
+bundle: ada_case
+label: 'Expert fees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

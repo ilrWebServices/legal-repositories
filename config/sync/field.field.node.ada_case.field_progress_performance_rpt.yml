@@ -1,0 +1,21 @@
+uuid: 8041de95-0c67-4fe3-a2e1-79539c05802c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_progress_performance_rpt
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_progress_performance_rpt
+field_name: field_progress_performance_rpt
+entity_type: node
+bundle: ada_case
+label: 'Progress and performance report(s)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

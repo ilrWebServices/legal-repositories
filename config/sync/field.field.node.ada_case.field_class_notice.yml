@@ -1,0 +1,21 @@
+uuid: e753c93b-1f89-45ae-900b-cc169d57946b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_class_notice
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_class_notice
+field_name: field_class_notice
+entity_type: node
+bundle: ada_case
+label: 'Notice to class'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

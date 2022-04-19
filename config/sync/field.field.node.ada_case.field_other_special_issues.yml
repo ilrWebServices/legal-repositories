@@ -1,0 +1,21 @@
+uuid: 5767c1e5-221d-4b09-a0d1-63220f04ceca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_special_issues
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_other_special_issues
+field_name: field_other_special_issues
+entity_type: node
+bundle: ada_case
+label: 'Other special issues'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

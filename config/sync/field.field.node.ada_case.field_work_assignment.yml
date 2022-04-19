@@ -1,0 +1,21 @@
+uuid: 299a6bc0-081d-4342-a21a-0b04d7512724
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_assignment
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_work_assignment
+field_name: field_work_assignment
+entity_type: node
+bundle: ada_case
+label: 'Work assignment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

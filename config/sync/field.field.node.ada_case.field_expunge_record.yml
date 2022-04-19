@@ -1,0 +1,21 @@
+uuid: 218ee3f7-e90f-49d3-b6cc-bdc342225789
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expunge_record
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_expunge_record
+field_name: field_expunge_record
+entity_type: node
+bundle: ada_case
+label: 'Expunge record'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

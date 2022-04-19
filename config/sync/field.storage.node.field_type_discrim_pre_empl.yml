@@ -1,0 +1,42 @@
+uuid: ce4ac4c9-2df8-4d10-a5b1-565ef60131db
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type_discrim_pre_empl
+field_name: field_type_discrim_pre_empl
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Assignment
+      label: Assignment
+    -
+      value: Compensation
+      label: Compensation
+    -
+      value: Evaluation
+      label: Evaluation
+    -
+      value: 'Failure to Accommodate'
+      label: 'Failure to Accommodate'
+    -
+      value: Hiring
+      label: Hiring
+    -
+      value: 'Subjective Decision Making'
+      label: 'Subjective Decision Making'
+    -
+      value: 'Terms and Conditions'
+      label: 'Terms and Conditions'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

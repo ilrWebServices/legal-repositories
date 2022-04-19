@@ -1,0 +1,21 @@
+uuid: aefe5b02-c6a6-40eb-a557-d6990089166e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ext_monitor_responsibility
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_ext_monitor_responsibility
+field_name: field_ext_monitor_responsibility
+entity_type: node
+bundle: ada_case
+label: 'External monitor responsibilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

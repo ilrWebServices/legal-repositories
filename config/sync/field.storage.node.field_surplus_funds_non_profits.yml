@@ -1,0 +1,19 @@
+uuid: 7a2a2437-cce5-4e63-a77b-e6141f14253a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_surplus_funds_non_profits
+field_name: field_surplus_funds_non_profits
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

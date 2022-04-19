@@ -1,0 +1,21 @@
+uuid: 42e3eaa1-5ad7-4ee8-9837-b62744864410
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_progs_discrim
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_training_progs_discrim
+field_name: field_training_progs_discrim
+entity_type: node
+bundle: ada_case
+label: 'Training programs (discrimination)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 84da259c-c83b-4bbe-bc65-4f9e157c0365
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mediators_utilized
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_mediators_utilized
+field_name: field_mediators_utilized
+entity_type: node
+bundle: ada_case
+label: 'Mediator(s) utilized'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 726dae2a-87d6-4195-b607-214cf81b93d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_holding
+field_name: field_holding
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

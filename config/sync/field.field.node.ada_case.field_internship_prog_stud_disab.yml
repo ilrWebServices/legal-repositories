@@ -1,0 +1,21 @@
+uuid: f0e49a41-0a50-43cc-a797-d23df1e9e867
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_internship_prog_stud_disab
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_internship_prog_stud_disab
+field_name: field_internship_prog_stud_disab
+entity_type: node
+bundle: ada_case
+label: 'Internship Program for Students with Disabilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

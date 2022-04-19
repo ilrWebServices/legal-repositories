@@ -1,0 +1,21 @@
+uuid: 3ed8f0d5-1d0b-4fd5-8dfe-672913c74a0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ext_monitors
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_ext_monitors
+field_name: field_ext_monitors
+entity_type: node
+bundle: ada_case
+label: 'External monitors'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

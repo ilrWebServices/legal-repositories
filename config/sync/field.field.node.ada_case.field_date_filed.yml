@@ -1,0 +1,21 @@
+uuid: 18dd516a-1ed3-4ed8-b705-17c2e559841c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_filed
+    - node.type.ada_case
+  module:
+    - datetime
+id: node.ada_case.field_date_filed
+field_name: field_date_filed
+entity_type: node
+bundle: ada_case
+label: 'Date decision filed in court'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

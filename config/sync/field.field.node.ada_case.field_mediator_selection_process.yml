@@ -1,0 +1,21 @@
+uuid: 27f88ee2-26aa-4004-b387-bc13d060b54a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mediator_selection_process
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_mediator_selection_process
+field_name: field_mediator_selection_process
+entity_type: node
+bundle: ada_case
+label: 'Mediator Selection Process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

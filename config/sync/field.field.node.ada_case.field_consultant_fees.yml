@@ -1,0 +1,21 @@
+uuid: 7d586242-5ae6-4c48-96f8-500afaa41130
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consultant_fees
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_consultant_fees
+field_name: field_consultant_fees
+entity_type: node
+bundle: ada_case
+label: 'Consultant fees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

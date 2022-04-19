@@ -1,0 +1,21 @@
+uuid: 45e6b1bf-6d5a-41c3-8bb6-094c7f084827
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ada_coordinator
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_ada_coordinator
+field_name: field_ada_coordinator
+entity_type: node
+bundle: ada_case
+label: 'ADA Coordinator'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

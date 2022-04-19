@@ -1,0 +1,21 @@
+uuid: 33ec2906-3400-49fe-814f-2719049d6153
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consultant_responsibility
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_consultant_responsibility
+field_name: field_consultant_responsibility
+entity_type: node
+bundle: ada_case
+label: 'Consultant responsibilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

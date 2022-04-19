@@ -1,0 +1,19 @@
+uuid: 8a52ce6a-e5f3-40f1-ae07-a2cdf1c14019
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_case_number
+    - node.type.ada_case
+id: node.ada_case.field_case_number
+field_name: field_case_number
+entity_type: node
+bundle: ada_case
+label: 'Case number'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

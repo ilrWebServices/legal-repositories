@@ -1,0 +1,21 @@
+uuid: c02d9438-25d6-48e6-a01a-ab232f09d68a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enforceability_procedures
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_enforceability_procedures
+field_name: field_enforceability_procedures
+entity_type: node
+bundle: ada_case
+label: 'Enforceability / enforcement procedures'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

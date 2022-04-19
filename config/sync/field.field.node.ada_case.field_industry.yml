@@ -1,0 +1,21 @@
+uuid: 00775950-f02f-4d31-8c7e-770dd6eb7243
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_industry
+    - node.type.ada_case
+  module:
+    - options
+id: node.ada_case.field_industry
+field_name: field_industry
+entity_type: node
+bundle: ada_case
+label: Industry
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

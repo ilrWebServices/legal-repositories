@@ -1,0 +1,19 @@
+uuid: faa9323f-5c6a-40c5-a251-03064738b97b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_ada_coordinator
+field_name: field_ada_coordinator
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

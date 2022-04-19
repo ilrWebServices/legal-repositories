@@ -1,0 +1,21 @@
+uuid: b66536a3-b858-4bfc-8bc7-5943e0436cb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_internal_monitor_selection
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_internal_monitor_selection
+field_name: field_internal_monitor_selection
+entity_type: node
+bundle: ada_case
+label: 'Internal monitor selection process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

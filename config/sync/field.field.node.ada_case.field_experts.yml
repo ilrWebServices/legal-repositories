@@ -1,0 +1,21 @@
+uuid: 9bdf2768-9172-4e9a-88bb-d9d5b7b48a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experts
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_experts
+field_name: field_experts
+entity_type: node
+bundle: ada_case
+label: 'Expert(s) utilized during discovery/trial'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

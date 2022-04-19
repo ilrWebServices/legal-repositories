@@ -1,0 +1,21 @@
+uuid: 639b43d1-e86d-4dd8-bee8-91b7e10eb6d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration_text
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_duration_text
+field_name: field_duration_text
+entity_type: node
+bundle: ada_case
+label: 'Duration text'
+description: 'Leave blank if not applicable.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

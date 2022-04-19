@@ -1,0 +1,21 @@
+uuid: 71f29f47-147d-4f11-81be-fe89291fe51d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_backpay_frontpay
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_backpay_frontpay
+field_name: field_backpay_frontpay
+entity_type: node
+bundle: ada_case
+label: Backpay/frontpay
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

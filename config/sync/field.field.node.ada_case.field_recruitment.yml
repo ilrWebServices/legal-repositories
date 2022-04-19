@@ -1,0 +1,21 @@
+uuid: ca103615-2382-41bd-b852-60306d4b3de8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_recruitment
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_recruitment
+field_name: field_recruitment
+entity_type: node
+bundle: ada_case
+label: Recruitment
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

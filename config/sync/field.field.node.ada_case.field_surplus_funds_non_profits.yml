@@ -1,0 +1,21 @@
+uuid: 375586e2-3614-4dd4-a917-3c1b286f3b82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_surplus_funds_non_profits
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_surplus_funds_non_profits
+field_name: field_surplus_funds_non_profits
+entity_type: node
+bundle: ada_case
+label: 'Surplus Funds to Relevant Non-Profit Organizations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

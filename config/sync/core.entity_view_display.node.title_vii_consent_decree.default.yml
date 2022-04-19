@@ -409,15 +409,6 @@ content:
     third_party_settings: {  }
     weight: 11
     region: content
-  field_date_signed:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: html_year
-    third_party_settings: {  }
-    weight: 12
-    region: content
   field_date_lawsuit_filed:
     type: datetime_default
     label: above
@@ -426,6 +417,15 @@ content:
       format_type: html_year
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_date_signed:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: html_year
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_defendant_counsel:
     type: entity_reference_revisions_entity_view

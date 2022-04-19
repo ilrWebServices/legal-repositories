@@ -1,0 +1,21 @@
+uuid: 202fbda7-8c20-4ec5-b089-4ca6ce61d375
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_diversity_awards
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_diversity_awards
+field_name: field_diversity_awards
+entity_type: node
+bundle: ada_case
+label: 'Diversity Awards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: dae655c1-7d1b-480f-8621-a44d63fc4734
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_monitor_fees
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_monitor_fees
+field_name: field_monitor_fees
+entity_type: node
+bundle: ada_case
+label: 'Monitor fees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

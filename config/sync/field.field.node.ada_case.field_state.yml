@@ -1,0 +1,21 @@
+uuid: 788d857a-8102-43ee-a707-71ec2def3d85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_state
+    - node.type.ada_case
+  module:
+    - options
+id: node.ada_case.field_state
+field_name: field_state
+entity_type: node
+bundle: ada_case
+label: State
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

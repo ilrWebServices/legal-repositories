@@ -1,0 +1,19 @@
+uuid: 21a98db3-199b-4175-ac4b-ce1695f08b66
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_jurisdiction
+    - node.type.ada_case
+id: node.ada_case.field_jurisdiction
+field_name: field_jurisdiction
+entity_type: node
+bundle: ada_case
+label: 'Jurisdiction (Court)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 6b4b80f2-6ecc-4459-825e-a7f4a96bb9ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_signed
+    - node.type.ada_case
+  module:
+    - datetime
+id: node.ada_case.field_date_signed
+field_name: field_date_signed
+entity_type: node
+bundle: ada_case
+label: 'Date decision signed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

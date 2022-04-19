@@ -1,0 +1,21 @@
+uuid: 871bffe2-6e78-4ab4-aa7b-1f25f48fe312
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_plaintiffs_attorneys_fees
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_plaintiffs_attorneys_fees
+field_name: field_plaintiffs_attorneys_fees
+entity_type: node
+bundle: ada_case
+label: 'Plaintiffs attorneys fees'
+description: 'Leave blank if not applicable.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

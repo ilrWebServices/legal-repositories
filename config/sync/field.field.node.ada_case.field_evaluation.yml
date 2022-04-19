@@ -1,0 +1,21 @@
+uuid: ffb4f490-2cd8-4b55-bb90-c68d7d7be4d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evaluation
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_evaluation
+field_name: field_evaluation
+entity_type: node
+bundle: ada_case
+label: Evaluation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

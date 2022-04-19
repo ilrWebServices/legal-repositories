@@ -1,0 +1,21 @@
+uuid: 8157a637-e58a-4257-9fc4-62728b86d49c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mediator_responsibilities
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_mediator_responsibilities
+field_name: field_mediator_responsibilities
+entity_type: node
+bundle: ada_case
+label: 'Mediator responsibilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

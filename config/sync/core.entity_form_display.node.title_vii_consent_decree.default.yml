@@ -475,15 +475,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_date_signed:
-    type: datetime_default
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_date_lawsuit_filed:
     type: datetime_default
     weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_signed:
+    type: datetime_default
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

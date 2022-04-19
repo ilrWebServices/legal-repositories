@@ -1,0 +1,21 @@
+uuid: 9e8deed5-3255-4c86-ae0b-c11f0bf777ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_new_staff_positions
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_new_staff_positions
+field_name: field_new_staff_positions
+entity_type: node
+bundle: ada_case
+label: 'New permanent staff positions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

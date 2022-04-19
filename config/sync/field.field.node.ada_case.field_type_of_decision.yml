@@ -1,0 +1,21 @@
+uuid: c4f69533-8f58-4e6c-8b9e-f390250180d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_of_decision
+    - node.type.ada_case
+  module:
+    - options
+id: node.ada_case.field_type_of_decision
+field_name: field_type_of_decision
+entity_type: node
+bundle: ada_case
+label: 'Type of decision'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

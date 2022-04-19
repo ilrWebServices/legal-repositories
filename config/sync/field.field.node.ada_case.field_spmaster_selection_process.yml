@@ -1,0 +1,21 @@
+uuid: f24e4074-c93d-4001-82cb-55429083e454
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spmaster_selection_process
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_spmaster_selection_process
+field_name: field_spmaster_selection_process
+entity_type: node
+bundle: ada_case
+label: 'Special master selection process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

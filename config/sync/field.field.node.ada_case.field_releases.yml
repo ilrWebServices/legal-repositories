@@ -1,0 +1,21 @@
+uuid: 377982d1-9a8f-48b8-95d9-0f64b26ae557
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_releases
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_releases
+field_name: field_releases
+entity_type: node
+bundle: ada_case
+label: Releases
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

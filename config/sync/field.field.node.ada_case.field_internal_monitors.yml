@@ -1,0 +1,21 @@
+uuid: b17c338b-b24a-4c40-bdc2-ca72b7874e35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_internal_monitors
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_internal_monitors
+field_name: field_internal_monitors
+entity_type: node
+bundle: ada_case
+label: 'Internal monitors'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

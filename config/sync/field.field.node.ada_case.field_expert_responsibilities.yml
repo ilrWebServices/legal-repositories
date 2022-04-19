@@ -1,0 +1,21 @@
+uuid: 56615b62-73df-4770-9e67-9fff85f083e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expert_responsibilities
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_expert_responsibilities
+field_name: field_expert_responsibilities
+entity_type: node
+bundle: ada_case
+label: 'Expert responsibilities'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

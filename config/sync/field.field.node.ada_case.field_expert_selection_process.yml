@@ -1,0 +1,21 @@
+uuid: 071cc680-d1d5-4187-baf2-502d7766e6d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expert_selection_process
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_expert_selection_process
+field_name: field_expert_selection_process
+entity_type: node
+bundle: ada_case
+label: 'Expert selection process'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

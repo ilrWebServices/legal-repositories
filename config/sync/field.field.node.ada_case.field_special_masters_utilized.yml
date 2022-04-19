@@ -1,0 +1,21 @@
+uuid: 846825ce-4821-4d6c-8ba5-da68fe50c5a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special_masters_utilized
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_special_masters_utilized
+field_name: field_special_masters_utilized
+entity_type: node
+bundle: ada_case
+label: 'Special master(s) utilized'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

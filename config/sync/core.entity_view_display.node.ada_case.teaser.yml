@@ -4,17 +4,236 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.ada_case.field_ada_coordinator
+    - field.field.node.ada_case.field_administration_claims
+    - field.field.node.ada_case.field_backpay_frontpay
+    - field.field.node.ada_case.field_case_number
+    - field.field.node.ada_case.field_circuit
+    - field.field.node.ada_case.field_class_definition_clause
+    - field.field.node.ada_case.field_class_notice
+    - field.field.node.ada_case.field_coll_bargaining_agreement
+    - field.field.node.ada_case.field_complaint_procedures
+    - field.field.node.ada_case.field_confidentiality
+    - field.field.node.ada_case.field_consultant_fees
+    - field.field.node.ada_case.field_consultant_responsibility
+    - field.field.node.ada_case.field_consultant_selection_proc
+    - field.field.node.ada_case.field_consultants_utilized
+    - field.field.node.ada_case.field_court_juris_retained
+    - field.field.node.ada_case.field_date_filed
+    - field.field.node.ada_case.field_date_lawsuit_filed
+    - field.field.node.ada_case.field_date_signed
+    - field.field.node.ada_case.field_defendant_counsel
+    - field.field.node.ada_case.field_diversity_awards
+    - field.field.node.ada_case.field_duration
+    - field.field.node.ada_case.field_duration_text
+    - field.field.node.ada_case.field_eeo_postings_and_policies
+    - field.field.node.ada_case.field_effective_date
+    - field.field.node.ada_case.field_employee_compensation
+    - field.field.node.ada_case.field_enforceability_procedures
+    - field.field.node.ada_case.field_evaluation
+    - field.field.node.ada_case.field_expert_fees
+    - field.field.node.ada_case.field_expert_responsibilities
+    - field.field.node.ada_case.field_expert_selection_process
+    - field.field.node.ada_case.field_experts
+    - field.field.node.ada_case.field_expunge_record
+    - field.field.node.ada_case.field_ext_monitor_responsibility
+    - field.field.node.ada_case.field_ext_monitor_selection_proc
+    - field.field.node.ada_case.field_ext_monitors
+    - field.field.node.ada_case.field_fairness_hearings
+    - field.field.node.ada_case.field_hearing_claims
+    - field.field.node.ada_case.field_hiring_promotions
+    - field.field.node.ada_case.field_holding
+    - field.field.node.ada_case.field_human_resource_policies
+    - field.field.node.ada_case.field_industry
+    - field.field.node.ada_case.field_injunction
+    - field.field.node.ada_case.field_internal_monitor_responsib
+    - field.field.node.ada_case.field_internal_monitor_selection
+    - field.field.node.ada_case.field_internal_monitors
+    - field.field.node.ada_case.field_internship_prog_stud_disab
+    - field.field.node.ada_case.field_judge
+    - field.field.node.ada_case.field_jurisdiction
+    - field.field.node.ada_case.field_legacy_id
+    - field.field.node.ada_case.field_mediator_fees
+    - field.field.node.ada_case.field_mediator_responsibilities
+    - field.field.node.ada_case.field_mediator_selection_process
+    - field.field.node.ada_case.field_mediators_utilized
+    - field.field.node.ada_case.field_monitor_fees
+    - field.field.node.ada_case.field_new_staff_positions
+    - field.field.node.ada_case.field_notice_of_rights
+    - field.field.node.ada_case.field_number_of_named_plaintiffs
+    - field.field.node.ada_case.field_other_special_issues
+    - field.field.node.ada_case.field_plaintiff_counsel
+    - field.field.node.ada_case.field_plaintiffs_attorneys_fees
+    - field.field.node.ada_case.field_print_media_notice
+    - field.field.node.ada_case.field_progress_performance_rpt
+    - field.field.node.ada_case.field_rationale
+    - field.field.node.ada_case.field_record_retention
+    - field.field.node.ada_case.field_recruitment
+    - field.field.node.ada_case.field_reinstatement
+    - field.field.node.ada_case.field_releases
+    - field.field.node.ada_case.field_resource_pdf_url
+    - field.field.node.ada_case.field_resource_url
+    - field.field.node.ada_case.field_settlement_funds_lower
+    - field.field.node.ada_case.field_settlement_funds_upper
+    - field.field.node.ada_case.field_special_master_fees
+    - field.field.node.ada_case.field_special_masters_utilized
+    - field.field.node.ada_case.field_spmaster_responsibilities
+    - field.field.node.ada_case.field_spmaster_selection_process
+    - field.field.node.ada_case.field_state
+    - field.field.node.ada_case.field_state_claims
+    - field.field.node.ada_case.field_successor_bligations
+    - field.field.node.ada_case.field_surplus_funds_non_profits
+    - field.field.node.ada_case.field_theory_discrim_empl
+    - field.field.node.ada_case.field_theory_discrim_pre_empl
+    - field.field.node.ada_case.field_training_progs_discrim
+    - field.field.node.ada_case.field_training_progs_diversity
+    - field.field.node.ada_case.field_training_providers
+    - field.field.node.ada_case.field_type_discrim_pre_empl
+    - field.field.node.ada_case.field_type_of_decision
+    - field.field.node.ada_case.field_type_of_discrimination_emp
+    - field.field.node.ada_case.field_version_number
+    - field.field.node.ada_case.field_work_assignment
     - node.type.ada_case
   module:
+    - datetime
+    - options
     - user
 id: node.ada_case.teaser
 targetEntityType: node
 bundle: ada_case
 mode: teaser
 content:
-  links:
+  field_case_number:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_date_lawsuit_filed:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_year
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_date_signed:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: html_year
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_judge:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_jurisdiction:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_state:
+    type: list_default
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
     region: content
-hidden: {  }
+hidden:
+  field_ada_coordinator: true
+  field_administration_claims: true
+  field_backpay_frontpay: true
+  field_circuit: true
+  field_class_definition_clause: true
+  field_class_notice: true
+  field_coll_bargaining_agreement: true
+  field_complaint_procedures: true
+  field_confidentiality: true
+  field_consultant_fees: true
+  field_consultant_responsibility: true
+  field_consultant_selection_proc: true
+  field_consultants_utilized: true
+  field_court_juris_retained: true
+  field_date_filed: true
+  field_defendant_counsel: true
+  field_diversity_awards: true
+  field_duration: true
+  field_duration_text: true
+  field_eeo_postings_and_policies: true
+  field_effective_date: true
+  field_employee_compensation: true
+  field_enforceability_procedures: true
+  field_evaluation: true
+  field_expert_fees: true
+  field_expert_responsibilities: true
+  field_expert_selection_process: true
+  field_experts: true
+  field_expunge_record: true
+  field_ext_monitor_responsibility: true
+  field_ext_monitor_selection_proc: true
+  field_ext_monitors: true
+  field_fairness_hearings: true
+  field_hearing_claims: true
+  field_hiring_promotions: true
+  field_holding: true
+  field_human_resource_policies: true
+  field_industry: true
+  field_injunction: true
+  field_internal_monitor_responsib: true
+  field_internal_monitor_selection: true
+  field_internal_monitors: true
+  field_internship_prog_stud_disab: true
+  field_legacy_id: true
+  field_mediator_fees: true
+  field_mediator_responsibilities: true
+  field_mediator_selection_process: true
+  field_mediators_utilized: true
+  field_monitor_fees: true
+  field_new_staff_positions: true
+  field_notice_of_rights: true
+  field_number_of_named_plaintiffs: true
+  field_other_special_issues: true
+  field_plaintiff_counsel: true
+  field_plaintiffs_attorneys_fees: true
+  field_print_media_notice: true
+  field_progress_performance_rpt: true
+  field_rationale: true
+  field_record_retention: true
+  field_recruitment: true
+  field_reinstatement: true
+  field_releases: true
+  field_resource_pdf_url: true
+  field_resource_url: true
+  field_settlement_funds_lower: true
+  field_settlement_funds_upper: true
+  field_special_master_fees: true
+  field_special_masters_utilized: true
+  field_spmaster_responsibilities: true
+  field_spmaster_selection_process: true
+  field_state_claims: true
+  field_successor_bligations: true
+  field_surplus_funds_non_profits: true
+  field_theory_discrim_empl: true
+  field_theory_discrim_pre_empl: true
+  field_training_progs_discrim: true
+  field_training_progs_diversity: true
+  field_training_providers: true
+  field_type_discrim_pre_empl: true
+  field_type_of_decision: true
+  field_type_of_discrimination_emp: true
+  field_version_number: true
+  field_work_assignment: true
+  links: true

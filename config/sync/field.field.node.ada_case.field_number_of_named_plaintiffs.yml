@@ -1,0 +1,23 @@
+uuid: 325a6391-b66f-478a-8318-c5bceb614a9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_named_plaintiffs
+    - node.type.ada_case
+id: node.ada_case.field_number_of_named_plaintiffs
+field_name: field_number_of_named_plaintiffs
+entity_type: node
+bundle: ada_case
+label: 'Number of named plaintiff(s)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

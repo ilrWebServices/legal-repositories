@@ -1,0 +1,21 @@
+uuid: 56d2cf48-7994-41c3-a65d-04ec5d860992
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_circuit
+    - node.type.ada_case
+  module:
+    - options
+id: node.ada_case.field_circuit
+field_name: field_circuit
+entity_type: node
+bundle: ada_case
+label: Circuit
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

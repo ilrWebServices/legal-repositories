@@ -1,0 +1,21 @@
+uuid: e7a3fc2e-da5a-447f-a348-2be499ddb956
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_discrim_pre_empl
+    - node.type.ada_case
+  module:
+    - options
+id: node.ada_case.field_type_discrim_pre_empl
+field_name: field_type_discrim_pre_empl
+entity_type: node
+bundle: ada_case
+label: 'Type of Discrimination - Pre-Employment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

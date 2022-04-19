@@ -1,0 +1,21 @@
+uuid: ed25ba28-9a21-4e71-b17b-d192e9d44bd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notice_of_rights
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_notice_of_rights
+field_name: field_notice_of_rights
+entity_type: node
+bundle: ada_case
+label: 'Notice of ADA rights'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

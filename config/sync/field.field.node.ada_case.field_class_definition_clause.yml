@@ -1,0 +1,21 @@
+uuid: 3ae8ed2d-0603-41e0-ab0b-8fb1dc2cedc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_class_definition_clause
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_class_definition_clause
+field_name: field_class_definition_clause
+entity_type: node
+bundle: ada_case
+label: 'Class definition clause'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

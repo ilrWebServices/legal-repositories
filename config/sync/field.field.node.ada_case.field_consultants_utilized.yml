@@ -1,0 +1,21 @@
+uuid: 61956240-9508-4342-8ff3-e48931c1cf05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_consultants_utilized
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_consultants_utilized
+field_name: field_consultants_utilized
+entity_type: node
+bundle: ada_case
+label: 'Consultant(s) utilized'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

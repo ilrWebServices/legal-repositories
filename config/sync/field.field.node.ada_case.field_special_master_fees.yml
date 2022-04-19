@@ -1,0 +1,21 @@
+uuid: d417c8c2-86f2-4931-b9e3-b5a5ce27fa8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special_master_fees
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_special_master_fees
+field_name: field_special_master_fees
+entity_type: node
+bundle: ada_case
+label: 'Special Master Fees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

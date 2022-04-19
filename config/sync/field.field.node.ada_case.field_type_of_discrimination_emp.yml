@@ -1,0 +1,21 @@
+uuid: 79f0678d-e37e-4067-9bc3-6c49589876a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_of_discrimination_emp
+    - node.type.ada_case
+  module:
+    - options
+id: node.ada_case.field_type_of_discrimination_emp
+field_name: field_type_of_discrimination_emp
+entity_type: node
+bundle: ada_case
+label: 'Type of Discrimination - Employment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

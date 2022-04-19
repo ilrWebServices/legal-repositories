@@ -1,0 +1,36 @@
+uuid: 90b2e164-b745-494b-95d9-038b87ba74c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_theory_discrim_pre_empl
+field_name: field_theory_discrim_pre_empl
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Disparate Impact'
+      label: 'Disparate Impact'
+    -
+      value: 'Disparate Treatment'
+      label: 'Disparate Treatment'
+    -
+      value: 'Failure to Accommodate'
+      label: 'Failure to Accommodate'
+    -
+      value: 'Unlawful Medical Exam'
+      label: 'Unlawful Medical Exam'
+    -
+      value: 'Other theory of discrimination pre-employment'
+      label: 'Other theory of discrimination pre-employment'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

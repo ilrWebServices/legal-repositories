@@ -1,0 +1,21 @@
+uuid: ab89303f-d687-4820-b947-b1a2d39b7183
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_human_resource_policies
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_human_resource_policies
+field_name: field_human_resource_policies
+entity_type: node
+bundle: ada_case
+label: 'Human resource policies'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

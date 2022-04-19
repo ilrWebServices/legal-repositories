@@ -1,0 +1,21 @@
+uuid: 3366562a-7b61-4c08-bfd8-2df6a546463e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_providers
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_training_providers
+field_name: field_training_providers
+entity_type: node
+bundle: ada_case
+label: 'Training providers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

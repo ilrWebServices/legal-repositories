@@ -1,0 +1,21 @@
+uuid: a62f56bb-84fe-44ff-86bc-768e8befdb76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_confidentiality
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_confidentiality
+field_name: field_confidentiality
+entity_type: node
+bundle: ada_case
+label: Confidentiality
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

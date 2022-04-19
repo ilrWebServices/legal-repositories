@@ -1,0 +1,18 @@
+uuid: ec93c513-bb75-46a8-aeb1-84983c685033
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.ada_case
+id: node.ada_case.title
+field_name: title
+entity_type: node
+bundle: ada_case
+label: 'Case name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

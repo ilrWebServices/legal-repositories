@@ -1,0 +1,21 @@
+uuid: 3fd329b7-2737-498a-abff-70c1b515c619
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_injunction
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_injunction
+field_name: field_injunction
+entity_type: node
+bundle: ada_case
+label: Injunction
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

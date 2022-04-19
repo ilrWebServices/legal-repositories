@@ -1,0 +1,21 @@
+uuid: 67701946-4d78-4f58-9665-80430ae61ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_successor_bligations
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_successor_bligations
+field_name: field_successor_bligations
+entity_type: node
+bundle: ada_case
+label: 'Successor obligations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

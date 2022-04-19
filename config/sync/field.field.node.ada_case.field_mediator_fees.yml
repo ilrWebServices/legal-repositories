@@ -1,0 +1,21 @@
+uuid: e0ec1329-17b4-4025-a130-3f1a799d05af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mediator_fees
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_mediator_fees
+field_name: field_mediator_fees
+entity_type: node
+bundle: ada_case
+label: 'Mediator fees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

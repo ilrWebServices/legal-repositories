@@ -1,0 +1,21 @@
+uuid: 2bb73f63-14b1-4545-9df7-449e76ecc0cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fairness_hearings
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_fairness_hearings
+field_name: field_fairness_hearings
+entity_type: node
+bundle: ada_case
+label: 'Fairness hearings'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

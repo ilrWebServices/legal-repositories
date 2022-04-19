@@ -1,0 +1,19 @@
+uuid: 14ecda33-a1b1-420c-91c7-486e0a23c7e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_injunction
+field_name: field_injunction
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

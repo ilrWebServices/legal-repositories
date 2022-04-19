@@ -1,0 +1,21 @@
+uuid: 4fcc9fa8-d3f8-49b6-b4e6-7d4db80390a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rationale
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_rationale
+field_name: field_rationale
+entity_type: node
+bundle: ada_case
+label: Rationale
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

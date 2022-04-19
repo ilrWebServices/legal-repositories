@@ -1,0 +1,39 @@
+uuid: 5a2d25a1-9e0d-4b6a-9e7a-346a31c05e7b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_type_of_decision
+field_name: field_type_of_decision
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Summary Judgment'
+      label: 'Summary Judgment'
+    -
+      value: 'Summary Judgment on Appeal'
+      label: 'Summary Judgment on Appeal'
+    -
+      value: 'Decision on the Merits - District Court'
+      label: 'Decision on the Merits - District Court'
+    -
+      value: 'Decision on the Merits - Court of Appeals'
+      label: 'Decision on the Merits - Court of Appeals'
+    -
+      value: 'Decision on the Merits - Supreme Court'
+      label: 'Decision on the Merits - Supreme Court'
+    -
+      value: 'Consent decree / Settlement'
+      label: 'Consent decree / Settlement'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

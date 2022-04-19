@@ -1,0 +1,21 @@
+uuid: 23bbd858-761c-41e2-97e3-e547fe085dc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reinstatement
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.field_reinstatement
+field_name: field_reinstatement
+entity_type: node
+bundle: ada_case
+label: Reinstatement
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
