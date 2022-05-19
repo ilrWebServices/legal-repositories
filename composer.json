@@ -38,6 +38,7 @@
     "drupal/fixed_text_link_formatter": "^1.6",
     "drupal/paragraphs": "^1.12",
     "drupal/redirect": "^1.6",
+    "drupal/samlauth": "^3.5",
     "drupal/title_length": "^1.2",
     "drupal/union_organizer": "dev-master",
     "drush/drush": "^10.6",

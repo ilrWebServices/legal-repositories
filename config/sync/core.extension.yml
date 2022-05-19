@@ -21,12 +21,14 @@ module:
   path: 0
   path_alias: 0
   redirect: 0
+  samlauth: 0
   system: 0
   text: 0
   title_length: 0
   toolbar: 0
   union_organizer: 0
   user: 0
+  externalauth: 10
   views: 10
   paragraphs: 11
   minimal: 1000
