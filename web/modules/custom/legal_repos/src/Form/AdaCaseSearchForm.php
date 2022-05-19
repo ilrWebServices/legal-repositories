@@ -176,7 +176,7 @@ class AdaCaseSearchForm extends SearchFormBase {
 
     $form['search']['clauses'] = [
       '#type' => 'fieldset',
-      '#title' => $this->t('Clauses'),
+      '#title' => $this->t('Additional Information'),
     ];
 
     $form['search']['clauses']['clause_condition'] = [

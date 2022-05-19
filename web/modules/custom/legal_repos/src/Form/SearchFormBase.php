@@ -103,7 +103,7 @@ abstract class SearchFormBase extends FormBase {
       ];
 
       $compare_opts = [
-        '' => $this->t('--- Choose clause ---'),
+        '' => $this->t('--- Select ---'),
       ];
 
       foreach ($this->clauseFields as $clause_group => $field_names) {
@@ -124,8 +124,8 @@ abstract class SearchFormBase extends FormBase {
 
       $form['results']['compare_wrapper']['compare'] = [
         '#type' => 'select',
-        '#title' => $this->t('Clause'),
-        '#description' => $this->t('Select a clause to compare across @things.', [
+        // '#title' => $this->t('Clause'),
+        '#description' => $this->t('Select to compare across @things.', [
           '@thing' => $this->entityTypeManager->getStorage('node_type')->load($this->nodeType)->label(),
         ]),
         '#options' => $compare_opts,
