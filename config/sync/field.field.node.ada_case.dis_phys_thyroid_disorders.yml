@@ -1,0 +1,21 @@
+uuid: a5962c70-9a50-4cc8-bad5-a390446c4283
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_thyroid_disorders
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_thyroid_disorders
+field_name: dis_phys_thyroid_disorders
+entity_type: node
+bundle: ada_case
+label: 'Thyroid Gland Disorders'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

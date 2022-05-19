@@ -1,0 +1,21 @@
+uuid: ace0e4f1-9b28-4183-a26a-003cb649b125
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_gastrointestinal
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_gastrointestinal
+field_name: dis_phys_gastrointestinal
+entity_type: node
+bundle: ada_case
+label: Gastrointestinal
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

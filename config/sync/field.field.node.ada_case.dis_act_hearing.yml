@@ -1,0 +1,21 @@
+uuid: 55cac5e9-ab20-465f-8aaf-4269de0de510
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_hearing
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_hearing
+field_name: dis_act_hearing
+entity_type: node
+bundle: ada_case
+label: Hearing
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

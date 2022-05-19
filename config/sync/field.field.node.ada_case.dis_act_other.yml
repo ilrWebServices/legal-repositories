@@ -1,0 +1,21 @@
+uuid: a937eb10-be9b-43ee-bb1f-d4f1b4cec43f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_other
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_other
+field_name: dis_act_other
+entity_type: node
+bundle: ada_case
+label: 'Other major life activity disability'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

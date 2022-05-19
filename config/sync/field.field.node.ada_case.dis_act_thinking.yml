@@ -1,0 +1,21 @@
+uuid: 7e33e6f4-6308-4bb7-9664-26d1865dcd9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_thinking
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_thinking
+field_name: dis_act_thinking
+entity_type: node
+bundle: ada_case
+label: Thinking
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

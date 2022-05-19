@@ -1,0 +1,19 @@
+uuid: 36f0391c-cace-4d01-a3f1-6e5ea9b22163
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_mental_alcoholism
+field_name: dis_mental_alcoholism
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

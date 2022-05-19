@@ -1,0 +1,21 @@
+uuid: ace29c0e-f8c2-4c5b-b41a-7fa84e4881e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_pregnancy_compl
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_pregnancy_compl
+field_name: dis_phys_pregnancy_compl
+entity_type: node
+bundle: ada_case
+label: 'Pregnancy Complications'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

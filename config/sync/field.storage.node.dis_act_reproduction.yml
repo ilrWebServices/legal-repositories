@@ -1,0 +1,19 @@
+uuid: 29a3afab-b597-4dbd-bc5a-5318ef950c25
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_act_reproduction
+field_name: dis_act_reproduction
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

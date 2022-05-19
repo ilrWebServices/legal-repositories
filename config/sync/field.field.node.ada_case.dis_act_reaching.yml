@@ -1,0 +1,21 @@
+uuid: 7b998a24-5827-4045-98d7-60ca75f46d22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_reaching
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_reaching
+field_name: dis_act_reaching
+entity_type: node
+bundle: ada_case
+label: Reaching
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

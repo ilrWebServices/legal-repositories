@@ -1,0 +1,21 @@
+uuid: b5c3b875-ba5f-4ea9-88de-c6737cc3de1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_deafness
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_deafness
+field_name: dis_phys_deafness
+entity_type: node
+bundle: ada_case
+label: Deafness
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

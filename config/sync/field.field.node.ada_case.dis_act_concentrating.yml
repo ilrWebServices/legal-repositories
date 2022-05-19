@@ -1,0 +1,21 @@
+uuid: bc9c8fc6-98fc-4042-bb21-9db45904efb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_concentrating
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_concentrating
+field_name: dis_act_concentrating
+entity_type: node
+bundle: ada_case
+label: Concentrating
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

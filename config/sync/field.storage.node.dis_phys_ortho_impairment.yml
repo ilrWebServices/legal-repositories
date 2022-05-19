@@ -1,0 +1,19 @@
+uuid: 6be03834-5fba-4567-8154-4b9973d22cdb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_phys_ortho_impairment
+field_name: dis_phys_ortho_impairment
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

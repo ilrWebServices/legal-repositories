@@ -1,0 +1,19 @@
+uuid: a473af27-a21b-48cb-ae47-8c58a54c676c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_act_learning
+field_name: dis_act_learning
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

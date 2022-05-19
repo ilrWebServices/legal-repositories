@@ -1,0 +1,21 @@
+uuid: 8088c292-52b3-4791-9e9b-8ce1ec7a75b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_cystic_fibrosis
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_cystic_fibrosis
+field_name: dis_phys_cystic_fibrosis
+entity_type: node
+bundle: ada_case
+label: 'Cystic Fibrosis'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: f2549e6a-8dad-479b-b58e-d72039e2ef52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_communicating
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_communicating
+field_name: dis_act_communicating
+entity_type: node
+bundle: ada_case
+label: Communicating
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 112f7b7a-9754-452d-8b4d-81d72fda7cc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_act_major_bodily_func_ops
+field_name: dis_act_major_bodily_func_ops
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

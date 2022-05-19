@@ -1,0 +1,19 @@
+uuid: adb6f422-9b0c-4e40-9622-714931e8c9ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_act_reading
+field_name: dis_act_reading
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: f44b2c2e-149a-4724-b1a7-1debf340e94b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_phys_hiv_infection
+field_name: dis_phys_hiv_infection
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

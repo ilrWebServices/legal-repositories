@@ -1,0 +1,21 @@
+uuid: 0909ff3e-4908-4b46-af6b-c003daeb5a12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_reproduction
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_reproduction
+field_name: dis_act_reproduction
+entity_type: node
+bundle: ada_case
+label: Reproduction
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

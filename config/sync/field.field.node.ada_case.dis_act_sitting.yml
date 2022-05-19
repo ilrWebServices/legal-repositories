@@ -1,0 +1,21 @@
+uuid: 391804aa-2503-47c7-9258-c1326144b1b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_sitting
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_sitting
+field_name: dis_act_sitting
+entity_type: node
+bundle: ada_case
+label: Sitting
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

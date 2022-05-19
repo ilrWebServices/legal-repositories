@@ -1,0 +1,21 @@
+uuid: ce45cb6d-7b12-4426-9611-b6e403a19411
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_standing
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_standing
+field_name: dis_act_standing
+entity_type: node
+bundle: ada_case
+label: Standing
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

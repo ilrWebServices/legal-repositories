@@ -1,0 +1,21 @@
+uuid: b71d30d2-abea-48d3-ad41-62f376dad210
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_kidney_impairment
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_kidney_impairment
+field_name: dis_phys_kidney_impairment
+entity_type: node
+bundle: ada_case
+label: 'Kidney Impairment'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: f52b9e05-6779-4e43-b11f-e74999b9f95e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_mental_ocd
+field_name: dis_mental_ocd
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

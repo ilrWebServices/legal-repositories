@@ -1,0 +1,21 @@
+uuid: f49b3d49-bf66-4dc0-95af-e22b03daf5f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_other_relationship_assoc
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_other_relationship_assoc
+field_name: dis_other_relationship_assoc
+entity_type: node
+bundle: ada_case
+label: 'Disability - Relationship/Association to a Person with a Disability'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

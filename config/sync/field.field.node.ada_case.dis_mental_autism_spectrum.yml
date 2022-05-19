@@ -1,0 +1,21 @@
+uuid: 2c041040-3625-44df-8b01-2e1d1fa9a176
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_mental_autism_spectrum
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_mental_autism_spectrum
+field_name: dis_mental_autism_spectrum
+entity_type: node
+bundle: ada_case
+label: Autism-Spectrum
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

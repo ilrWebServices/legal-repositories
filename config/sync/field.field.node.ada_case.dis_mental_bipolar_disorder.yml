@@ -1,0 +1,21 @@
+uuid: c522b87b-2121-457f-bef5-cc8dc3caf604
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_mental_bipolar_disorder
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_mental_bipolar_disorder
+field_name: dis_mental_bipolar_disorder
+entity_type: node
+bundle: ada_case
+label: 'Bipolar Disorder'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

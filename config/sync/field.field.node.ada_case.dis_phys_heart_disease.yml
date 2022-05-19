@@ -1,0 +1,21 @@
+uuid: f15ea199-3116-4f4d-af83-5e5e9f907a6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_heart_disease
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_heart_disease
+field_name: dis_phys_heart_disease
+entity_type: node
+bundle: ada_case
+label: 'Heart Disease'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

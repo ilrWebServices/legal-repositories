@@ -3,6 +3,75 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.ada_case.dis_act_bending
+    - field.field.node.ada_case.dis_act_breathing
+    - field.field.node.ada_case.dis_act_caring_oneself
+    - field.field.node.ada_case.dis_act_communicating
+    - field.field.node.ada_case.dis_act_concentrating
+    - field.field.node.ada_case.dis_act_eating
+    - field.field.node.ada_case.dis_act_hearing
+    - field.field.node.ada_case.dis_act_interacting
+    - field.field.node.ada_case.dis_act_learning
+    - field.field.node.ada_case.dis_act_lifting
+    - field.field.node.ada_case.dis_act_major_bodily_func_ops
+    - field.field.node.ada_case.dis_act_manual_tasks
+    - field.field.node.ada_case.dis_act_other
+    - field.field.node.ada_case.dis_act_reaching
+    - field.field.node.ada_case.dis_act_reading
+    - field.field.node.ada_case.dis_act_reproduction
+    - field.field.node.ada_case.dis_act_seeing
+    - field.field.node.ada_case.dis_act_sitting
+    - field.field.node.ada_case.dis_act_sleeping
+    - field.field.node.ada_case.dis_act_speaking
+    - field.field.node.ada_case.dis_act_standing
+    - field.field.node.ada_case.dis_act_thinking
+    - field.field.node.ada_case.dis_act_walking
+    - field.field.node.ada_case.dis_act_working
+    - field.field.node.ada_case.dis_mental_alcoholism
+    - field.field.node.ada_case.dis_mental_autism_spectrum
+    - field.field.node.ada_case.dis_mental_bipolar_disorder
+    - field.field.node.ada_case.dis_mental_brain_injury
+    - field.field.node.ada_case.dis_mental_depression
+    - field.field.node.ada_case.dis_mental_drug_addiction
+    - field.field.node.ada_case.dis_mental_intellectual
+    - field.field.node.ada_case.dis_mental_ld_adhd
+    - field.field.node.ada_case.dis_mental_mdd
+    - field.field.node.ada_case.dis_mental_ocd
+    - field.field.node.ada_case.dis_mental_other
+    - field.field.node.ada_case.dis_mental_ptsd
+    - field.field.node.ada_case.dis_mental_schizophrenia
+    - field.field.node.ada_case.dis_other_record
+    - field.field.node.ada_case.dis_other_regarded
+    - field.field.node.ada_case.dis_other_relationship_assoc
+    - field.field.node.ada_case.dis_phys_allergies
+    - field.field.node.ada_case.dis_phys_alzheimers
+    - field.field.node.ada_case.dis_phys_asthma
+    - field.field.node.ada_case.dis_phys_blindness
+    - field.field.node.ada_case.dis_phys_cancer
+    - field.field.node.ada_case.dis_phys_cerebral_palsy
+    - field.field.node.ada_case.dis_phys_chemical_sensitivity
+    - field.field.node.ada_case.dis_phys_cystic_fibrosis
+    - field.field.node.ada_case.dis_phys_deafness
+    - field.field.node.ada_case.dis_phys_diabetes
+    - field.field.node.ada_case.dis_phys_disfigurement
+    - field.field.node.ada_case.dis_phys_dwarfism
+    - field.field.node.ada_case.dis_phys_epilepsy
+    - field.field.node.ada_case.dis_phys_gastrointestinal
+    - field.field.node.ada_case.dis_phys_genetic
+    - field.field.node.ada_case.dis_phys_heart_disease
+    - field.field.node.ada_case.dis_phys_hiv_infection
+    - field.field.node.ada_case.dis_phys_kidney_impairment
+    - field.field.node.ada_case.dis_phys_limbs_missing
+    - field.field.node.ada_case.dis_phys_mobility_wheelchair
+    - field.field.node.ada_case.dis_phys_multiple_sclerosis
+    - field.field.node.ada_case.dis_phys_muscular_dystrophy
+    - field.field.node.ada_case.dis_phys_ortho_impairment
+    - field.field.node.ada_case.dis_phys_other
+    - field.field.node.ada_case.dis_phys_paralysis
+    - field.field.node.ada_case.dis_phys_pregnancy_compl
+    - field.field.node.ada_case.dis_phys_speech_impairmnt
+    - field.field.node.ada_case.dis_phys_thyroid_disorders
+    - field.field.node.ada_case.dis_phys_tuberculosis
     - field.field.node.ada_case.field_ada_coordinator
     - field.field.node.ada_case.field_administration_claims
     - field.field.node.ada_case.field_backpay_frontpay
@@ -387,6 +456,127 @@ third_party_settings:
         id: ''
         description: ''
         required_fields: true
+    group_disability_physical_impair:
+      children:
+        - dis_phys_allergies
+        - dis_phys_alzheimers
+        - dis_phys_asthma
+        - dis_phys_blindness
+        - dis_phys_cancer
+        - dis_phys_cerebral_palsy
+        - dis_phys_chemical_sensitivity
+        - dis_phys_cystic_fibrosis
+        - dis_phys_deafness
+        - dis_phys_diabetes
+        - dis_phys_disfigurement
+        - dis_phys_dwarfism
+        - dis_phys_epilepsy
+        - dis_phys_gastrointestinal
+        - dis_phys_genetic
+        - dis_phys_heart_disease
+        - dis_phys_hiv_infection
+        - dis_phys_kidney_impairment
+        - dis_phys_limbs_missing
+        - dis_phys_mobility_wheelchair
+        - dis_phys_multiple_sclerosis
+        - dis_phys_muscular_dystrophy
+        - dis_phys_ortho_impairment
+        - dis_phys_paralysis
+        - dis_phys_pregnancy_compl
+        - dis_phys_speech_impairmnt
+        - dis_phys_thyroid_disorders
+        - dis_phys_tuberculosis
+        - dis_phys_other
+      label: 'Disability - Physical Impairment'
+      region: content
+      parent_name: ''
+      weight: 18
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_disability_mental_impairme:
+      children:
+        - dis_mental_alcoholism
+        - dis_mental_autism_spectrum
+        - dis_mental_bipolar_disorder
+        - dis_mental_depression
+        - dis_mental_drug_addiction
+        - dis_mental_intellectual
+        - dis_mental_ld_adhd
+        - dis_mental_mdd
+        - dis_mental_ocd
+        - dis_mental_ptsd
+        - dis_mental_schizophrenia
+        - dis_mental_brain_injury
+        - dis_mental_other
+      label: 'Disability - Mental Impairment'
+      region: content
+      parent_name: ''
+      weight: 19
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_disability_major_life_acti:
+      children:
+        - dis_act_bending
+        - dis_act_breathing
+        - dis_act_caring_oneself
+        - dis_act_communicating
+        - dis_act_concentrating
+        - dis_act_eating
+        - dis_act_hearing
+        - dis_act_interacting
+        - dis_act_learning
+        - dis_act_lifting
+        - dis_act_major_bodily_func_ops
+        - dis_act_manual_tasks
+        - dis_act_reaching
+        - dis_act_reading
+        - dis_act_reproduction
+        - dis_act_seeing
+        - dis_act_sitting
+        - dis_act_sleeping
+        - dis_act_speaking
+        - dis_act_standing
+        - dis_act_thinking
+        - dis_act_walking
+        - dis_act_working
+        - dis_act_other
+      label: 'Disability - Major Life Activities'
+      region: content
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
+    group_disability_other:
+      children:
+        - dis_other_record
+        - dis_other_regarded
+        - dis_other_relationship_assoc
+      label: 'Disability - Other'
+      region: content
+      parent_name: ''
+      weight: 21
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        description: ''
+        required_fields: true
 id: node.ada_case.default
 targetEntityType: node
 bundle: ada_case
@@ -397,6 +587,558 @@ content:
     weight: 13
     region: content
     settings: {  }
+    third_party_settings: {  }
+  dis_act_bending:
+    type: text_textarea
+    weight: 21
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_breathing:
+    type: text_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_caring_oneself:
+    type: text_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_communicating:
+    type: text_textarea
+    weight: 24
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_concentrating:
+    type: text_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_eating:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_hearing:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_interacting:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_learning:
+    type: text_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_lifting:
+    type: text_textarea
+    weight: 30
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_major_bodily_func_ops:
+    type: text_textarea
+    weight: 31
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_manual_tasks:
+    type: text_textarea
+    weight: 32
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_other:
+    type: text_textarea
+    weight: 44
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_reaching:
+    type: text_textarea
+    weight: 33
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_reading:
+    type: text_textarea
+    weight: 34
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_reproduction:
+    type: text_textarea
+    weight: 35
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_seeing:
+    type: text_textarea
+    weight: 36
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_sitting:
+    type: text_textarea
+    weight: 37
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_sleeping:
+    type: text_textarea
+    weight: 38
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_speaking:
+    type: text_textarea
+    weight: 39
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_standing:
+    type: text_textarea
+    weight: 40
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_thinking:
+    type: text_textarea
+    weight: 41
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_walking:
+    type: text_textarea
+    weight: 42
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_act_working:
+    type: text_textarea
+    weight: 43
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_alcoholism:
+    type: text_textarea
+    weight: 20
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_autism_spectrum:
+    type: text_textarea
+    weight: 21
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_bipolar_disorder:
+    type: text_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_brain_injury:
+    type: text_textarea
+    weight: 31
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_depression:
+    type: text_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_drug_addiction:
+    type: text_textarea
+    weight: 24
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_intellectual:
+    type: text_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_ld_adhd:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_mdd:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_ocd:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_other:
+    type: text_textarea
+    weight: 32
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_ptsd:
+    type: text_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_mental_schizophrenia:
+    type: text_textarea
+    weight: 30
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_other_record:
+    type: text_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_other_regarded:
+    type: text_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_other_relationship_assoc:
+    type: text_textarea
+    weight: 24
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_allergies:
+    type: text_textarea
+    weight: 19
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_alzheimers:
+    type: text_textarea
+    weight: 20
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_asthma:
+    type: text_textarea
+    weight: 21
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_blindness:
+    type: text_textarea
+    weight: 22
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_cancer:
+    type: text_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_cerebral_palsy:
+    type: text_textarea
+    weight: 24
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_chemical_sensitivity:
+    type: text_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_cystic_fibrosis:
+    type: text_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_deafness:
+    type: text_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_diabetes:
+    type: text_textarea
+    weight: 28
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_disfigurement:
+    type: text_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_dwarfism:
+    type: text_textarea
+    weight: 30
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_epilepsy:
+    type: text_textarea
+    weight: 31
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_gastrointestinal:
+    type: text_textarea
+    weight: 32
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_genetic:
+    type: text_textarea
+    weight: 33
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_heart_disease:
+    type: text_textarea
+    weight: 34
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_hiv_infection:
+    type: text_textarea
+    weight: 35
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_kidney_impairment:
+    type: text_textarea
+    weight: 36
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_limbs_missing:
+    type: text_textarea
+    weight: 37
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_mobility_wheelchair:
+    type: text_textarea
+    weight: 38
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_multiple_sclerosis:
+    type: text_textarea
+    weight: 39
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_muscular_dystrophy:
+    type: text_textarea
+    weight: 40
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_ortho_impairment:
+    type: text_textarea
+    weight: 41
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_other:
+    type: text_textarea
+    weight: 47
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_paralysis:
+    type: text_textarea
+    weight: 42
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_pregnancy_compl:
+    type: text_textarea
+    weight: 43
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_speech_impairmnt:
+    type: text_textarea
+    weight: 44
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_thyroid_disorders:
+    type: text_textarea
+    weight: 45
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  dis_phys_tuberculosis:
+    type: text_textarea
+    weight: 46
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_ada_coordinator:
     type: text_textarea

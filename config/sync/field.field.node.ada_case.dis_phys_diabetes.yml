@@ -1,0 +1,21 @@
+uuid: 94ac3f37-e177-4a3e-a6c4-510a11bda4f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_diabetes
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_diabetes
+field_name: dis_phys_diabetes
+entity_type: node
+bundle: ada_case
+label: Diabetes
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

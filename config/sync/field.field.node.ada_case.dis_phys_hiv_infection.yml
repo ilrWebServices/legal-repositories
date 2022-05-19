@@ -1,0 +1,21 @@
+uuid: 56d6ce6f-ff60-4e0e-9fd6-5a3c25f8756a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_hiv_infection
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_hiv_infection
+field_name: dis_phys_hiv_infection
+entity_type: node
+bundle: ada_case
+label: 'HIV infection'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: bf6ba629-2f49-41ba-a339-e4873318cda7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_phys_chemical_sensitivity
+field_name: dis_phys_chemical_sensitivity
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
