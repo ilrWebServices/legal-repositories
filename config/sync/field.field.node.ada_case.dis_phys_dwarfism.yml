@@ -1,0 +1,21 @@
+uuid: 84d949bb-69d1-42ef-b938-fcca75b8e957
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_dwarfism
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_dwarfism
+field_name: dis_phys_dwarfism
+entity_type: node
+bundle: ada_case
+label: Dwarfism
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

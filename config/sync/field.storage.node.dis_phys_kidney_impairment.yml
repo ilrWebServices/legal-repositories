@@ -1,0 +1,19 @@
+uuid: d6202fce-553e-4c20-9354-7ebf53ccfc6d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_phys_kidney_impairment
+field_name: dis_phys_kidney_impairment
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

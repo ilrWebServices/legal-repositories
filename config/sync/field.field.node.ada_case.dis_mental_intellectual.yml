@@ -1,0 +1,21 @@
+uuid: d6fca3ac-2b21-4118-b861-48328775e61f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_mental_intellectual
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_mental_intellectual
+field_name: dis_mental_intellectual
+entity_type: node
+bundle: ada_case
+label: 'Intellectual Disability'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

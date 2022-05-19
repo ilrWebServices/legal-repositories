@@ -1,0 +1,19 @@
+uuid: 5dd98aac-b8f7-4b10-b035-65e76a867dc1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_phys_epilepsy
+field_name: dis_phys_epilepsy
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

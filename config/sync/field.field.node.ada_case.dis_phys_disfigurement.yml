@@ -1,0 +1,21 @@
+uuid: 491d10bd-3a1e-43fc-b6c5-d217e499d2f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_disfigurement
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_disfigurement
+field_name: dis_phys_disfigurement
+entity_type: node
+bundle: ada_case
+label: Disfigurement
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

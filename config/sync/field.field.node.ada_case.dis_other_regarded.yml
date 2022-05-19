@@ -1,0 +1,21 @@
+uuid: 9d312520-a67d-4bd8-997b-021760672723
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_other_regarded
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_other_regarded
+field_name: dis_other_regarded
+entity_type: node
+bundle: ada_case
+label: 'Disability - Regarded as Having a Disability'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

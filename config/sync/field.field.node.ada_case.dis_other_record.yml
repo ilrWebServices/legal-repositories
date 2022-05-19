@@ -1,0 +1,21 @@
+uuid: 49f5707e-c294-4301-bd22-0a124f901bf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_other_record
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_other_record
+field_name: dis_other_record
+entity_type: node
+bundle: ada_case
+label: 'Disability - Record of Disability'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

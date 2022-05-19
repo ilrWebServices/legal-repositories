@@ -1,0 +1,21 @@
+uuid: 1b3e5f07-0961-49b7-a423-017da110b945
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_sleeping
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_sleeping
+field_name: dis_act_sleeping
+entity_type: node
+bundle: ada_case
+label: Sleeping
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

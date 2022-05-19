@@ -1,0 +1,21 @@
+uuid: fd448e52-28b4-4903-b824-8d37cfbbe41c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_mobility_wheelchair
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_mobility_wheelchair
+field_name: dis_phys_mobility_wheelchair
+entity_type: node
+bundle: ada_case
+label: 'Mobility impairments requiring use of wheelchair'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 8cb35c32-5c52-4f52-9530-ca78995947b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_mental_ld_adhd
+field_name: dis_mental_ld_adhd
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

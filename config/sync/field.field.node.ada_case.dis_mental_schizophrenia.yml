@@ -1,0 +1,21 @@
+uuid: 2ec2767e-1820-412a-8221-4621bd5e4c41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_mental_schizophrenia
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_mental_schizophrenia
+field_name: dis_mental_schizophrenia
+entity_type: node
+bundle: ada_case
+label: Schizophrenia
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 0c88f440-d92f-4904-b31f-9493fd408a7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_mental_ld_adhd
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_mental_ld_adhd
+field_name: dis_mental_ld_adhd
+entity_type: node
+bundle: ada_case
+label: 'Learning Disability/ADHD'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

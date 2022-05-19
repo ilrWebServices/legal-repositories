@@ -1,0 +1,21 @@
+uuid: 7da9f8f1-eb3b-4731-851b-646081f9e6df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_working
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_working
+field_name: dis_act_working
+entity_type: node
+bundle: ada_case
+label: Working
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: 573a1344-ee06-420d-a25f-48b2e9fa55f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_act_walking
+field_name: dis_act_walking
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 29740f76-9a62-4f0e-8524-bcba910482c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_phys_genetic
+field_name: dis_phys_genetic
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

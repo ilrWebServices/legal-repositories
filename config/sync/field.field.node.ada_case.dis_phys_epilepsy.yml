@@ -1,0 +1,21 @@
+uuid: e8e6abdc-8847-4f90-a784-3a29a7da60b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_epilepsy
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_epilepsy
+field_name: dis_phys_epilepsy
+entity_type: node
+bundle: ada_case
+label: Epilepsy
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: a03e7214-41dd-4747-bc89-7ee8a5659640
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_mental_ocd
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_mental_ocd
+field_name: dis_mental_ocd
+entity_type: node
+bundle: ada_case
+label: 'Obsessive Compulsive Disorder'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

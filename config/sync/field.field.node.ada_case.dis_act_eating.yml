@@ -1,0 +1,21 @@
+uuid: 850697a2-9ca2-4f8e-93da-4c4ba72fbe2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_eating
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_eating
+field_name: dis_act_eating
+entity_type: node
+bundle: ada_case
+label: Eating
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

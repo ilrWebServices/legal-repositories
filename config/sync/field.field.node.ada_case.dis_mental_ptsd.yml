@@ -1,0 +1,21 @@
+uuid: c07e787a-7f75-461a-a1e6-2ed6b8a223f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_mental_ptsd
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_mental_ptsd
+field_name: dis_mental_ptsd
+entity_type: node
+bundle: ada_case
+label: 'Post-Traumatic Stress Disorder'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

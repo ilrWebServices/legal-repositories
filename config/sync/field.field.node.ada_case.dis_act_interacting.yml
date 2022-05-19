@@ -1,0 +1,21 @@
+uuid: 1af01cab-1e15-49d2-8d4c-879818c4de89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_interacting
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_interacting
+field_name: dis_act_interacting
+entity_type: node
+bundle: ada_case
+label: 'Interacting with Others'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

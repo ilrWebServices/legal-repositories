@@ -1,0 +1,21 @@
+uuid: 5bd14039-c43a-4e48-a34e-1f503a138aca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_mental_depression
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_mental_depression
+field_name: dis_mental_depression
+entity_type: node
+bundle: ada_case
+label: Depression
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

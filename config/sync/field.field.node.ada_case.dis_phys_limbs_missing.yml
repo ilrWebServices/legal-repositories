@@ -1,0 +1,21 @@
+uuid: 95776d58-45ce-4c19-bc39-17388323b0fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_limbs_missing
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_limbs_missing
+field_name: dis_phys_limbs_missing
+entity_type: node
+bundle: ada_case
+label: 'Limbs partly or completely missing'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

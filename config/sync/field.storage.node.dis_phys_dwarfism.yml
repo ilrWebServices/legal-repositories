@@ -1,0 +1,19 @@
+uuid: ba613dd8-97e4-47ee-b22f-b18e34f906ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_phys_dwarfism
+field_name: dis_phys_dwarfism
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 3ee89e4b-78c5-4fb0-9d4d-1acd84d6ff78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_breathing
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_breathing
+field_name: dis_act_breathing
+entity_type: node
+bundle: ada_case
+label: Breathing
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

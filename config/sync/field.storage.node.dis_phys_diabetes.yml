@@ -1,0 +1,19 @@
+uuid: 505b875a-ec97-4b93-9102-ec048514411f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_phys_diabetes
+field_name: dis_phys_diabetes
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

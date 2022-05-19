@@ -1,0 +1,21 @@
+uuid: 248231ee-ee9a-466a-b965-22ad3ad44eb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_reading
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_reading
+field_name: dis_act_reading
+entity_type: node
+bundle: ada_case
+label: Reading
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

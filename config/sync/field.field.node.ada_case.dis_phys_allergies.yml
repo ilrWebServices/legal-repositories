@@ -1,0 +1,21 @@
+uuid: 628ac8b5-6a66-412f-8990-012a9a2345a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_allergies
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_allergies
+field_name: dis_phys_allergies
+entity_type: node
+bundle: ada_case
+label: Allergies
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: a4759e08-51e4-4c63-9791-61a2615aca2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_act_seeing
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_act_seeing
+field_name: dis_act_seeing
+entity_type: node
+bundle: ada_case
+label: Seeing
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,19 @@
+uuid: b7a5fb6c-cb14-4e1f-b4de-b2c560a55bd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.dis_act_sitting
+field_name: dis_act_sitting
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

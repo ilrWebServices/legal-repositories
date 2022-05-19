@@ -1,0 +1,21 @@
+uuid: 46c620c3-37ba-4db4-8d68-66d6eb8db298
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_mental_mdd
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_mental_mdd
+field_name: dis_mental_mdd
+entity_type: node
+bundle: ada_case
+label: 'Major Depressive Disorder'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

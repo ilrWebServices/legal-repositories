@@ -1,0 +1,21 @@
+uuid: a6b2c78c-b67c-4c70-bbc4-6a4e5b05898f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.dis_phys_asthma
+    - node.type.ada_case
+  module:
+    - text
+id: node.ada_case.dis_phys_asthma
+field_name: dis_phys_asthma
+entity_type: node
+bundle: ada_case
+label: Asthma
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
