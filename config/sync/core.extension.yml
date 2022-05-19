@@ -34,4 +34,5 @@ theme:
   seven: 0
   stable: 0
   union_base: 0
+  legal_admin: 0
 profile: minimal

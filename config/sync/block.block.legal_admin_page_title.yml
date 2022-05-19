@@ -1,0 +1,20 @@
+uuid: 5e814207-3fb0-448f-9ff7-b3b802847350
+langcode: en
+status: true
+dependencies:
+  theme:
+    - legal_admin
+_core:
+  default_config_hash: WImvmaBdDpwIqobqbDWebBnyxssRvrNEnZSQbOsvOe4
+id: legal_admin_page_title
+theme: legal_admin
+region: content
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

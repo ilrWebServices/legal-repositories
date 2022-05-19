@@ -1,0 +1,27 @@
+uuid: 4185f28f-fd79-4572-b2ba-f2553325657c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - legal_admin
+_core:
+  default_config_hash: _uH7wnTwQN9LR9emIpwucAsiGiqgy6xNxBzEjrhF4SM
+id: legal_admin_main_menu
+theme: legal_admin
+region: header
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

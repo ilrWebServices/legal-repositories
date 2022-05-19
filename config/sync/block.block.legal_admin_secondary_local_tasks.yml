@@ -1,0 +1,22 @@
+uuid: 5923a862-5fdb-40c5-b6a4-a3fedd219f7b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - legal_admin
+_core:
+  default_config_hash: V7GM1m6Qh500cQE7LWZV8lRuwLqXdjR0S2kSk8pEv6g
+id: legal_admin_secondary_local_tasks
+theme: legal_admin
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

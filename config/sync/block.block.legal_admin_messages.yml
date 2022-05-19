@@ -1,0 +1,22 @@
+uuid: cc43190a-2c4e-459e-8b38-01ed8619685f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - legal_admin
+_core:
+  default_config_hash: KfyaTPRJEcAyy2e5AxEfWQnuHcn4WrfvcWek7lSmHZQ
+id: legal_admin_messages
+theme: legal_admin
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

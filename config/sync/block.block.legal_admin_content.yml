@@ -1,0 +1,22 @@
+uuid: 056c7f7a-a142-446a-a282-2fcc6834b408
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - legal_admin
+_core:
+  default_config_hash: BL6Gcw5Us0zai1ADadlNYLxlEblMedc_3C3lF0PjtCE
+id: legal_admin_content
+theme: legal_admin
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

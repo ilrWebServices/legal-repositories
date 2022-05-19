@@ -1,0 +1,8 @@
+name: Legal Admin
+type: theme
+description: 'A custom admin theme based on Seven (for now)'
+package: Union
+core_version_requirement: ^8 || ^9
+libraries:
+  - legal_admin/global
+base theme: seven

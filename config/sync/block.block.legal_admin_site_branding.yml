@@ -1,0 +1,25 @@
+uuid: 147de4fc-620f-4aa0-bbaf-8b154461024c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - legal_admin
+_core:
+  default_config_hash: sYjScJ6uW1UvGZ-G3AtTcZmPoOiQJtndHqamm8FAFgU
+id: legal_admin_site_branding
+theme: legal_admin
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

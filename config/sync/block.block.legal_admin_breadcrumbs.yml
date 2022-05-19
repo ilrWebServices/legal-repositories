@@ -1,0 +1,22 @@
+uuid: 1d535de7-9f27-4b11-8329-5b68b1af771a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - legal_admin
+_core:
+  default_config_hash: XMsRP1YhWAcorbrFWZglMYJ_SgWHyF3fyCh5vDXaUN4
+id: legal_admin_breadcrumbs
+theme: legal_admin
+region: content
+weight: -4
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

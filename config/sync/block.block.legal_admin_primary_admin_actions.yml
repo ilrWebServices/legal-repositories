@@ -1,0 +1,20 @@
+uuid: 3d84c846-22ca-438f-b7ee-52fba0e281f0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - legal_admin
+_core:
+  default_config_hash: sBMSSrWtP58IZaz1i3-MJ9yq_y32w1nc7N5DZJmt-4M
+id: legal_admin_primary_admin_actions
+theme: legal_admin
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
