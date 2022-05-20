@@ -1,0 +1,53 @@
+.js .dropbutton-widget {
+  min-width: 9em;
+  overflow: hidden;
+  margin: 0.125em 0;
+  cursor: pointer;
+  text-align: center;
+  border: 2px solid var(--color-link);
+  border-radius: 2px;
+  background-color: #fff;
+}
+.js .dropbutton-widget .button {
+  margin: 0;
+  padding: 0.32em 1em;
+  border: none;
+  background: transparent none;
+}
+.js .dropbutton-multiple .dropbutton-widget,
+.js[dir="rtl"] .dropbutton-multiple .dropbutton-widget {
+  padding: 0;
+}
+.js .dropbutton-multiple .dropbutton-widget .dropbutton {
+  position: relative;
+  padding-right: 2em; /* LTR */
+}
+.js[dir="rtl"] .dropbutton-multiple .dropbutton-widget .dropbutton {
+  padding-right: 0;
+  padding-left: 2em;
+}
+.js .dropbutton-multiple .dropbutton-widget .dropbutton-action a {
+  margin-right: 0; /* LTR */
+}
+[dir="rtl"].js .dropbutton-multiple .dropbutton-widget .dropbutton-action a {
+  margin-left: 0;
+}
+.js .dropbutton .secondary-action {
+  border-top-color: #ccc;
+}
+.js .dropbutton-toggle button {
+  background-color: #fff;
+}
+.js .dropbutton-toggle .dropbutton-arrow {
+  color: var(--color-link);
+}
+.js .dropbutton a {
+  color: var(--color-black);
+  text-decoration: none;
+  border-bottom: 0 none;
+}
+.js .dropbutton .dropbutton-action:hover,
+.js .dropbutton a:hover {
+  border-bottom: 0 none;
+  background: #fff;
+}
