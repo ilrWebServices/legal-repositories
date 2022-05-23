@@ -52,9 +52,11 @@ class DownloadController extends ControllerBase {
           $row_info['case_name'] = $field_definition;
         }
         else if (strpos($field_name, 'field_') === 0) {
-          // dump($field_name);
-          // dump($field_definition->getType());
           $row_info[substr($field_name, 6)] = $field_definition;
+        }
+        // Include custom fields from ada cases.
+        else if (strpos($field_name, 'dis_') === 0) {
+          $row_info[$field_name] = $field_definition;
         }
       }
     }
