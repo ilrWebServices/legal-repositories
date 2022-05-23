@@ -27,7 +27,8 @@ class DownloadController extends ControllerBase {
 
     // Load the nodes.
     if (empty($nids)) {
-      $results = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple();
+      // throw new BadRequestHttpException();
+      throw new NotFoundHttpException();
     }
     else {
       $results = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple(explode('.', $nids));
@@ -37,8 +38,6 @@ class DownloadController extends ControllerBase {
     $csv_file = fopen('php://temp', 'r+');
 
     // Create the header row dynamically from the fields available on node type.
-    $header = [];
-
     if ($results) {
       /** @var LegalDocumentBase $first_result */
       $first_result = reset($results);
@@ -66,7 +65,6 @@ class DownloadController extends ControllerBase {
     fputcsv($csv_file, array_keys($row_info));
 
     // Add rows to the CSV.
-      // Use a 1 or 0 if only the presence of a value is requested.
     foreach ($results as $nid => $node) {
       if (!$node instanceof LegalDocumentBase) {
         throw new BadRequestHttpException();
@@ -84,6 +82,7 @@ class DownloadController extends ControllerBase {
         // dump($row_field_name);
         // dump($field_definition->getType());
 
+        // Use a 1 or 0 if only the presence of a value is requested.
         if ($long_text_presence && $field_definition->getType() === 'text_long') {
           $row[] = $node->get($field_definition->getName())->isEmpty() ? 0 : 1;
         }
