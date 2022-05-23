@@ -20,7 +20,8 @@ class DownloadController extends ControllerBase {
    * Returns a CSV export for the download request.
    */
   public function content(Request $request) {
-    $nids = $request->get('nids');
+    $hash = $request->get('hash');
+    $nids = \Drupal::keyValue('results_download_hash')->get($hash);
     $download_type = $request->get('preview') ? 'inline' : 'attachment';
     $long_text_presence = $request->get('mini') ? TRUE : FALSE;
 
@@ -118,7 +119,7 @@ class DownloadController extends ControllerBase {
     // Generate a unique file name.
     $filename_parts = [
       $first_result->bundle() . '-download',
-      crc32($nids),
+      md5($nids),
       $long_text_presence ? 'mini' : 'full',
       date('Y-m-d'),
     ];

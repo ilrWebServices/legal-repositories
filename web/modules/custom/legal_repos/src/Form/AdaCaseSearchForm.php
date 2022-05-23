@@ -243,19 +243,7 @@ class AdaCaseSearchForm extends SearchFormBase {
       $query->condition($clause_group);
     }
 
-    // dump($query->__toString());
-    $results = $query->execute();
-    $results_obj = new \stdClass();
-
-    if ($results) {
-      $results_obj->nodes = $this->entityTypeManager->getStorage('node')->loadMultiple($results);
-      $results_obj->count = count($results_obj->nodes);
-    }
-    else {
-      $results_obj->nodes = [];
-      $results_obj->count = 0;
-    }
-
+    $results_obj = $this->executeQuery($query);
     $form_state->set('results', $results_obj);
   }
 

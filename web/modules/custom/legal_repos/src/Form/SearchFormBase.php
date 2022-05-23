@@ -85,7 +85,7 @@ abstract class SearchFormBase extends FormBase {
             'title' => $this->t('Download'),
             'url' => Url::fromRoute('legal_repos.download', [], [
               'query' => [
-                'nids' => implode('.', array_keys($results->nodes)),
+                'hash' => $results->download_hash,
                 // 'preview' => 1,
               ],
             ]),
@@ -94,7 +94,7 @@ abstract class SearchFormBase extends FormBase {
             'title' => $this->t('Download mini'),
             'url' => Url::fromRoute('legal_repos.download', [], [
               'query' => [
-                'nids' => implode('.', array_keys($results->nodes)),
+                'hash' => $results->download_hash,
                 'mini' => 1,
               ],
             ]),
@@ -469,6 +469,27 @@ abstract class SearchFormBase extends FormBase {
         $query->condition($group);
       }
     }
+  }
+
+  public function executeQuery(QueryInterface $query) {
+    $results = $query->execute();
+    $results_obj = new \stdClass();
+
+    if ($results) {
+      $results_obj->nodes = $this->entityTypeManager->getStorage('node')->loadMultiple($results);
+      $results_obj->count = count($results_obj->nodes);
+      $results_obj->download_hash = md5(implode('.', array_keys($results_obj->nodes)));
+
+      // Save the download hash in the key/value store.
+      \Drupal::keyValue('results_download_hash')->set($results_obj->download_hash, implode('.', array_keys($results_obj->nodes)));
+    }
+    else {
+      $results_obj->nodes = [];
+      $results_obj->count = 0;
+      $results_obj->download_hash = '';
+    }
+
+    return $results_obj;
   }
 
 }
