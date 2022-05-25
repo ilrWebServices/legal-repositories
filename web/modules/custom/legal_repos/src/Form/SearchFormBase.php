@@ -198,7 +198,7 @@ abstract class SearchFormBase extends FormBase {
 
     $form['search']['general']['field_state_claims'] = [
       '#type' => 'checkbox',
-      '#title' => $this->t('Consent decree includes a state claim'),
+      '#title' => $this->t('Includes a state claim'),
     ];
 
     $form['search']['general']['year_filed'] = [

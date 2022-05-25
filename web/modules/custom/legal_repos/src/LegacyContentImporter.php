@@ -102,7 +102,7 @@ class LegacyContentImporter {
       $node->field_case_number = $record['caseNumber'];
       $node->field_version_number = $record['versionNumber'];
       $node->field_state = $record['state'];
-      $node->field_state_claims = $record['stateClaim'] === 'True' ? 1 : 0;
+      $node->field_state_claims = $record['stateClaim'];
       $node->field_judge = $record['judgeFullName'];
       $node->field_resource_url = $commons_url;
       $node->field_jurisdiction = $record['court'];
@@ -241,7 +241,7 @@ class LegacyContentImporter {
       $node->field_case_number = $record['caseNumber'];
       $node->field_version_number = $record['versionNumber'];
       $node->field_state = $record['state'];
-      $node->field_state_claims = $record['stateClaim'] === 'True' ? 1 : 0;
+      $node->field_state_claims = $record['stateClaim'];
       $node->field_judge = $record['judgeFullName'];
       $node->field_resource_url = $commons_url;
       $node->field_jurisdiction = $record['court'];
