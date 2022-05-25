@@ -25,4 +25,5 @@ main footer {
 
 .layout-footer {
   border-top: 1px solid var(--color-gray-medium);
+  margin-top: auto;
 }

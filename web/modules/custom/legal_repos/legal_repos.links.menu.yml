@@ -1,0 +1,16 @@
+legal_repos.programs:
+  title: Labor and Employment Law Programs
+  url: https://www.ilr.cornell.edu/labor-and-employment-law-program
+  menu_name: footer
+  weight: 1
+legal_repos.contact:
+  title: Feedback about Law Repositories
+  url: https://www.ilr.cornell.edu/website-feedback
+  menu_name: footer
+  weight: 2
+legal_repos.copyright:
+  title: '[COPYRIGHT]'
+  url: 'route:<nolink>'
+  menu_name: footer
+  class: Drupal\legal_repos\Plugin\Menu\DisplayCopyrightMenuLink
+  weight: 15

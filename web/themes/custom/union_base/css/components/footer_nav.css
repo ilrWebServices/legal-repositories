@@ -1,0 +1,20 @@
+.layout-footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  list-style-type: none;
+  padding: 0;
+}
+
+@media (min-width: 64rem) {
+  .layout-footer ul {
+    flex-direction: row;
+  }
+  .layout-footer ul li:last-child {
+    margin-left: auto;
+  }
+}
+
+.layout-footer a {
+  color: var(--color-black);
+}
