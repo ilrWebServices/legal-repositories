@@ -31,6 +31,6 @@ a {
   color: var(--color-link);
 }
 
-[class*="cu-"] p {
+[class*="cu-"] p:not(.cu-message__text) {
   margin-top: revert;
 }
