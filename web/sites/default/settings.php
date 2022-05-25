@@ -761,6 +761,23 @@ $settings['entity_update_backup'] = TRUE;
  */
 $settings['migrate_node_migrate_type_classic'] = FALSE;
 
+/**
+ * SAML Auth service provider entity id.
+ *
+ * This is automatically configured for the current host.
+ */
+$config['samlauth.authentication']['sp_entity_id'] = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/saml/metadata';
+
+/**
+ * SAML Auth secret settings.
+ *
+ * Bogus data for the service provider private key is stored in config. The real
+ * value should be added to the environment.
+ */
+if (!empty($_ENV['SAMLAUTH_SP_PRIVATE_KEY'])) {
+  $config['samlauth.authentication']['sp_private_key'] = $_ENV['SAMLAUTH_SP_PRIVATE_KEY'];
+}
+
 // Automatic Platform.sh settings.
 if (file_exists($app_root . '/' . $site_path . '/settings.platformsh.php')) {
   include $app_root . '/' . $site_path . '/settings.platformsh.php';
