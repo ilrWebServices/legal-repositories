@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.counsel.field_attorneys
     - field.field.paragraph.counsel.field_firm_name
+    - field.field.paragraph.counsel.field_legacy_id
     - paragraphs.paragraphs_type.counsel
 id: paragraph.counsel.default
 targetEntityType: paragraph
@@ -27,4 +28,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_legacy_id: true

@@ -65,7 +65,6 @@ class LegacyContentImporter {
 
   public function importConsentDecrees() {
     $node_storage = $this->entityTypeManager->getStorage('node');
-    $paragraph_storage = $this->entityTypeManager->getStorage('paragraph');
 
     $json_file = file_get_contents($this->dataPath . 'consent_decrees.json');
     $data = json_decode($json_file, TRUE);
@@ -115,24 +114,22 @@ class LegacyContentImporter {
       $node->field_plaintiffs_attorneys_fees = $record['plaintiffsAttorneysFees'];
       $node->setRevisionLogMessage($record['internComments']);
 
-      foreach ($record['plaintiffCounsel'] as $firm => $attorney_array) {
-        $counsel = $paragraph_storage->create([
-          'type' => 'counsel',
-          'field_firm_name' => $firm,
-          'field_attorneys' => $attorney_array,
-        ]);
-        $counsel->save();
-        $node->field_plaintiff_counsel->appendItem($counsel);
+      foreach ($record['plaintiffCounsel'] as $firm_id => $firm_info) {
+        if ($counsel = $this->getFirm($firm_id, $firm_info)) {
+          if ($counsel->isNew()) {
+            $node->field_plaintiff_counsel->appendItem($counsel);
+          }
+          $counsel->save();
+        }
       }
 
-      foreach ($record['defendantCounsel'] as $firm => $attorney_array) {
-        $counsel = $paragraph_storage->create([
-          'type' => 'counsel',
-          'field_firm_name' => $firm,
-          'field_attorneys' => $attorney_array,
-        ]);
-        $counsel->save();
-        $node->field_defendant_counsel->appendItem($counsel);
+      foreach ($record['defendantCounsel'] as $firm_id => $firm_info) {
+        if ($counsel = $this->getFirm($firm_id, $firm_info)) {
+          if ($counsel->isNew()) {
+            $node->field_defendant_counsel->appendItem($counsel);
+          }
+          $counsel->save();
+        }
       }
 
       $node->field_industry = $record['fields']['Industry'] ?? '';
@@ -204,7 +201,6 @@ class LegacyContentImporter {
 
   public function importAdaCases() {
     $node_storage = $this->entityTypeManager->getStorage('node');
-    $paragraph_storage = $this->entityTypeManager->getStorage('paragraph');
 
     $json_file = file_get_contents($this->dataPath . 'ada_cases.json');
     $data = json_decode($json_file, TRUE);
@@ -254,24 +250,22 @@ class LegacyContentImporter {
       $node->field_plaintiffs_attorneys_fees = $record['plaintiffsAttorneysFees'];
       $node->setRevisionLogMessage($record['internComments']);
 
-      foreach ($record['plaintiffCounsel'] as $firm => $attorney_array) {
-        $counsel = $paragraph_storage->create([
-          'type' => 'counsel',
-          'field_firm_name' => $firm,
-          'field_attorneys' => $attorney_array,
-        ]);
-        $counsel->save();
-        $node->field_plaintiff_counsel->appendItem($counsel);
+      foreach ($record['plaintiffCounsel'] as $firm_id => $firm_info) {
+        if ($counsel = $this->getFirm($firm_id, $firm_info)) {
+          if ($counsel->isNew()) {
+            $node->field_plaintiff_counsel->appendItem($counsel);
+          }
+          $counsel->save();
+        }
       }
 
-      foreach ($record['defendantCounsel'] as $firm => $attorney_array) {
-        $counsel = $paragraph_storage->create([
-          'type' => 'counsel',
-          'field_firm_name' => $firm,
-          'field_attorneys' => $attorney_array,
-        ]);
-        $counsel->save();
-        $node->field_defendant_counsel->appendItem($counsel);
+      foreach ($record['defendantCounsel'] as $firm_id => $firm_info) {
+        if ($counsel = $this->getFirm($firm_id, $firm_info)) {
+          if ($counsel->isNew()) {
+            $node->field_defendant_counsel->appendItem($counsel);
+          }
+          $counsel->save();
+        }
       }
 
       $node->field_industry = $record['fields']['Industry'] ?? '';
@@ -392,6 +386,40 @@ class LegacyContentImporter {
     }
 
     return TRUE;
+  }
+
+  /**
+   * Load or create a counsel paragraph entity.
+   *
+   * @param integer $firm_id
+   * @param array $firm_info
+   * @return \Drupal\paragraphs\Entity\Paragraph|NULL
+   *   The paragraph entity representing the firm.
+   */
+  protected function getFirm($firm_id = 0, $firm_info = []) {
+    $paragraph_storage = $this->entityTypeManager->getStorage('paragraph');
+    $firm = NULL;
+
+    if ($firm_id) {
+      $existing_firms = $paragraph_storage->loadByProperties([
+        'type' => 'counsel',
+        'field_legacy_id' => $firm_id,
+      ]);
+
+      if (empty($existing_firms)) {
+        $firm = $paragraph_storage->create([
+          'type' => 'counsel',
+          'field_legacy_id' => $firm_id,
+        ]);
+      }
+      else {
+        $firm = reset($existing_firms);
+      }
+      $firm->field_firm_name = $firm_info['firmName'];
+      $firm->field_attorneys = $firm_info['attorneys'];
+    }
+
+    return $firm;
   }
 
   /**
