@@ -34,3 +34,7 @@ a {
 [class*="cu-"] p:not(.cu-message__text) {
   margin-top: revert;
 }
+
+#block-union-base-page-title .cu-heading {
+  margin-top: .5em;
+}
