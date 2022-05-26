@@ -10,7 +10,7 @@ field_name: field_attorneys
 entity_type: paragraph
 bundle: counsel
 label: Attorneys
-description: 'PLACEHOLDER. This will become a compound person name field.'
+description: ''
 required: false
 translatable: false
 default_value: {  }
