@@ -6,6 +6,7 @@ dependencies:
     - field.field.paragraph.counsel.field_attorneys
     - field.field.paragraph.counsel.field_firm_name
     - field.field.paragraph.counsel.field_legacy_id
+    - field.field.paragraph.counsel.field_legacy_source
     - paragraphs.paragraphs_type.counsel
   module:
     - legal_repos
@@ -41,4 +42,5 @@ content:
         disabled: '1'
 hidden:
   created: true
+  field_legacy_source: true
   status: true

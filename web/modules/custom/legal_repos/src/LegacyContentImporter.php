@@ -134,7 +134,7 @@ class LegacyContentImporter {
       $node->setRevisionLogMessage($record['internComments']);
 
       foreach ($record['plaintiffCounsel'] as $firm_id => $firm_info) {
-        if ($counsel = $this->getFirm($firm_id, $firm_info)) {
+        if ($counsel = $this->getFirm('consent_decree', $firm_id, $firm_info)) {
           if ($counsel->isNew()) {
             $node->field_plaintiff_counsel->appendItem($counsel);
           }
@@ -143,7 +143,7 @@ class LegacyContentImporter {
       }
 
       foreach ($record['defendantCounsel'] as $firm_id => $firm_info) {
-        if ($counsel = $this->getFirm($firm_id, $firm_info)) {
+        if ($counsel = $this->getFirm('consent_decree', $firm_id, $firm_info)) {
           if ($counsel->isNew()) {
             $node->field_defendant_counsel->appendItem($counsel);
           }
@@ -280,7 +280,7 @@ class LegacyContentImporter {
       $node->setRevisionLogMessage($record['internComments']);
 
       foreach ($record['plaintiffCounsel'] as $firm_id => $firm_info) {
-        if ($counsel = $this->getFirm($firm_id, $firm_info)) {
+        if ($counsel = $this->getFirm('ada_case', $firm_id, $firm_info)) {
           if ($counsel->isNew()) {
             $node->field_plaintiff_counsel->appendItem($counsel);
           }
@@ -289,7 +289,7 @@ class LegacyContentImporter {
       }
 
       foreach ($record['defendantCounsel'] as $firm_id => $firm_info) {
-        if ($counsel = $this->getFirm($firm_id, $firm_info)) {
+        if ($counsel = $this->getFirm('ada_case', $firm_id, $firm_info)) {
           if ($counsel->isNew()) {
             $node->field_defendant_counsel->appendItem($counsel);
           }
@@ -420,12 +420,18 @@ class LegacyContentImporter {
   /**
    * Load or create a counsel paragraph entity.
    *
+   * @param string $source
+   *   The source of this firm; e.g. ada_case or consent_decree
    * @param integer $firm_id
+   *   The legacy firm id from the import source.
    * @param array $firm_info
+   *   An array containing the string `firmName` and the array `attorneys`, a
+   *   list of attorney string names.
+   *
    * @return \Drupal\paragraphs\Entity\Paragraph|NULL
    *   The paragraph entity representing the firm.
    */
-  protected function getFirm($firm_id = 0, $firm_info = []) {
+  protected function getFirm($source, $firm_id = 0, $firm_info = []) {
     $paragraph_storage = $this->entityTypeManager->getStorage('paragraph');
     $firm = NULL;
 
@@ -433,12 +439,14 @@ class LegacyContentImporter {
       $existing_firms = $paragraph_storage->loadByProperties([
         'type' => 'counsel',
         'field_legacy_id' => $firm_id,
+        'field_legacy_source' => $source,
       ]);
 
       if (empty($existing_firms)) {
         $firm = $paragraph_storage->create([
           'type' => 'counsel',
           'field_legacy_id' => $firm_id,
+          'field_legacy_source' => $source,
         ]);
       }
       else {

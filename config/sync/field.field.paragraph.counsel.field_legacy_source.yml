@@ -1,0 +1,19 @@
+uuid: e5cea3de-2434-4fb4-939e-58f0a57f6e0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_legacy_source
+    - paragraphs.paragraphs_type.counsel
+id: paragraph.counsel.field_legacy_source
+field_name: field_legacy_source
+entity_type: paragraph
+bundle: counsel
+label: 'Legacy source'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
