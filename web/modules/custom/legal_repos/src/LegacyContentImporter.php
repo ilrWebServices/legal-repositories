@@ -80,12 +80,6 @@ class LegacyContentImporter {
     $case_count = count($data);
 
     foreach ($data as $index => $record) {
-      $index++;
-
-      if ($this->showProgress) {
-        Drush::output()->writeln("Importing {$index}" . " of {$case_count} consent decrees");
-      }
-
       $existing_nodes = $node_storage->loadByProperties([
         'type' => 'title_vii_consent_decree',
         'field_legacy_id' => $record['cdid'],
@@ -106,6 +100,14 @@ class LegacyContentImporter {
       else {
         // @todo Log error?
         continue;
+      }
+
+      if ($show_progress) {
+        Drush::output()->writeln(strtr("{op} {index}" . " of {case_count} ADA cases", [
+          '{op}' => $node->isNew() ? 'Importing' : 'Updating',
+          '{index}' => $index + 1,
+          '{case_count}' => $case_count,
+        ]));
       }
 
       if ($node->field_resource_url->isEmpty()) {
@@ -224,12 +226,6 @@ class LegacyContentImporter {
     $case_count = count($data);
 
     foreach ($data as $index => $record) {
-      $index++;
-
-      if ($this->showProgress) {
-        Drush::output()->writeln("Importing {$index}" . " of {$case_count} ADA cases");
-      }
-
       $existing_nodes = $node_storage->loadByProperties([
         'type' => 'ada_case',
         'field_legacy_id' => $record['cdid'],
@@ -250,6 +246,14 @@ class LegacyContentImporter {
       else {
         // @todo Log error?
         continue;
+      }
+
+      if ($show_progress) {
+        Drush::output()->writeln(strtr("{op} {index}" . " of {case_count} ADA cases", [
+          '{op}' => $node->isNew() ? 'Importing' : 'Updating',
+          '{index}' => $index + 1,
+          '{case_count}' => $case_count,
+        ]));
       }
 
       if ($node->field_resource_url->isEmpty()) {
@@ -299,7 +303,7 @@ class LegacyContentImporter {
       $node->field_settlement_funds_upper = $record['fields']['Settlement Funds (upper bound)'] ?? '';
       $node->field_theory_discrim_empl = $record['fields']['Theory of Discrimination - Employment'] ?? '';
       $node->field_theory_discrim_pre_empl = $record['fields']['Theory of Discrimination - Pre-Employment'] ?? '';
-      $node->field_type_of_decision = $record['fields']['Type of Decision'] ?? ''; // FIX ME!
+      $node->field_type_of_decision = $record['fields']['Type of Decision'] ?? '';
       $node->field_type_of_discrimination_emp = $record['fields']['Type of Discrimination - Employment'] ?? '';
       $node->field_type_discrim_pre_empl = $record['fields']['Type of Discrimination - Pre-Employment'] ?? '';
 
