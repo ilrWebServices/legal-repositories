@@ -5,6 +5,7 @@ namespace Drupal\legal_repos;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Messenger\MessengerInterface;
+use Drush\Drush;
 use GuzzleHttp\Client as GuzzleClient;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -68,8 +69,12 @@ class LegacyContentImporter {
 
     $json_file = file_get_contents($this->dataPath . 'consent_decrees.json');
     $data = json_decode($json_file, TRUE);
+    $case_count = count($data);
 
-    foreach ($data as $record) {
+    foreach ($data as $index => $record) {
+      $index++;
+      Drush::output()->writeln("Importing {$index}" . " of {$case_count} consent decrees");
+
       $existing_nodes = $node_storage->loadByProperties([
         'type' => 'title_vii_consent_decree',
         'field_legacy_id' => $record['cdid'],
@@ -204,8 +209,12 @@ class LegacyContentImporter {
 
     $json_file = file_get_contents($this->dataPath . 'ada_cases.json');
     $data = json_decode($json_file, TRUE);
+    $case_count = count($data);
 
-    foreach ($data as $record) {
+    foreach ($data as $index => $record) {
+      $index++;
+      Drush::output()->writeln("Importing {$index}" . " of {$case_count} ADA cases");
+
       $existing_nodes = $node_storage->loadByProperties([
         'type' => 'ada_case',
         'field_legacy_id' => $record['cdid'],
