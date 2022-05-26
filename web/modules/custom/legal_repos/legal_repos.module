@@ -5,6 +5,8 @@
  * Contains legal_repos.module.
  */
 
+use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Field\WidgetInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 use \Drupal\field\Entity\FieldConfig;
@@ -92,4 +94,33 @@ function legal_repos_form_user_login_form_alter(&$form, FormStateInterface $form
     '#markup' => '</details><p></p>',
     '#weight' => 100
   ];
+}
+
+/**
+ * Implements hook_field_widget_third_party_settings_form().
+ */
+function legal_repos_field_widget_third_party_settings_form(WidgetInterface $plugin, FieldDefinitionInterface $field_definition, $form_mode, $form, FormStateInterface $form_state) {
+  $element = [];
+
+  // Add a 'Disabled' checkbox to the settings form for 'number' field
+  // formatters.
+  if ($plugin->getPluginId() === 'number') {
+    $element['disabled'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Disabled'),
+      '#description' => t('Prevent the field value from being modified.'),
+      '#default_value' => $plugin->getThirdPartySetting('legal_repos', 'disabled'),
+    ];
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_widget_form_alter().
+ */
+function legal_repos_field_widget_form_alter(&$element, FormStateInterface $form_state, $context) {
+  if ($context['widget']->getThirdPartySetting('legal_repos', 'disabled')) {
+    $element['#disabled'] = TRUE;
+  }
 }
