@@ -1,0 +1,23 @@
+uuid: 3302b0dd-22bb-4d09-869e-a5f7ed3d763c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_legacy_id
+    - paragraphs.paragraphs_type.counsel
+id: paragraph.counsel.field_legacy_id
+field_name: field_legacy_id
+entity_type: paragraph
+bundle: counsel
+label: 'Legacy Id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

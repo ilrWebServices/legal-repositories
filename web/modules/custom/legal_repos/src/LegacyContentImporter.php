@@ -5,6 +5,7 @@ namespace Drupal\legal_repos;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Messenger\MessengerInterface;
+use Drush\Drush;
 use GuzzleHttp\Client as GuzzleClient;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -57,20 +58,20 @@ class LegacyContentImporter {
     $this->httpClient = $http_client;
   }
 
-  public function import() {
-    $this->importConsentDecrees();
-    $this->importAdaCases();
+  public function import($show_progress = FALSE) {
+    $this->importConsentDecrees($show_progress);
+    $this->importAdaCases($show_progress);
     return TRUE;
   }
 
-  public function importConsentDecrees() {
+  public function importConsentDecrees($show_progress) {
     $node_storage = $this->entityTypeManager->getStorage('node');
-    $paragraph_storage = $this->entityTypeManager->getStorage('paragraph');
 
     $json_file = file_get_contents($this->dataPath . 'consent_decrees.json');
     $data = json_decode($json_file, TRUE);
+    $case_count = count($data);
 
-    foreach ($data as $record) {
+    foreach ($data as $index => $record) {
       $existing_nodes = $node_storage->loadByProperties([
         'type' => 'title_vii_consent_decree',
         'field_legacy_id' => $record['cdid'],
@@ -93,7 +94,17 @@ class LegacyContentImporter {
         continue;
       }
 
-      $commons_url = $this->getFinalRedirectUrl($record['digitalCommonsURL']);
+      if ($show_progress) {
+        Drush::output()->writeln(strtr("{op} {index}" . " of {case_count} ADA cases", [
+          '{op}' => $node->isNew() ? 'Importing' : 'Updating',
+          '{index}' => $index + 1,
+          '{case_count}' => $case_count,
+        ]));
+      }
+
+      if ($node->field_resource_url->isEmpty()) {
+        $node->field_resource_url = $this->getFinalRedirectUrl($record['digitalCommonsURL']);
+      }
 
       $node->created = strtotime(substr($record['cdCreateDate'], 0, 20));
       $node->changed = strtotime(substr($record['lastModifiedDate'], 0, 20));
@@ -104,7 +115,6 @@ class LegacyContentImporter {
       $node->field_state = $record['state'];
       $node->field_state_claims = $record['stateClaim'];
       $node->field_judge = $record['judgeFullName'];
-      $node->field_resource_url = $commons_url;
       $node->field_jurisdiction = $record['court'];
       $node->field_date_lawsuit_filed = substr($record['lawsuitFiledDate'], 0, 10);
       $node->field_date_filed = substr($record['cdFiledDate'], 0, 10);
@@ -115,24 +125,22 @@ class LegacyContentImporter {
       $node->field_plaintiffs_attorneys_fees = $record['plaintiffsAttorneysFees'];
       $node->setRevisionLogMessage($record['internComments']);
 
-      foreach ($record['plaintiffCounsel'] as $firm => $attorney_array) {
-        $counsel = $paragraph_storage->create([
-          'type' => 'counsel',
-          'field_firm_name' => $firm,
-          'field_attorneys' => $attorney_array,
-        ]);
-        $counsel->save();
-        $node->field_plaintiff_counsel->appendItem($counsel);
+      foreach ($record['plaintiffCounsel'] as $firm_id => $firm_info) {
+        if ($counsel = $this->getFirm('consent_decree', $firm_id, $firm_info)) {
+          if ($counsel->isNew()) {
+            $node->field_plaintiff_counsel->appendItem($counsel);
+          }
+          $counsel->save();
+        }
       }
 
-      foreach ($record['defendantCounsel'] as $firm => $attorney_array) {
-        $counsel = $paragraph_storage->create([
-          'type' => 'counsel',
-          'field_firm_name' => $firm,
-          'field_attorneys' => $attorney_array,
-        ]);
-        $counsel->save();
-        $node->field_defendant_counsel->appendItem($counsel);
+      foreach ($record['defendantCounsel'] as $firm_id => $firm_info) {
+        if ($counsel = $this->getFirm('consent_decree', $firm_id, $firm_info)) {
+          if ($counsel->isNew()) {
+            $node->field_defendant_counsel->appendItem($counsel);
+          }
+          $counsel->save();
+        }
       }
 
       $node->field_industry = $record['fields']['Industry'] ?? '';
@@ -202,14 +210,14 @@ class LegacyContentImporter {
     return TRUE;
   }
 
-  public function importAdaCases() {
+  public function importAdaCases($show_progress) {
     $node_storage = $this->entityTypeManager->getStorage('node');
-    $paragraph_storage = $this->entityTypeManager->getStorage('paragraph');
 
     $json_file = file_get_contents($this->dataPath . 'ada_cases.json');
     $data = json_decode($json_file, TRUE);
+    $case_count = count($data);
 
-    foreach ($data as $record) {
+    foreach ($data as $index => $record) {
       $existing_nodes = $node_storage->loadByProperties([
         'type' => 'ada_case',
         'field_legacy_id' => $record['cdid'],
@@ -232,7 +240,17 @@ class LegacyContentImporter {
         continue;
       }
 
-      $commons_url = $this->getFinalRedirectUrl($record['digitalCommonsURL']);
+      if ($show_progress) {
+        Drush::output()->writeln(strtr("{op} {index}" . " of {case_count} ADA cases", [
+          '{op}' => $node->isNew() ? 'Importing' : 'Updating',
+          '{index}' => $index + 1,
+          '{case_count}' => $case_count,
+        ]));
+      }
+
+      if ($node->field_resource_url->isEmpty()) {
+        $node->field_resource_url = $this->getFinalRedirectUrl($record['digitalCommonsURL']);
+      }
 
       $node->created = strtotime(substr($record['cdCreateDate'], 0, 20));
       $node->changed = strtotime(substr($record['lastModifiedDate'], 0, 20));
@@ -243,7 +261,6 @@ class LegacyContentImporter {
       $node->field_state = $record['state'];
       $node->field_state_claims = $record['stateClaim'];
       $node->field_judge = $record['judgeFullName'];
-      $node->field_resource_url = $commons_url;
       $node->field_jurisdiction = $record['court'];
       $node->field_date_lawsuit_filed = substr($record['lawsuitFiledDate'], 0, 10);
       $node->field_date_filed = substr($record['cdFiledDate'], 0, 10);
@@ -254,24 +271,22 @@ class LegacyContentImporter {
       $node->field_plaintiffs_attorneys_fees = $record['plaintiffsAttorneysFees'];
       $node->setRevisionLogMessage($record['internComments']);
 
-      foreach ($record['plaintiffCounsel'] as $firm => $attorney_array) {
-        $counsel = $paragraph_storage->create([
-          'type' => 'counsel',
-          'field_firm_name' => $firm,
-          'field_attorneys' => $attorney_array,
-        ]);
-        $counsel->save();
-        $node->field_plaintiff_counsel->appendItem($counsel);
+      foreach ($record['plaintiffCounsel'] as $firm_id => $firm_info) {
+        if ($counsel = $this->getFirm('ada_case', $firm_id, $firm_info)) {
+          if ($counsel->isNew()) {
+            $node->field_plaintiff_counsel->appendItem($counsel);
+          }
+          $counsel->save();
+        }
       }
 
-      foreach ($record['defendantCounsel'] as $firm => $attorney_array) {
-        $counsel = $paragraph_storage->create([
-          'type' => 'counsel',
-          'field_firm_name' => $firm,
-          'field_attorneys' => $attorney_array,
-        ]);
-        $counsel->save();
-        $node->field_defendant_counsel->appendItem($counsel);
+      foreach ($record['defendantCounsel'] as $firm_id => $firm_info) {
+        if ($counsel = $this->getFirm('ada_case', $firm_id, $firm_info)) {
+          if ($counsel->isNew()) {
+            $node->field_defendant_counsel->appendItem($counsel);
+          }
+          $counsel->save();
+        }
       }
 
       $node->field_industry = $record['fields']['Industry'] ?? '';
@@ -280,7 +295,7 @@ class LegacyContentImporter {
       $node->field_settlement_funds_upper = $record['fields']['Settlement Funds (upper bound)'] ?? '';
       $node->field_theory_discrim_empl = $record['fields']['Theory of Discrimination - Employment'] ?? '';
       $node->field_theory_discrim_pre_empl = $record['fields']['Theory of Discrimination - Pre-Employment'] ?? '';
-      $node->field_type_of_decision = $record['fields']['Type of Decision'] ?? ''; // FIX ME!
+      $node->field_type_of_decision = $record['fields']['Type of Decision'] ?? '';
       $node->field_type_of_discrimination_emp = $record['fields']['Type of Discrimination - Employment'] ?? '';
       $node->field_type_discrim_pre_empl = $record['fields']['Type of Discrimination - Pre-Employment'] ?? '';
 
@@ -392,6 +407,48 @@ class LegacyContentImporter {
     }
 
     return TRUE;
+  }
+
+  /**
+   * Load or create a counsel paragraph entity.
+   *
+   * @param string $source
+   *   The source of this firm; e.g. ada_case or consent_decree
+   * @param integer $firm_id
+   *   The legacy firm id from the import source.
+   * @param array $firm_info
+   *   An array containing the string `firmName` and the array `attorneys`, a
+   *   list of attorney string names.
+   *
+   * @return \Drupal\paragraphs\Entity\Paragraph|NULL
+   *   The paragraph entity representing the firm.
+   */
+  protected function getFirm($source, $firm_id = 0, $firm_info = []) {
+    $paragraph_storage = $this->entityTypeManager->getStorage('paragraph');
+    $firm = NULL;
+
+    if ($firm_id) {
+      $existing_firms = $paragraph_storage->loadByProperties([
+        'type' => 'counsel',
+        'field_legacy_id' => $firm_id,
+        'field_legacy_source' => $source,
+      ]);
+
+      if (empty($existing_firms)) {
+        $firm = $paragraph_storage->create([
+          'type' => 'counsel',
+          'field_legacy_id' => $firm_id,
+          'field_legacy_source' => $source,
+        ]);
+      }
+      else {
+        $firm = reset($existing_firms);
+      }
+      $firm->field_firm_name = $firm_info['firmName'];
+      $firm->field_attorneys = $firm_info['attorneys'];
+    }
+
+    return $firm;
   }
 
   /**

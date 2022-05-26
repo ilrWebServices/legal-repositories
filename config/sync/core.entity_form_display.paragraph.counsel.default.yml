@@ -5,7 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.counsel.field_attorneys
     - field.field.paragraph.counsel.field_firm_name
+    - field.field.paragraph.counsel.field_legacy_id
+    - field.field.paragraph.counsel.field_legacy_source
     - paragraphs.paragraphs_type.counsel
+  module:
+    - legal_repos
 id: paragraph.counsel.default
 targetEntityType: paragraph
 bundle: counsel
@@ -27,6 +31,16 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_legacy_id:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings:
+      legal_repos:
+        disabled: '1'
 hidden:
   created: true
+  field_legacy_source: true
   status: true
