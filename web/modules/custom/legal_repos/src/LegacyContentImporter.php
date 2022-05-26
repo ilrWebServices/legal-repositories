@@ -42,13 +42,6 @@ class LegacyContentImporter {
   protected $httpClient;
 
   /**
-   * Whether to show progress during importing.
-   *
-   * @var bool
-   */
-  protected $showProgress;
-
-  /**
    * Constructs a new legacy content importer.
    *
    * @param EntityTypeManagerInterface $entity_type_manager
@@ -66,13 +59,12 @@ class LegacyContentImporter {
   }
 
   public function import($show_progress = FALSE) {
-    $this->showProgress = $show_progress;
-    $this->importConsentDecrees();
-    $this->importAdaCases();
+    $this->importConsentDecrees($show_progress);
+    $this->importAdaCases($show_progress);
     return TRUE;
   }
 
-  public function importConsentDecrees() {
+  public function importConsentDecrees($show_progress) {
     $node_storage = $this->entityTypeManager->getStorage('node');
 
     $json_file = file_get_contents($this->dataPath . 'consent_decrees.json');
@@ -218,7 +210,7 @@ class LegacyContentImporter {
     return TRUE;
   }
 
-  public function importAdaCases() {
+  public function importAdaCases($show_progress) {
     $node_storage = $this->entityTypeManager->getStorage('node');
 
     $json_file = file_get_contents($this->dataPath . 'ada_cases.json');
