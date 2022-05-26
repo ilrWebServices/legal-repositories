@@ -97,7 +97,9 @@ class LegacyContentImporter {
         continue;
       }
 
-      $commons_url = $this->getFinalRedirectUrl($record['digitalCommonsURL']);
+      if ($node->field_resource_url->isEmpty()) {
+        $node->field_resource_url = $this->getFinalRedirectUrl($record['digitalCommonsURL']);
+      }
 
       $node->created = strtotime(substr($record['cdCreateDate'], 0, 20));
       $node->changed = strtotime(substr($record['lastModifiedDate'], 0, 20));
@@ -108,7 +110,6 @@ class LegacyContentImporter {
       $node->field_state = $record['state'];
       $node->field_state_claims = $record['stateClaim'];
       $node->field_judge = $record['judgeFullName'];
-      $node->field_resource_url = $commons_url;
       $node->field_jurisdiction = $record['court'];
       $node->field_date_lawsuit_filed = substr($record['lawsuitFiledDate'], 0, 10);
       $node->field_date_filed = substr($record['cdFiledDate'], 0, 10);
@@ -237,7 +238,9 @@ class LegacyContentImporter {
         continue;
       }
 
-      $commons_url = $this->getFinalRedirectUrl($record['digitalCommonsURL']);
+      if ($node->field_resource_url->isEmpty()) {
+        $node->field_resource_url = $this->getFinalRedirectUrl($record['digitalCommonsURL']);
+      }
 
       $node->created = strtotime(substr($record['cdCreateDate'], 0, 20));
       $node->changed = strtotime(substr($record['lastModifiedDate'], 0, 20));
@@ -248,7 +251,6 @@ class LegacyContentImporter {
       $node->field_state = $record['state'];
       $node->field_state_claims = $record['stateClaim'];
       $node->field_judge = $record['judgeFullName'];
-      $node->field_resource_url = $commons_url;
       $node->field_jurisdiction = $record['court'];
       $node->field_date_lawsuit_filed = substr($record['lawsuitFiledDate'], 0, 10);
       $node->field_date_filed = substr($record['cdFiledDate'], 0, 10);
