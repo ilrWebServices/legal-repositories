@@ -14,7 +14,7 @@ class LegalDocumentBase extends Node {
   public function preSave(EntityStorageInterface $storage) {
     parent::preSave($storage);
 
-    if (!$this->field_resource_url->isEmpty()) {
+    if (!$this->field_resource_url->isEmpty() && $this->field_resource_pdf_url->isEmpty()) {
       $this->field_resource_pdf_url = $this->getEcommonsPdfUrl($this->field_resource_url->uri);
     }
 
