@@ -31,9 +31,11 @@ class LegalReposCommands extends DrushCommands {
    *
    * @command legal_repos:import
    * @aliases lri
+   * @options arr An option that takes multiple values
+   * @options progress to display progress during importing.
    */
-  public function import() {
-    $result = $this->importer->import();
+  public function import($options = ['progress' => FALSE]) {
+    $result = $this->importer->import($options['progress']);
     $this->logger()->success(dt('Legal repos legacy content importer completed @result. Check logs for results.', [
       '@result' => $result ? 'successfully' : 'with issues',
     ]));

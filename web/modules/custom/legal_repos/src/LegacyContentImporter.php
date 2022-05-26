@@ -42,6 +42,13 @@ class LegacyContentImporter {
   protected $httpClient;
 
   /**
+   * Whether to show progress during importing.
+   *
+   * @var bool
+   */
+  protected $showProgress;
+
+  /**
    * Constructs a new legacy content importer.
    *
    * @param EntityTypeManagerInterface $entity_type_manager
@@ -58,7 +65,8 @@ class LegacyContentImporter {
     $this->httpClient = $http_client;
   }
 
-  public function import() {
+  public function import($show_progress = FALSE) {
+    $this->showProgress = $show_progress;
     $this->importConsentDecrees();
     $this->importAdaCases();
     return TRUE;
@@ -73,7 +81,10 @@ class LegacyContentImporter {
 
     foreach ($data as $index => $record) {
       $index++;
-      Drush::output()->writeln("Importing {$index}" . " of {$case_count} consent decrees");
+
+      if ($this->showProgress) {
+        Drush::output()->writeln("Importing {$index}" . " of {$case_count} consent decrees");
+      }
 
       $existing_nodes = $node_storage->loadByProperties([
         'type' => 'title_vii_consent_decree',
@@ -214,7 +225,10 @@ class LegacyContentImporter {
 
     foreach ($data as $index => $record) {
       $index++;
-      Drush::output()->writeln("Importing {$index}" . " of {$case_count} ADA cases");
+
+      if ($this->showProgress) {
+        Drush::output()->writeln("Importing {$index}" . " of {$case_count} ADA cases");
+      }
 
       $existing_nodes = $node_storage->loadByProperties([
         'type' => 'ada_case',
