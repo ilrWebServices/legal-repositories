@@ -21,3 +21,4 @@
 
 # Ignore build artifacts.
 /node_modules/
+/data/*.sqlite
