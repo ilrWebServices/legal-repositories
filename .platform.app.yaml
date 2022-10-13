@@ -1,8 +1,6 @@
 name: drupal
 type: 'php:8.1'
 disk: 2048
-relationships:
-  database: 'db:mysql'
 runtime:
   extensions:
     - apcu
@@ -38,6 +36,9 @@ mounts:
   '/.drush': 'shared:files/.drush'
   '/drush-backups': 'shared:files/drush-backups'
   '/.console': 'shared:files/console'
+  '/data':
+    source: local
+    source_path: 'data'
 web:
   # Specific parameters for different URL prefixes.
   locations:
