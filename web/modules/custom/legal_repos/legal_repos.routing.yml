@@ -13,7 +13,7 @@ legal_repos.title-vii-consent-decree.search:
   requirements:
     _permission: 'access content'
 legal_repos.ada-case.search:
-  path: '/ada_case'
+  path: '/ada-case'
   defaults:
     _form: '\Drupal\legal_repos\Form\AdaCaseSearchForm'
     _title: 'ADA Case Search'
