@@ -59,6 +59,8 @@ details > summary::-webkit-details-marker {
   content: '';
 }
 
-.details__wrapper {
-  margin-left: calc(var(--cu-ps-1) + 0.625rem + 10px);
+@media (min-width: 64rem) {
+  .details__wrapper {
+    margin-left: calc(var(--cu-ps-1) + 0.625rem + 10px);
+  }
 }

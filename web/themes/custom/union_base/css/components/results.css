@@ -14,3 +14,7 @@
 .node--view-mode-mini {
   margin-bottom: var(--cu-vr1);
 }
+
+.search-items {
+  padding-left: 1.6em;
+}

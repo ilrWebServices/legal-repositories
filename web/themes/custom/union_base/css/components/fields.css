@@ -32,6 +32,8 @@
   font-size: 0.9em;
 }
 
-.compare {
-  float: right;
+@media (min-width: 64rem) {
+  .compare {
+    float: right;
+  }
 }

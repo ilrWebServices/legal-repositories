@@ -142,6 +142,7 @@ abstract class SearchFormBase extends FormBase {
         '#items' => [],
         '#empty' => $this->t('Please refine your search criteria.'),
         '#list_type' => 'ol',
+        '#attributes' => ['class' => ['search-items']],
       ];
 
       foreach ($results->nodes as $node) {
