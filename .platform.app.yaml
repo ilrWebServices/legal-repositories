@@ -22,8 +22,6 @@ hooks:
     curl -sS https://platform.sh/cli/installer | php
     set -e
     composer --no-dev --no-ansi --no-interaction install --no-progress --prefer-dist --optimize-autoloader
-    # Install union.
-    npm install
   deploy: |
     set -e
     php ./drush/platformsh_generate_drush_yml.php
