@@ -12,3 +12,13 @@ function union_base_preprocess_page(array &$variables) {
     $variables['#attached']['library'][] = 'union_base/livereload';
   }
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * Add a non-standard Union class to all blocks so that custom property font
+ * styles will apply.
+ */
+function union_base_preprocess_block(&$variables) {
+  $variables['attributes']['class'][] = 'cu-x-block';
+}

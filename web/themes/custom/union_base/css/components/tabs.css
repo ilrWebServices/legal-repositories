@@ -16,7 +16,7 @@
 
 #block-union-base-primary-local-tasks a {
   display: block;
-  color: var(--color-link);
+  --cu-text-color: var(--color-link);
   text-decoration: none;
   padding: 0 0.75rem 0.5rem;
 }

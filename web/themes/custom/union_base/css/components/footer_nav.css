@@ -16,5 +16,5 @@
 }
 
 .layout-footer a {
-  color: var(--color-black);
+  --cu-text-color: var(--color-black);
 }

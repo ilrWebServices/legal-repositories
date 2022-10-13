@@ -8,7 +8,6 @@ function livereloadStartServer(done) {
 
 function watchFiles(done) {
   var lr_watcher = gulp.watch([
-    'web/libraries/union/source/**/*.css',
     'web/themes/custom/union_base/**/*.css'
   ]);
 

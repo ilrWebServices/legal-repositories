@@ -27,11 +27,16 @@
     },
     {
       "type": "vcs",
+      "url": "https://github.com/ilrWebServices/union.git"
+    },
+    {
+      "type": "vcs",
       "url": "https://github.com/ilrWebServices/union_organizer.git"
     }
   ],
   "require": {
     "composer/installers": "^1.9",
+    "cornell/union": "dev-union_ng",
     "drupal/core-composer-scaffold": "^9.2",
     "drupal/core-recommended": "^9.2",
     "drupal/field_group": "^3.2",
@@ -40,7 +45,7 @@
     "drupal/redirect": "^1.6",
     "drupal/samlauth": "^3.5",
     "drupal/title_length": "^1.2",
-    "drupal/union_organizer": "dev-master",
+    "drupal/union_organizer": "dev-union_ng",
     "drush/drush": "^10.6",
     "platformsh/config-reader": "^2.4",
     "symfony/dotenv": "^5.3"

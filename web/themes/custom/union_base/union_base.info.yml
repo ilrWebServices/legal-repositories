@@ -5,7 +5,7 @@ package: Union
 core_version_requirement: ^9
 libraries:
   - union_base/global
-  - union_organizer/ilr
+  - union_organizer/ilr-base
 base theme: false
 regions:
     header: Header

@@ -3,16 +3,13 @@
   "version": "1.0.0",
   "description": "Composer-based Drupal site for ILR Legal Repositories",
   "main": "gulpfile.js",
-  "dependencies": {
-    "@cornell_ilr/union": "^0.13.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^4",
     "gulp-livereload": "^4"
   },
   "scripts": {
-    "start": "gulp",
-    "postinstall": "if [ -L \"./web/libraries/union\" ]; then echo \"./web/libraries/union is a symlink; skipping copy from ./node_modules\"; else rsync -av --delete ./node_modules/@cornell_ilr/union ./web/libraries/; fi"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",

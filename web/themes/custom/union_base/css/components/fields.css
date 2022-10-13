@@ -1,7 +1,8 @@
 .title--view-mode-teaser,
 .title--view-mode-mini {
-  font-size: large;
-  font-weight: normal;
+  --cu-font-size: large;
+  --cu-font-weight: normal;
+  margin-bottom: var(--cu-vr-2);
 }
 
 .field__label {

@@ -1,6 +1,6 @@
 .cu-input--submit,
 .cu-button {
-  --cu-current-link-color: var(--color-black);
+  --cu-text-color: var(--color-black);
 
   border-width: 2px;
   border-style: solid;
@@ -23,7 +23,7 @@ details {
   display: block;
   margin-top: 1.125rem;
   margin-bottom: 1.125rem;
-  color: inherit;
+  --cu-text-color: inherit;
 }
 
 details > summary {
@@ -31,7 +31,7 @@ details > summary {
   align-items: center;
   gap: 10px;
   position: relative;
-  font-weight: bold;
+  font-weight: 400;
   list-style: none;
   line-height: 1;
   padding: 0.75em var(--cu-ps-1);

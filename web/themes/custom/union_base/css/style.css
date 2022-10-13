@@ -28,7 +28,7 @@
 }
 
 a {
-  color: var(--color-link);
+  --cu-text-color: var(--color-link);
 }
 
 [class*="cu-"] p:not(.cu-message__text) {
