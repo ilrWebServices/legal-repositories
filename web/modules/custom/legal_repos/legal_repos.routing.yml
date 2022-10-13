@@ -26,3 +26,27 @@ legal_repos.download:
     _title: 'Search Results Download'
   requirements:
     _permission: 'access content'
+legacy_paths.consentdecree:
+  path: '/consentdecree'
+  defaults:
+    _controller: '\Drupal\legal_repos\Controller\RedirectController::legacyRedirect'
+  requirements:
+    _permission: 'access content'
+legacy_paths.consentdecree.doc:
+  path: '/consentdecree/index.html'
+  defaults:
+    _controller: '\Drupal\legal_repos\Controller\RedirectController::legacyRedirect'
+  requirements:
+    _permission: 'access content'
+legacy_paths.ada_case:
+  path: '/ada-repository'
+  defaults:
+    _controller: '\Drupal\legal_repos\Controller\RedirectController::legacyRedirect'
+  requirements:
+    _permission: 'access content'
+legacy_paths.ada_case.doc:
+  path: '/ada-repository/index.html'
+  defaults:
+    _controller: '\Drupal\legal_repos\Controller\RedirectController::legacyRedirect'
+  requirements:
+    _permission: 'access content'
