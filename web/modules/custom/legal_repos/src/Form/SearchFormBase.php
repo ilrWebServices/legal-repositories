@@ -261,10 +261,10 @@ abstract class SearchFormBase extends FormBase {
       '#field_suffix' => $this->t('year(s)'),
     ];
 
+    // @todo Confirm that we want this new search field
     $form['search']['general']['field_judge'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Judge'),
-      '#description' => '@todo Confirm that we want this new search field.',
     ];
 
     $form['search']['general']['law_firm'] = [
