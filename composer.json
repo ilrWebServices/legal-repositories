@@ -39,7 +39,7 @@
     }
   ],
   "require": {
-    "composer/installers": "^1.9",
+    "composer/installers": "^2.0",
     "cornell/union": "dev-union_ng",
     "drupal/core-composer-scaffold": "^9.2",
     "drupal/core-recommended": "^9.2",
