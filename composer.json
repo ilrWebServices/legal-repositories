@@ -70,6 +70,11 @@
   "autoload": {
     "files": ["load.environment.php"]
   },
+  "scripts": {
+    "sync-prod": [
+      "rsync -avz \"$(platform ssh --pipe --environment main)\":/app/data/ ./data/"
+    ]
+  },
   "extra": {
     "drupal-scaffold": {
       "locations": {
