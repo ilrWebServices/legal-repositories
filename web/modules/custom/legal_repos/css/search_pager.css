@@ -1,0 +1,21 @@
+#edit-page {
+  display: flex;
+  gap: 1em;
+}
+
+#edit-page label,
+#edit-page .cu-input-list__item--radio {
+  margin: 0;
+}
+
+#edit-page label {
+  cursor: pointer;
+  padding: var(--cu-vr-4) var(--cu-ps-1);
+  border: 2px solid var(--color-cornell-red, #B31B1B);
+  border-radius: 2px;
+  text-transform: capitalize;
+}
+
+#edit-page input.has-js {
+  display: none;
+}

@@ -16,6 +16,7 @@ abstract class SearchFormBase extends FormBase {
 
   protected $entityTypeManager;
 
+  const LIMIT = 100;
 
   protected $fieldDefinitions = [];
 
@@ -47,11 +48,12 @@ abstract class SearchFormBase extends FormBase {
 
     if ($results) {
       $compare_field = $form_state->getValue('compare');
+      $page = $form_state->getValue('page') ?? 0;
 
       $form['results'] = [
         '#type' => 'details',
-        '#title' => $results->count . ' ' . $this->stringTranslation->formatPlural(count($results->nodes), ' Result', ' Results'),
-        '#open' => (bool) $results->count,
+        '#title' => $results->total . ' ' . $this->stringTranslation->formatPlural($results->total, ' Result', ' Results'),
+        '#open' => (bool) $results->total,
       ];
 
       $form['results']['utils'] = [
@@ -132,7 +134,7 @@ abstract class SearchFormBase extends FormBase {
         '#items' => [],
         '#empty' => $this->t('Please refine your search criteria.'),
         '#list_type' => 'ol',
-        '#attributes' => ['class' => ['search-items']],
+        '#attributes' => ['class' => ['search-items'], 'start' => $page * self::LIMIT + 1],
       ];
 
       foreach ($results->nodes as $node) {
@@ -160,6 +162,25 @@ abstract class SearchFormBase extends FormBase {
           }
         }
       }
+
+      $page_count = ceil($results->total / self::LIMIT);
+      $options = [];
+
+      if ($page > 0) {
+        $options[$page - 1] = 'prev';
+      }
+
+      if ($page + 1 < $page_count) {
+        $options[$page + 1] = 'next';
+      }
+
+      $form['results']['page'] = [
+        '#type' => 'radios',
+        '#options' => $options,
+        '#attached' => [
+          'library' => ['legal_repos/search.enhance'],
+        ],
+      ];
     }
 
     $form['search'] = [
@@ -462,12 +483,18 @@ abstract class SearchFormBase extends FormBase {
     }
   }
 
-  public function executeQuery(QueryInterface $query) {
-    $results = $query->execute();
+  public function executeQuery(QueryInterface $query, int $page = 0) {
+    $count_query = clone $query;
+    $total = $count_query->count()->execute();
     $results_obj = new \stdClass();
 
-    if ($results) {
+    if ($total) {
+      $start = $page * self::LIMIT;
+      $query->range($start, self::LIMIT);
+      $results = $query->execute();
+
       $results_obj->nodes = $this->entityTypeManager->getStorage('node')->loadMultiple($results);
+      $results_obj->total = $total;
       $results_obj->count = count($results_obj->nodes);
       $results_obj->download_hash = md5(implode('.', array_keys($results_obj->nodes)));
 
@@ -476,6 +503,7 @@ abstract class SearchFormBase extends FormBase {
     }
     else {
       $results_obj->nodes = [];
+      $results_obj->total = 0;
       $results_obj->count = 0;
       $results_obj->download_hash = '';
     }

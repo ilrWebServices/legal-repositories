@@ -151,7 +151,8 @@ class ConsentDecreeSearchForm extends SearchFormBase {
       $query->condition($clause_group);
     }
 
-    $results_obj = $this->executeQuery($query);
+    $page = (int) $form_state->getValue('page');
+    $results_obj = $this->executeQuery($query, $page);
     $form_state->set('results', $results_obj);
   }
 

@@ -1,0 +1,9 @@
+search.enhance:
+  version: 1.x
+  css:
+    theme:
+      css/search_pager.css: {}
+  js:
+    js/pager_submit.js: {}
+  dependencies:
+    - core/drupal
