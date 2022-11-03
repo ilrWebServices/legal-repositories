@@ -2,13 +2,11 @@
 
 namespace Drupal\legal_repos\Form;
 
-use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Entity\Query\QueryInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Link;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -18,12 +16,6 @@ abstract class SearchFormBase extends FormBase {
 
   protected $entityTypeManager;
 
-  /**
-   * The field storage definitions for nodes.
-   *
-   * @var array
-   */
-  // protected $fieldStorageDefinitions = [];
 
   protected $fieldDefinitions = [];
 
@@ -33,7 +25,6 @@ abstract class SearchFormBase extends FormBase {
   public function __construct(EntityFieldManagerInterface $entity_field_manager, EntityTypeManagerInterface $entity_type_manager) {
     $this->entityFieldManager = $entity_field_manager;
     $this->entityTypeManager = $entity_type_manager;
-    // $this->fieldStorageDefinitions = $entity_field_manager->getFieldStorageDefinitions('node');
     $this->fieldDefinitions = $entity_field_manager->getFieldDefinitions('node', $this->nodeType);
   }
 
@@ -55,7 +46,6 @@ abstract class SearchFormBase extends FormBase {
     $results = $form_state->get('results');
 
     if ($results) {
-      // dump($results);
       $compare_field = $form_state->getValue('compare');
 
       $form['results'] = [

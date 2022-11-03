@@ -125,7 +125,6 @@ class ConsentDecreeSearchForm extends SearchFormBase {
     $this->addQueryGeneralConditions($query, $form_state);
 
     $values = $form_state->getValues();
-    // dump($values);
 
     $this->addQueryListCondition($query, $form_state, 'field_protected_classes');
     $this->addQueryListCondition($query, $form_state, 'field_theory_of_discrimination');
