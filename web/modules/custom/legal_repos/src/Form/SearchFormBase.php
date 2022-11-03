@@ -484,27 +484,24 @@ abstract class SearchFormBase extends FormBase {
   }
 
   public function executeQuery(QueryInterface $query, int $page = 0) {
-    $count_query = clone $query;
-    $total = $count_query->count()->execute();
+    $query_full = clone $query;
+    $full_results = $query_full->execute();
     $results_obj = new \stdClass();
+    $results_obj->total = count($full_results);
 
-    if ($total) {
+    if ($results_obj->total) {
       $start = $page * self::LIMIT;
       $query->range($start, self::LIMIT);
-      $results = $query->execute();
+      $range_results = $query->execute();
 
-      $results_obj->nodes = $this->entityTypeManager->getStorage('node')->loadMultiple($results);
-      $results_obj->total = $total;
-      $results_obj->count = count($results_obj->nodes);
-      $results_obj->download_hash = md5(implode('.', array_keys($results_obj->nodes)));
+      $results_obj->nodes = $this->entityTypeManager->getStorage('node')->loadMultiple($range_results);
+      $results_obj->download_hash = md5(implode('.', array_keys($full_results)));
 
       // Save the download hash in the key/value store.
-      \Drupal::keyValue('results_download_hash')->set($results_obj->download_hash, implode('.', array_keys($results_obj->nodes)));
+      \Drupal::keyValue('results_download_hash')->set($results_obj->download_hash, implode('.', array_keys($full_results)));
     }
     else {
       $results_obj->nodes = [];
-      $results_obj->total = 0;
-      $results_obj->count = 0;
       $results_obj->download_hash = '';
     }
 
