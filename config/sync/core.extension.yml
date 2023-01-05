@@ -33,8 +33,7 @@ module:
   paragraphs: 11
   minimal: 1000
 theme:
-  seven: 0
-  stable: 0
   union_base: 0
   legal_admin: 0
+  claro: 0
 profile: minimal
