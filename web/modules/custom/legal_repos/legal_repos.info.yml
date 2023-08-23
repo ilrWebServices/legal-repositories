@@ -1,6 +1,6 @@
 name: 'ILR Legal Repositories'
 type: module
 description: 'Update hooks and misc custom code for the Legal Repos site'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9.5 || ^10
 dependencies:
   - drupal:node

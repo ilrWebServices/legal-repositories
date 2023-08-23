@@ -2,7 +2,7 @@ name: Legal Admin
 type: theme
 description: 'A custom admin theme based on Claro'
 package: Union
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9.5 || ^10
 libraries:
   - legal_admin/global
 base theme: claro
