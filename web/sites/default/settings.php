@@ -537,6 +537,25 @@ $settings['update_free_access'] = FALSE;
 # $settings['file_additional_public_schemes'] = ['example'];
 
 /**
+ * File schemes whose paths should not be normalized:
+ *
+ * Normally, Drupal normalizes '/./' and '/../' segments in file URIs in order
+ * to prevent unintended file access. For example, 'private://css/../image.png'
+ * is normalized to 'private://image.png' before checking access to the file.
+ *
+ * On Windows, Drupal also replaces '\' with '/' in URIs for the local
+ * filesystem.
+ *
+ * If file URIs with one or more scheme should not be normalized like this, then
+ * list the schemes here. For example, if 'porcelain://china/./plate.png' should
+ * not be normalized to 'porcelain://china/plate.png', then add 'porcelain' to
+ * this array. In this case, make sure that the module providing the 'porcelain'
+ * scheme does not allow unintended file access when using '/../' to move up the
+ * directory tree.
+ */
+# $settings['file_sa_core_2023_005_schemes'] = ['porcelain'];
+
+/**
  * Private file path:
  *
  * A local file system path where private files will be stored. This directory
@@ -623,21 +642,6 @@ $settings['update_free_access'] = FALSE;
  */
 # ini_set('pcre.backtrack_limit', 200000);
 # ini_set('pcre.recursion_limit', 200000);
-
-/**
- * Add Permissions-Policy header to disable Google FLoC.
- *
- * By default, Drupal sends the 'Permissions-Policy: interest-cohort=()' header
- * to disable Google's Federated Learning of Cohorts feature, introduced in
- * Chrome 89.
- *
- * See https://en.wikipedia.org/wiki/Federated_Learning_of_Cohorts for more
- * information about FLoC.
- *
- * If you don't wish to disable FLoC in Chrome, you can set this value
- * to FALSE.
- */
-# $settings['block_interest_cohort'] = TRUE;
 
 /**
  * Configuration overrides.
