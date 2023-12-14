@@ -110,5 +110,8 @@
         "type:drupal-custom-theme"
       ]
     }
+  },
+  "require-dev": {
+    "palantirnet/drupal-rector": "^0.18.3"
   }
 }
