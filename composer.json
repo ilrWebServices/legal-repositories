@@ -112,6 +112,7 @@
     }
   },
   "require-dev": {
+    "drupal/upgrade_status": "^4.0",
     "palantirnet/drupal-rector": "^0.18.3"
   }
 }
