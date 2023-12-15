@@ -11,7 +11,7 @@ id: node.ada_case.dis_phys_alzheimers
 field_name: dis_phys_alzheimers
 entity_type: node
 bundle: ada_case
-label: 'Alzheimer''s'
+label: "Alzheimer's"
 description: ''
 required: false
 translatable: true

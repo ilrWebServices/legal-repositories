@@ -41,17 +41,17 @@
   "require": {
     "composer/installers": "^2.0",
     "cornell/union": "dev-union_ng",
-    "drupal/core-composer-scaffold": "^9.2",
-    "drupal/core-recommended": "^9.2",
+    "drupal/core-composer-scaffold": "^10",
+    "drupal/core-recommended": "^10",
     "drupal/field_group": "^3.2",
     "drupal/fixed_text_link_formatter": "^1.6",
     "drupal/paragraphs": "^1.12",
     "drupal/redirect": "^1.6",
     "drupal/samlauth": "^3.5",
-    "drupal/simple_sqlite_vacuum": "^1.0",
-    "drupal/title_length": "^1.2",
+    "drupal/simple_sqlite_vacuum": "1.x-dev",
+    "drupal/title_length": "^2.0@RC",
     "drupal/union_organizer": "dev-union_ng",
-    "drush/drush": "^11.0",
+    "drush/drush": "^12",
     "platformsh/config-reader": "^2.4",
     "symfony/dotenv": "^5.3"
   },
@@ -110,5 +110,9 @@
         "type:drupal-custom-theme"
       ]
     }
+  },
+  "require-dev": {
+    "drupal/upgrade_status": "^4.0",
+    "palantirnet/drupal-rector": "^0.18.3"
   }
 }
