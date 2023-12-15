@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a565884217dcf29f58c7d262efc97149",
+    "content-hash": "c6ee533e51beaeeef837718ef610ea2d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2000,29 +2000,34 @@
         },
         {
             "name": "drupal/title_length",
-            "version": "1.2.0",
+            "version": "2.0.0-rc0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/title_length.git",
-                "reference": "8.x-1.2"
+                "reference": "2.0.0-rc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/title_length-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "22a19724c3807b6847a84ae0a38df80eebe69360"
+                "url": "https://ftp.drupal.org/files/projects/title_length-2.0.0-rc0.zip",
+                "reference": "2.0.0-rc0",
+                "shasum": "e43902448fa309307c0a5a463a53da39e8e2924a"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1631721151",
+                    "version": "2.0.0-rc0",
+                    "datestamp": "1657000016",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^10"
                     }
                 }
             },
@@ -2040,7 +2045,7 @@
                     "homepage": "https://www.drupal.org/user/515310"
                 }
             ],
-            "description": "Increases maximum length of node titles.",
+            "description": "Increases maximum length of node titles and taxonomy term names.",
             "homepage": "https://www.drupal.org/project/title_length",
             "keywords": [
                 "Drupal"
@@ -7913,6 +7918,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "cornell/union": 20,
+        "drupal/title_length": 5,
         "drupal/union_organizer": 20
     },
     "prefer-stable": true,

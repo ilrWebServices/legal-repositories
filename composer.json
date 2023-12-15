@@ -49,7 +49,7 @@
     "drupal/redirect": "^1.6",
     "drupal/samlauth": "^3.5",
     "drupal/simple_sqlite_vacuum": "^1.0",
-    "drupal/title_length": "^1.2",
+    "drupal/title_length": "^2.0@RC",
     "drupal/union_organizer": "dev-union_ng",
     "drush/drush": "^11.0",
     "platformsh/config-reader": "^2.4",
