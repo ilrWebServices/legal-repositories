@@ -14,7 +14,7 @@ build:
   flavor: none
 dependencies:
   php:
-    composer/composer: '~2.1.0'
+    composer/composer: '~2.6.0'
 hooks:
   build: |
     curl -sS https://platform.sh/cli/installer | php
