@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2832aef617b5f714dbb144a62b5f24c",
+    "content-hash": "e5f1f867861471dcd2b974515b7867c9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1885,18 +1885,19 @@
         },
         {
             "name": "drupal/union_organizer",
-            "version": "dev-union_ng",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ilrWebServices/union_organizer.git",
-                "reference": "39c0646695167309f434c5862561f9888051f369"
+                "reference": "f55f5f759b230d0cc09e54fe370c9f0016233c51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ilrWebServices/union_organizer/zipball/39c0646695167309f434c5862561f9888051f369",
-                "reference": "39c0646695167309f434c5862561f9888051f369",
+                "url": "https://api.github.com/repos/ilrWebServices/union_organizer/zipball/f55f5f759b230d0cc09e54fe370c9f0016233c51",
+                "reference": "f55f5f759b230d0cc09e54fe370c9f0016233c51",
                 "shasum": ""
             },
+            "default-branch": true,
             "type": "drupal-module",
             "license": [
                 "GPL-2.0+"
@@ -1910,7 +1911,7 @@
                 "issues": "https://github.com/ilrWebServices/union_organizer/issues",
                 "source": "https://github.com/ilrWebServices/union_organizer.git"
             },
-            "time": "2023-11-30T19:27:03+00:00"
+            "time": "2026-03-13T16:49:21+00:00"
         },
         {
             "name": "drush/drush",
