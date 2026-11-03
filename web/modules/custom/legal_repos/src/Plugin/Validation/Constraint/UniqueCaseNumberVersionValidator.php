@@ -21,6 +21,7 @@ class UniqueCaseNumberVersionValidator extends ConstraintValidator {
     // Look for an existing node of the same type with the same case_number and
     // version combo.
     $query = \Drupal::entityQuery($entity->getEntityTypeId());
+    $query->accessCheck(TRUE);
     $query->condition('type', $entity->bundle());
     $query->condition('field_case_number', $entity->field_case_number->value);
     $query->condition('field_version_number', $entity->field_version_number->value);

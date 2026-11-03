@@ -20,6 +20,8 @@ abstract class SearchFormBase extends FormBase {
 
   protected $fieldDefinitions = [];
 
+  protected $clauseFields;
+
   // Set this in classes that extend this class.
   protected $nodeType = '';
 
