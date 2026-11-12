@@ -1,5 +1,5 @@
 name: drupal
-type: 'php:8.3'
+type: 'php:8.4'
 disk: 2048
 runtime:
   extensions:
