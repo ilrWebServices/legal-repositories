@@ -49,7 +49,7 @@ abstract class SearchFormBase extends FormBase {
     $results = $form_state->get('results');
 
     if ($results) {
-      $compare_field = $form_state->getValue('compare');
+      $compare_field = $form_state->getValue('compare') ?? '';
       $page = $form_state->getValue('page') ?? 0;
 
       $form['results'] = [
